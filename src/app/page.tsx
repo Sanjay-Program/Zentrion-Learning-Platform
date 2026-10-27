@@ -250,7 +250,7 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #f8fafc)", minHeight: "100vh", transition: "background 0.2s ease, color 0.2s ease" }}>
+    <div style={{ background: "var(--bg, #ffffff)", color: "var(--text, #0f172a)", minHeight: "100vh", transition: "background 0.2s ease, color 0.2s ease" }}>
       {/* ======================================================== */}
       {/* 1. HERO SECTION (Mockup Left Text + Right Hologram Card) */}
       {/* ======================================================== */}
@@ -259,15 +259,15 @@ export default async function HomePage() {
           position: "relative",
           padding: "4rem 0 5rem",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.22), transparent 75%), radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.12), transparent 50%)",
+          background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99, 102, 241, 0.08), transparent 75%), radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.06), transparent 50%)",
         }}
       >
         {/* Hero grid bg */}
         <div className="hero-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0, opacity: 0.4 }} />
         {/* Floating decorative orbs */}
-        <div className="animate-float" style={{ position: "absolute", top: "5%", left: "3%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
-        <div className="animate-float-medium" style={{ position: "absolute", bottom: "10%", right: "5%", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle, rgba(34, 211, 238, 0.08), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
-        <div className="animate-float-fast" style={{ position: "absolute", top: "40%", left: "45%", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(192, 132, 252, 0.07), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float" style={{ position: "absolute", top: "5%", left: "3%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.06), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float-medium" style={{ position: "absolute", bottom: "10%", right: "5%", width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(circle, rgba(34, 211, 238, 0.06), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float-fast" style={{ position: "absolute", top: "40%", left: "45%", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(192, 132, 252, 0.05), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div
             style={{
@@ -288,15 +288,15 @@ export default async function HomePage() {
                     gap: "0.4rem",
                     padding: "0.4rem 1rem",
                     borderRadius: "9999px",
-                    background: "rgba(99, 102, 241, 0.12)",
+                    background: "rgba(99, 102, 241, 0.08)",
                     border: "1px solid rgba(129, 140, 248, 0.4)",
-                    color: "#A5B4FC",
+                    color: "#4338CA",
                     fontSize: "0.85rem",
                     fontWeight: 600,
-                    boxShadow: "0 0 15px rgba(99, 102, 241, 0.2)",
+                    boxShadow: "0 0 15px rgba(99, 102, 241, 0.08)",
                   }}
                 >
-                  <span style={{ color: "#818CF8" }}>✦</span> #1 AI & Cybersecurity Learning Platform
+                  <span style={{ color: "#6366F1" }}>✦</span> #1 AI & Cybersecurity Learning Platform
                 </span>
               </div>
 
@@ -352,7 +352,7 @@ export default async function HomePage() {
                     fontWeight: 700,
                     fontSize: "1rem",
                     textDecoration: "none",
-                    boxShadow: "0 0 25px rgba(99, 102, 241, 0.5)",
+                    boxShadow: "0 0 25px rgba(99, 102, 241, 0.2)",
                     transition: "all 0.2s ease",
                   }}
                 >
@@ -401,7 +401,7 @@ export default async function HomePage() {
                   gap: "0.75rem",
                   padding: "1rem 1.25rem",
                   background: "rgba(10, 15, 29, 0.75)",
-                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                   borderRadius: "1rem",
                   backdropFilter: "blur(12px)",
                 }}
@@ -411,11 +411,11 @@ export default async function HomePage() {
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Learners</div>
                 </div>
                 <div>
-                  <div className="stat-number" style={{ color: "#22D3EE", fontSize: "1.4rem" }}>500+</div>
+                  <div className="stat-number" style={{ color: "#0891B2", fontSize: "1.4rem" }}>500+</div>
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Hands-on Projects</div>
                 </div>
                 <div>
-                  <div className="stat-number" style={{ color: "#818CF8", fontSize: "1.4rem" }}>50+</div>
+                  <div className="stat-number" style={{ color: "#6366F1", fontSize: "1.4rem" }}>50+</div>
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Industry Experts</div>
                 </div>
                 <div>
@@ -432,8 +432,8 @@ export default async function HomePage() {
                   position: "relative",
                   borderRadius: "1.5rem",
                   overflow: "hidden",
-                  border: "1px solid rgba(99, 102, 241, 0.35)",
-                  boxShadow: "0 20px 60px -15px rgba(99, 102, 241, 0.3), 0 0 40px rgba(34, 211, 238, 0.15)",
+                  border: "1px solid rgba(99, 102, 241, 0.12)",
+                  boxShadow: "0 20px 60px -15px rgba(99, 102, 241, 0.12), 0 0 40px rgba(34, 211, 238, 0.1)",
                   background: "#0A0F1D",
                 }}
               >
@@ -457,13 +457,13 @@ export default async function HomePage() {
                     padding: "0.75rem 1rem",
                     borderRadius: "0.75rem",
                     background: "rgba(10, 15, 29, 0.85)",
-                    border: "1px solid rgba(34, 211, 238, 0.4)",
+                    border: "1px solid rgba(34, 211, 238, 0.15)",
                     backdropFilter: "blur(12px)",
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
                     maxWidth: "14rem",
                   }}
                 >
-                  <div style={{ fontSize: "0.7rem", color: "#22D3EE", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                  <div style={{ fontSize: "0.7rem", color: "#0891B2", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
                     Workflow
                   </div>
                   <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#FFFFFF", marginTop: "2px" }}>
@@ -480,12 +480,12 @@ export default async function HomePage() {
                     padding: "0.75rem 1rem",
                     borderRadius: "0.75rem",
                     background: "rgba(10, 15, 29, 0.85)",
-                    border: "1px solid rgba(192, 132, 252, 0.4)",
+                    border: "1px solid rgba(192, 132, 252, 0.25)",
                     backdropFilter: "blur(12px)",
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
                   }}
                 >
-                  <div style={{ fontSize: "0.7rem", color: "#C084FC", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                  <div style={{ fontSize: "0.7rem", color: "#9333EA", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase" }}>
                     Career Path
                   </div>
                   <div style={{ fontSize: "0.85rem", fontWeight: 700, color: "#FFFFFF", marginTop: "2px" }}>
@@ -503,14 +503,14 @@ export default async function HomePage() {
                     height: "48px",
                     borderRadius: "0.75rem",
                     background: "rgba(10, 15, 29, 0.8)",
-                    border: "1px solid rgba(99, 102, 241, 0.5)",
+                    border: "1px solid rgba(99, 102, 241, 0.12)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     fontWeight: 900,
                     fontSize: "1.1rem",
-                    color: "#22D3EE",
-                    boxShadow: "0 0 15px rgba(34, 211, 238, 0.3)",
+                    color: "#0891B2",
+                    boxShadow: "0 0 15px rgba(34, 211, 238, 0.2)",
                   }}
                 >
                   AI
@@ -547,7 +547,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section style={{ padding: "5rem 0", background: "#060913" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "2.5rem", flexWrap: "wrap", gap: "1rem" }}>
             <div>
@@ -562,7 +562,7 @@ export default async function HomePage() {
             <Link
               href="/courses"
               style={{
-                color: "#818CF8",
+                color: "#6366F1",
                 textDecoration: "none",
                 fontWeight: 600,
                 fontSize: "0.95rem",
@@ -598,7 +598,7 @@ export default async function HomePage() {
                     padding: "1.75rem",
                     borderRadius: "1rem",
                     background: "rgba(10, 15, 29, 0.7)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    border: "1px solid rgba(0, 0, 0, 0.08)",
                     display: "flex",
                     flexDirection: "column",
                     height: "100%",
@@ -610,8 +610,8 @@ export default async function HomePage() {
                         width: "52px",
                         height: "52px",
                         borderRadius: "0.75rem",
-                        background: "rgba(99, 102, 241, 0.1)",
-                        border: "1px solid rgba(99, 102, 241, 0.25)",
+                        background: "rgba(99, 102, 241, 0.06)",
+                        border: "1px solid rgba(99, 102, 241, 0.08)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -625,9 +625,9 @@ export default async function HomePage() {
                         fontWeight: 700,
                         padding: "0.25rem 0.6rem",
                         borderRadius: "9999px",
-                        background: "rgba(34, 211, 238, 0.1)",
-                        color: "#22D3EE",
-                        border: "1px solid rgba(34, 211, 238, 0.25)",
+                        background: "rgba(34, 211, 238, 0.06)",
+                        color: "#0891B2",
+                        border: "1px solid rgba(34, 211, 238, 0.1)",
                       }}
                     >
                       {path.badge}
@@ -640,7 +640,7 @@ export default async function HomePage() {
                   <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0, flex: 1 }}>
                     {path.desc}
                   </p>
-                  <div style={{ marginTop: "1.25rem", color: "#818CF8", fontSize: "0.85rem", fontWeight: 600 }}>
+                  <div style={{ marginTop: "1.25rem", color: "#6366F1", fontSize: "0.85rem", fontWeight: 600 }}>
                     Start learning →
                   </div>
                 </div>
@@ -653,7 +653,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 3. WHY CHOOSE ZENTRION LEARNTECH? (6 Benefit Cards)       */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(255, 255, 255, 0.06)", borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(0, 0, 0, 0.06)", borderBottom: "1px solid rgba(0, 0, 0, 0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "42rem", margin: "0 auto 3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>✨ Why Us</div>
@@ -690,8 +690,8 @@ export default async function HomePage() {
                     width: "48px",
                     height: "48px",
                     borderRadius: "0.75rem",
-                    background: "rgba(99, 102, 241, 0.12)",
-                    border: "1px solid rgba(99, 102, 241, 0.25)",
+                    background: "rgba(99, 102, 241, 0.08)",
+                    border: "1px solid rgba(99, 102, 241, 0.08)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -717,7 +717,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 4. REAL PROJECTS. REAL SKILLS. REAL CAREERS. (5 Cards)     */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#060913" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "42rem", margin: "0 auto 3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>🚀 Portfolio Projects</div>
@@ -742,7 +742,7 @@ export default async function HomePage() {
                 style={{
                   borderRadius: "1rem",
                   background: "rgba(10, 15, 29, 0.8)",
-                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                   overflow: "hidden",
                   display: "flex",
                   flexDirection: "column",
@@ -754,7 +754,7 @@ export default async function HomePage() {
                   style={{
                     height: "140px",
                     background: "rgba(255, 255, 255, 0.03)",
-                    borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+                    borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -790,9 +790,9 @@ export default async function HomePage() {
                           fontWeight: 600,
                           padding: "0.2rem 0.55rem",
                           borderRadius: "0.35rem",
-                          background: "rgba(99, 102, 241, 0.12)",
-                          color: "#A5B4FC",
-                          border: "1px solid rgba(99, 102, 241, 0.25)",
+                          background: "rgba(99, 102, 241, 0.08)",
+                          color: "#4338CA",
+                          border: "1px solid rgba(99, 102, 241, 0.08)",
                         }}
                       >
                         {b}
@@ -803,7 +803,7 @@ export default async function HomePage() {
                   <Link
                     href={proj.href}
                     style={{
-                      color: "#22D3EE",
+                      color: "#0891B2",
                       fontSize: "0.85rem",
                       fontWeight: 600,
                       textDecoration: "none",
@@ -836,7 +836,7 @@ export default async function HomePage() {
                   Structured courses with in-depth modules and hands-on capstone evaluation.
                 </p>
               </div>
-              <Link href="/courses" style={{ color: "#818CF8", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
+              <Link href="/courses" style={{ color: "#6366F1", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
                 Browse All ({courseCount.n}) →
               </Link>
             </div>
@@ -867,7 +867,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 6. LOVED BY 250,000+ LEARNERS WORLDWIDE (Testimonials)     */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255, 255, 255, 0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(0, 0, 0, 0.06)" }}>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
             <div>
@@ -882,7 +882,7 @@ export default async function HomePage() {
             <Link
               href="/community"
               style={{
-                color: "#818CF8",
+                color: "#6366F1",
                 textDecoration: "none",
                 fontWeight: 600,
                 fontSize: "0.95rem",
@@ -909,7 +909,7 @@ export default async function HomePage() {
                   padding: "2rem",
                   borderRadius: "1rem",
                   background: "rgba(10, 15, 29, 0.7)",
-                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(0, 0, 0, 0.08)",
                   display: "flex",
                   flexDirection: "column",
                   height: "100%",
@@ -968,7 +968,7 @@ export default async function HomePage() {
       {/* 7. LIVE SESSIONS & ENTERPRISE SECTION                     */}
       {/* ======================================================== */}
       {upcoming.length > 0 && (
-        <section style={{ padding: "4rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(255, 255, 255, 0.06)" }}>
+        <section style={{ padding: "4rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(0, 0, 0, 0.06)" }}>
           <div className="container">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
               <div>
@@ -980,7 +980,7 @@ export default async function HomePage() {
                   Join Upcoming Live Interactive Sessions
                 </h2>
               </div>
-              <Link href="/live" style={{ color: "#818CF8", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
+              <Link href="/live" style={{ color: "#6366F1", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
                 Enter Live Studio →
               </Link>
             </div>
@@ -999,7 +999,7 @@ export default async function HomePage() {
                     padding: "1.5rem",
                     borderRadius: "1rem",
                     background: "rgba(6, 9, 19, 0.8)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    border: "1px solid rgba(0, 0, 0, 0.08)",
                   }}
                 >
                   <span style={{ fontSize: "0.75rem", padding: "0.2rem 0.5rem", borderRadius: "0.25rem", background: "rgba(239, 68, 68, 0.15)", color: "#F87171", fontWeight: 600 }}>
@@ -1036,15 +1036,15 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 8. BOTTOM CALL TO ACTION BANNER                          */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#060913" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
         <div className="container">
           <div
             style={{
               textAlign: "center",
               padding: "4rem 2rem",
               borderRadius: "1.5rem",
-              background: "linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(34, 211, 238, 0.08) 100%)",
-              border: "1px solid rgba(99, 102, 241, 0.3)",
+              background: "linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(34, 211, 238, 0.06) 100%)",
+              border: "1px solid rgba(99, 102, 241, 0.12)",
               boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4)",
             }}
           >
@@ -1065,7 +1065,7 @@ export default async function HomePage() {
                   fontWeight: 700,
                   fontSize: "1rem",
                   textDecoration: "none",
-                  boxShadow: "0 0 25px rgba(99, 102, 241, 0.5)",
+                  boxShadow: "0 0 25px rgba(99, 102, 241, 0.2)",
                 }}
               >
                 Get Started Free

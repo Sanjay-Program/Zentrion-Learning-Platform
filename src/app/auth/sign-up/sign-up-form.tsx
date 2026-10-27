@@ -58,7 +58,7 @@ export function SignUpForm({ next }: { next: string }) {
         alignItems: "center",
         justifyContent: "center",
         padding: "3rem 1.5rem",
-        background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15), transparent 70%), var(--bg, #060913)",
+        background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08), transparent 70%), var(--bg, #060913)",
       }}
     >
       <div
@@ -67,7 +67,7 @@ export function SignUpForm({ next }: { next: string }) {
           maxWidth: "880px",
           borderRadius: "1.5rem",
           background: "var(--card-bg, #0A0F1D)",
-          border: "1px solid var(--border-strong, rgba(255, 255, 255, 0.1))",
+          border: "1px solid var(--border-strong, rgba(0, 0, 0, 0.1))",
           boxShadow: "var(--card-shadow, 0 25px 60px -15px rgba(0, 0, 0, 0.8))",
           overflow: "hidden",
           display: "grid",
@@ -154,9 +154,9 @@ export function SignUpForm({ next }: { next: string }) {
               fontSize: "0.8rem",
             }}
           >
-            <div style={{ flex: 1, height: "1px", background: "rgba(255, 255, 255, 0.08)" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(0, 0, 0, 0.08)" }} />
             <span style={{ padding: "0 0.75rem" }}>or</span>
-            <div style={{ flex: 1, height: "1px", background: "rgba(255, 255, 255, 0.08)" }} />
+            <div style={{ flex: 1, height: "1px", background: "rgba(0, 0, 0, 0.08)" }} />
           </div>
 
           {formError && <div style={{ marginBottom: "1rem" }}><Alert tone="danger">{formError}</Alert></div>}
@@ -268,7 +268,7 @@ export function SignUpForm({ next }: { next: string }) {
                 fontSize: "1rem",
                 border: "none",
                 cursor: loading ? "not-allowed" : "pointer",
-                boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+                boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
               }}
             >
               {loading ? "Creating Account..." : "Create Account"}
@@ -276,8 +276,8 @@ export function SignUpForm({ next }: { next: string }) {
 
             <p style={{ color: "#64748B", fontSize: "0.75rem", marginTop: "0.85rem", textAlign: "center" }}>
               By creating an account, you agree to our{" "}
-              <Link href="/terms" style={{ color: "#818CF8", textDecoration: "none" }}>Terms</Link> and{" "}
-              <Link href="/privacy" style={{ color: "#818CF8", textDecoration: "none" }}>Privacy Policy</Link>.
+              <Link href="/terms" style={{ color: "#6366F1", textDecoration: "none" }}>Terms</Link> and{" "}
+              <Link href="/privacy" style={{ color: "#6366F1", textDecoration: "none" }}>Privacy Policy</Link>.
             </p>
           </form>
 
@@ -285,7 +285,7 @@ export function SignUpForm({ next }: { next: string }) {
             Already have an account?{" "}
             <Link
               href={`/auth/sign-in?next=${encodeURIComponent(next)}`}
-              style={{ color: "#818CF8", fontWeight: 600, textDecoration: "none" }}
+              style={{ color: "#6366F1", fontWeight: 600, textDecoration: "none" }}
             >
               Sign In
             </Link>
@@ -297,7 +297,7 @@ export function SignUpForm({ next }: { next: string }) {
           style={{
             padding: "3.5rem 2.5rem",
             background: "linear-gradient(145deg, #0f172a 0%, #1e1b4b 50%, #31104b 100%)",
-            borderLeft: "1px solid rgba(255, 255, 255, 0.08)",
+            borderLeft: "1px solid rgba(0, 0, 0, 0.08)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -310,9 +310,9 @@ export function SignUpForm({ next }: { next: string }) {
                 display: "inline-block",
                 padding: "0.3rem 0.8rem",
                 borderRadius: "9999px",
-                background: "rgba(34, 211, 238, 0.15)",
-                color: "#22D3EE",
-                border: "1px solid rgba(34, 211, 238, 0.3)",
+                background: "rgba(34, 211, 238, 0.06)",
+                color: "#0891B2",
+                border: "1px solid rgba(34, 211, 238, 0.2)",
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 marginBottom: "1rem",
@@ -367,7 +367,7 @@ export function SignUpForm({ next }: { next: string }) {
               padding: "1rem",
               borderRadius: "0.75rem",
               background: "rgba(0, 0, 0, 0.3)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
               display: "flex",
               alignItems: "center",
               gap: "0.75rem",

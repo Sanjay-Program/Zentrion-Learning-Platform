@@ -69,8 +69,8 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
       style={{
         borderRadius: "1rem",
         background: "rgba(10, 15, 29, 0.9)",
-        border: "1px solid rgba(99, 102, 241, 0.35)",
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(99, 102, 241, 0.15)",
+        border: "1px solid rgba(99, 102, 241, 0.2)",
+        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(99, 102, 241, 0.08)",
         padding: "1.5rem",
         marginTop: "1.5rem",
       }}
@@ -87,9 +87,9 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
               fontWeight: 700,
               padding: "0.2rem 0.5rem",
               borderRadius: "0.3rem",
-              background: "rgba(34, 211, 238, 0.15)",
-              color: "#22D3EE",
-              border: "1px solid rgba(34, 211, 238, 0.3)",
+              background: "rgba(34, 211, 238, 0.06)",
+              color: "#0891B2",
+              border: "1px solid rgba(34, 211, 238, 0.2)",
             }}
           >
             In-Browser Execution
@@ -110,8 +110,8 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
               style={{
                 padding: "0.3rem 0.65rem",
                 borderRadius: "0.4rem",
-                background: selectedPreset === k ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "rgba(255, 255, 255, 0.06)",
-                border: selectedPreset === k ? "none" : "1px solid rgba(255, 255, 255, 0.1)",
+                background: selectedPreset === k ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "rgba(0, 0, 0, 0.06)",
+                border: selectedPreset === k ? "none" : "1px solid rgba(0, 0, 0, 0.1)",
                 color: "#FFFFFF",
                 fontSize: "0.75rem",
                 fontWeight: 600,
@@ -139,7 +139,7 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
             padding: "0.75rem 1rem",
             borderRadius: "0.5rem",
             background: "rgba(15, 23, 42, 0.8)",
-            border: "1px solid rgba(255, 255, 255, 0.08)",
+            border: "1px solid rgba(0, 0, 0, 0.08)",
             fontFamily: "var(--font-mono)",
             fontSize: "0.8rem",
             color: "#CBD5E1",
@@ -159,13 +159,13 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
           style={{
             padding: "0.6rem 1.4rem",
             borderRadius: "0.5rem",
-            background: running ? "rgba(99, 102, 241, 0.5)" : "linear-gradient(135deg, #6366F1, #8B5CF6)",
+            background: running ? "rgba(99, 102, 241, 0.3)" : "linear-gradient(135deg, #6366F1, #8B5CF6)",
             color: "#FFFFFF",
             fontWeight: 700,
             fontSize: "0.85rem",
             border: "none",
             cursor: running ? "not-allowed" : "pointer",
-            boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+            boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
             display: "inline-flex",
             alignItems: "center",
             gap: "0.4rem",
@@ -188,11 +188,11 @@ export function InteractiveAutomationWidget({ courseSlug }: { courseSlug?: strin
           style={{
             padding: "0.85rem 1.25rem",
             borderRadius: "0.6rem",
-            background: "#060913",
-            border: "1px solid rgba(255, 255, 255, 0.1)",
+            background: "#ffffff",
+            border: "1px solid rgba(0, 0, 0, 0.1)",
             fontFamily: "var(--font-mono)",
             fontSize: "0.775rem",
-            color: "#22D3EE",
+            color: "#0891B2",
             display: "flex",
             flexDirection: "column",
             gap: "0.4rem",
@@ -253,11 +253,11 @@ export function InlineLessonAiAssistant() {
         padding: "1.25rem",
         borderRadius: "0.75rem",
         background: "rgba(10, 15, 29, 0.8)",
-        border: "1px solid rgba(99, 102, 241, 0.3)",
+        border: "1px solid rgba(99, 102, 241, 0.2)",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
-        <span style={{ color: "#818CF8", fontWeight: 700, fontSize: "0.85rem" }}>🤖 Live Lesson AI Tutor:</span>
+        <span style={{ color: "#6366F1", fontWeight: 700, fontSize: "0.85rem" }}>🤖 Live Lesson AI Tutor:</span>
         <span style={{ color: "#94A3B8", fontSize: "0.75rem" }}>Ask questions directly without leaving your lesson</span>
       </div>
 
@@ -270,9 +270,9 @@ export function InlineLessonAiAssistant() {
             style={{
               padding: "0.25rem 0.6rem",
               borderRadius: "9999px",
-              background: "rgba(99, 102, 241, 0.12)",
-              border: "1px solid rgba(99, 102, 241, 0.25)",
-              color: "#A5B4FC",
+              background: "rgba(99, 102, 241, 0.08)",
+              border: "1px solid rgba(99, 102, 241, 0.15)",
+              color: "#4338CA",
               fontSize: "0.75rem",
               cursor: "pointer",
             }}

@@ -43,12 +43,12 @@ export function LiveClassroom() {
   };
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Top Studio Bar */}
       <div
         style={{
           height: "60px",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
           background: "#0A0F1D",
           display: "flex",
           alignItems: "center",
@@ -137,7 +137,7 @@ export function LiveClassroom() {
         <aside
           style={{
             background: "#080C19",
-            borderRight: "1px solid rgba(255, 255, 255, 0.08)",
+            borderRight: "1px solid rgba(0, 0, 0, 0.08)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -161,8 +161,8 @@ export function LiveClassroom() {
                 width: "42px",
                 height: "42px",
                 borderRadius: "0.6rem",
-                background: activeLeftTool === tool.id ? "rgba(99, 102, 241, 0.25)" : "transparent",
-                border: activeLeftTool === tool.id ? "1px solid rgba(99, 102, 241, 0.5)" : "1px solid transparent",
+                background: activeLeftTool === tool.id ? "rgba(99, 102, 241, 0.15)" : "transparent",
+                border: activeLeftTool === tool.id ? "1px solid rgba(99, 102, 241, 0.3)" : "1px solid transparent",
                 color: activeLeftTool === tool.id ? "#22D3EE" : "#94A3B8",
                 display: "flex",
                 alignItems: "center",
@@ -178,7 +178,7 @@ export function LiveClassroom() {
         </aside>
 
         {/* Center Main Stage + Bottom Tabs */}
-        <div style={{ display: "flex", flexDirection: "column", background: "#060913", overflowY: "auto" }}>
+        <div style={{ display: "flex", flexDirection: "column", background: "#ffffff", overflowY: "auto" }}>
           {/* Video Stream Stage */}
           <div
             style={{
@@ -210,7 +210,7 @@ export function LiveClassroom() {
                 padding: "0.4rem 0.8rem",
                 borderRadius: "0.5rem",
                 background: "rgba(10, 15, 29, 0.8)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
                 backdropFilter: "blur(8px)",
                 display: "flex",
                 alignItems: "center",
@@ -219,7 +219,7 @@ export function LiveClassroom() {
                 fontWeight: 600,
               }}
             >
-              <span style={{ color: "#22D3EE" }}>✦</span> Arjun Varma (Lead AI Instructor)
+              <span style={{ color: "#0891B2" }}>✦</span> Arjun Varma (Lead AI Instructor)
             </div>
 
             {/* Bottom Classroom Controls Bar */}
@@ -248,7 +248,7 @@ export function LiveClassroom() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  background: isMicMuted ? "rgba(239, 68, 68, 0.2)" : "rgba(255, 255, 255, 0.1)",
+                  background: isMicMuted ? "rgba(239, 68, 68, 0.2)" : "rgba(0, 0, 0, 0.1)",
                   border: isMicMuted ? "1px solid #EF4444" : "1px solid rgba(255, 255, 255, 0.15)",
                   color: isMicMuted ? "#F87171" : "#FFFFFF",
                   fontSize: "1rem",
@@ -266,7 +266,7 @@ export function LiveClassroom() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  background: isVideoOff ? "rgba(239, 68, 68, 0.2)" : "rgba(255, 255, 255, 0.1)",
+                  background: isVideoOff ? "rgba(239, 68, 68, 0.2)" : "rgba(0, 0, 0, 0.1)",
                   border: isVideoOff ? "1px solid #EF4444" : "1px solid rgba(255, 255, 255, 0.15)",
                   color: isVideoOff ? "#F87171" : "#FFFFFF",
                   fontSize: "1rem",
@@ -283,7 +283,7 @@ export function LiveClassroom() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.1)",
+                  background: "rgba(0, 0, 0, 0.1)",
                   border: "1px solid rgba(255, 255, 255, 0.15)",
                   color: "#FFFFFF",
                   fontSize: "1rem",
@@ -301,7 +301,7 @@ export function LiveClassroom() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  background: isHandRaised ? "rgba(245, 158, 11, 0.25)" : "rgba(255, 255, 255, 0.1)",
+                  background: isHandRaised ? "rgba(245, 158, 11, 0.25)" : "rgba(0, 0, 0, 0.1)",
                   border: isHandRaised ? "1px solid #F59E0B" : "1px solid rgba(255, 255, 255, 0.15)",
                   color: isHandRaised ? "#FBBF24" : "#FFFFFF",
                   fontSize: "1.1rem",
@@ -338,7 +338,7 @@ export function LiveClassroom() {
               style={{
                 display: "flex",
                 gap: "1.5rem",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+                borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
                 marginBottom: "1.25rem",
               }}
             >
@@ -376,7 +376,7 @@ export function LiveClassroom() {
                     padding: "1rem 1.25rem",
                     borderRadius: "0.75rem",
                     background: "rgba(10, 15, 29, 0.8)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    border: "1px solid rgba(0, 0, 0, 0.08)",
                     marginBottom: "0.75rem",
                   }}
                 >
@@ -393,10 +393,10 @@ export function LiveClassroom() {
                       </div>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "0.85rem" }}>
-                      <span style={{ color: "#22D3EE", fontWeight: 600 }}>2. Applications of Autonomous AI Agents</span>
+                      <span style={{ color: "#0891B2", fontWeight: 600 }}>2. Applications of Autonomous AI Agents</span>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                         <span style={{ color: "#64748B" }}>15:20</span>
-                        <span style={{ color: "#22D3EE", fontWeight: 700 }}>● Ongoing</span>
+                        <span style={{ color: "#0891B2", fontWeight: 700 }}>● Ongoing</span>
                       </div>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "0.85rem" }}>
@@ -426,8 +426,8 @@ export function LiveClassroom() {
 
             {activeTab === "resources" && (
               <div style={{ color: "#94A3B8", fontSize: "0.9rem" }}>
-                <a href="/courses" style={{ color: "#818CF8" }}>Download Lecture Slides (.PDF)</a> ·{" "}
-                <a href="/labs" style={{ color: "#818CF8" }}>Companion GitHub Sandbox</a>
+                <a href="/courses" style={{ color: "#6366F1" }}>Download Lecture Slides (.PDF)</a> ·{" "}
+                <a href="/labs" style={{ color: "#6366F1" }}>Companion GitHub Sandbox</a>
               </div>
             )}
           </div>
@@ -437,7 +437,7 @@ export function LiveClassroom() {
         <aside
           style={{
             background: "#0A0F1D",
-            borderLeft: "1px solid rgba(255, 255, 255, 0.08)",
+            borderLeft: "1px solid rgba(0, 0, 0, 0.08)",
             display: "flex",
             flexDirection: "column",
             height: "100%",
@@ -446,7 +446,7 @@ export function LiveClassroom() {
           <div
             style={{
               padding: "1rem 1.25rem",
-              borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+              borderBottom: "1px solid rgba(0, 0, 0, 0.08)",
               fontWeight: 700,
               fontSize: "0.95rem",
               color: "#FFFFFF",
@@ -507,7 +507,7 @@ export function LiveClassroom() {
             onSubmit={handleSendMessage}
             style={{
               padding: "0.85rem 1rem",
-              borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+              borderTop: "1px solid rgba(0, 0, 0, 0.08)",
               background: "#080C19",
               display: "flex",
               gap: "0.5rem",
@@ -523,7 +523,7 @@ export function LiveClassroom() {
                 padding: "0.6rem 0.85rem",
                 borderRadius: "0.5rem",
                 background: "rgba(15, 23, 42, 0.6)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
                 color: "#FFFFFF",
                 fontSize: "0.85rem",
                 outline: "none",

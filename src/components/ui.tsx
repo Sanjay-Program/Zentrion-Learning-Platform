@@ -354,7 +354,7 @@ export function CourseCard({
       style={{
         borderRadius: "1rem",
         background: "rgba(10, 15, 29, 0.8)",
-        border: "1px solid rgba(255, 255, 255, 0.08)",
+        border: "1px solid rgba(0, 0, 0, 0.08)",
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
@@ -388,7 +388,7 @@ export function CourseCard({
             <span style={{ color: "#FBBF24" }}>★ 4.9</span>
             <span style={{ color: "#94A3B8" }}>(12.8K)</span>
           </div>
-          <span style={{ fontSize: "0.75rem", color: "#818CF8", fontWeight: 600, textTransform: "capitalize" }}>
+          <span style={{ fontSize: "0.75rem", color: "#6366F1", fontWeight: 600, textTransform: "capitalize" }}>
             {level}
           </span>
         </div>
@@ -405,7 +405,7 @@ export function CourseCard({
           </p>
         )}
 
-        <div style={{ marginTop: "auto", borderTop: "1px solid rgba(255, 255, 255, 0.06)", paddingTop: "0.85rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div style={{ marginTop: "auto", borderTop: "1px solid rgba(0, 0, 0, 0.06)", paddingTop: "0.85rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#FFFFFF" }}>
             {formattedPrice}
           </div>

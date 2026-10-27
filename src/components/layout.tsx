@@ -22,7 +22,7 @@ function Logo() {
           color: "#FFFFFF",
           fontWeight: 900,
           fontSize: "1.2rem",
-          boxShadow: "0 0 15px rgba(99, 102, 241, 0.4)",
+          boxShadow: "0 0 15px rgba(99, 102, 241, 0.25)",
           flexShrink: 0,
         }}
       >
@@ -32,7 +32,7 @@ function Logo() {
         <span style={{ fontWeight: 800, fontSize: "1.15rem", color: "var(--text-strong, #FFFFFF)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
           Zentrion
         </span>
-        <span style={{ fontWeight: 700, color: "#22D3EE", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        <span style={{ fontWeight: 700, color: "#0891B2", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>
           LEARNTECH
         </span>
       </div>
@@ -60,7 +60,7 @@ export async function Navbar() {
         background: "var(--nav-bg, rgba(6, 9, 19, 0.95))",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
-        borderBottom: "1px solid var(--nav-border, rgba(255, 255, 255, 0.08))",
+        borderBottom: "1px solid var(--nav-border, rgba(0, 0, 0, 0.08))",
         width: "100%",
         transition: "background 0.2s ease, border-color 0.2s ease",
       }}
@@ -68,8 +68,8 @@ export async function Navbar() {
       {/* Top Admissions & WhatsApp Helpline Strip */}
       <div
         style={{
-          background: "linear-gradient(90deg, rgba(99, 102, 241, 0.12), rgba(37, 211, 102, 0.12))",
-          borderBottom: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+          background: "linear-gradient(90deg, rgba(99, 102, 241, 0.08), rgba(37, 211, 102, 0.12))",
+          borderBottom: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
           padding: "0.3rem 1rem",
           fontSize: "0.78rem",
           display: "flex",
@@ -215,7 +215,7 @@ export async function Navbar() {
                   color: "#FFFFFF",
                   textDecoration: "none",
                   fontWeight: 700,
-                  boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+                  boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
                   display: "inline-flex",
                   alignItems: "center",
                 }}
@@ -236,7 +236,7 @@ export function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+        borderTop: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
         background: "var(--footer-bg, rgba(5, 8, 18, 0.95))",
         marginTop: "var(--space-20)",
         transition: "background 0.2s ease, border-color 0.2s ease",
@@ -336,7 +336,7 @@ export function Footer() {
         {/* Tech Stack & Responsive bar (matching mockup bottom strip) */}
         <div
           style={{
-            borderTop: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+            borderTop: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
             paddingTop: "var(--space-6)",
             marginTop: "var(--space-8)",
             display: "flex",
@@ -387,7 +387,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        background: "var(--bg, #060913)",
+        background: "var(--bg, #ffffff)",
         color: "var(--text, #F8FAFC)",
         transition: "background 0.2s ease, color 0.2s ease",
       }}

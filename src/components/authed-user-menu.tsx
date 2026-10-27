@@ -65,7 +65,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
           display: "flex",
           alignItems: "center",
           gap: "0.6rem",
-          background: "rgba(255, 255, 255, 0.06)",
+          background: "rgba(0, 0, 0, 0.06)",
           border: "1px solid var(--border, rgba(255, 255, 255, 0.12))",
           borderRadius: "9999px",
           padding: "0.3rem 0.75rem 0.3rem 0.4rem",
@@ -86,7 +86,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
             justifyContent: "center",
             fontWeight: 800,
             fontSize: "0.8rem",
-            boxShadow: "0 0 10px rgba(99, 102, 241, 0.4)",
+            boxShadow: "0 0 10px rgba(99, 102, 241, 0.25)",
           }}
         >
           {initials}
@@ -118,7 +118,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
             borderRadius: "1rem",
             background: "var(--card-bg, rgba(10, 15, 29, 0.98))",
             border: "1px solid var(--border-strong, rgba(255, 255, 255, 0.15))",
-            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(99, 102, 241, 0.15)",
+            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(99, 102, 241, 0.08)",
             backdropFilter: "blur(20px)",
             padding: "0.75rem 0",
             zIndex: 100,
@@ -129,7 +129,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
           <div
             style={{
               padding: "0.5rem 1rem 0.75rem",
-              borderBottom: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+              borderBottom: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
               marginBottom: "0.4rem",
             }}
           >
@@ -147,14 +147,14 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
                     ? "rgba(239, 68, 68, 0.15)"
                     : isInstructor
                     ? "rgba(16, 185, 129, 0.15)"
-                    : "rgba(99, 102, 241, 0.15)",
+                    : "rgba(99, 102, 241, 0.08)",
                   color: isAdmin ? "#F87171" : isInstructor ? "#34D399" : "#A5B4FC",
                   border: `1px solid ${
                     isAdmin
                       ? "rgba(239, 68, 68, 0.3)"
                       : isInstructor
                       ? "rgba(16, 185, 129, 0.3)"
-                      : "rgba(99, 102, 241, 0.3)"
+                      : "rgba(99, 102, 241, 0.2)"
                   }`,
                 }}
               >
@@ -317,7 +317,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
                   color: "#34D399",
                   textDecoration: "none",
                   fontWeight: 600,
-                  borderTop: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+                  borderTop: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
                   marginTop: "0.3rem",
                   paddingTop: "0.5rem",
                 }}
@@ -349,7 +349,7 @@ export function AuthedUserMenu({ user, roles }: AuthedUserMenuProps) {
           {/* Sign Out Action */}
           <div
             style={{
-              borderTop: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+              borderTop: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
               marginTop: "0.4rem",
               paddingTop: "0.4rem",
             }}

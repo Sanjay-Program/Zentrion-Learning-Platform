@@ -161,7 +161,7 @@ All automated tasks executed successfully in browser sandbox.`;
   };
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
       <div className="container">
         {/* Lab Header */}
         <div style={{ marginBottom: "2rem" }}>
@@ -172,9 +172,9 @@ All automated tasks executed successfully in browser sandbox.`;
                 fontWeight: 700,
                 padding: "0.2rem 0.6rem",
                 borderRadius: "9999px",
-                background: "rgba(34, 211, 238, 0.15)",
-                color: "#22D3EE",
-                border: "1px solid rgba(34, 211, 238, 0.3)",
+                background: "rgba(34, 211, 238, 0.06)",
+                color: "#0891B2",
+                border: "1px solid rgba(34, 211, 238, 0.2)",
               }}
             >
               Interactive Sandbox
@@ -217,13 +217,13 @@ All automated tasks executed successfully in browser sandbox.`;
                 padding: "0.6rem 1.25rem",
                 borderRadius: "9999px",
                 background: activeTab === tab.id ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "rgba(10, 15, 29, 0.8)",
-                border: activeTab === tab.id ? "1px solid rgba(99, 102, 241, 0.5)" : "1px solid rgba(255, 255, 255, 0.08)",
+                border: activeTab === tab.id ? "1px solid rgba(99, 102, 241, 0.3)" : "1px solid rgba(0, 0, 0, 0.08)",
                 color: activeTab === tab.id ? "#FFFFFF" : "#94A3B8",
                 fontWeight: 600,
                 fontSize: "0.9rem",
                 cursor: "pointer",
                 whiteSpace: "nowrap",
-                boxShadow: activeTab === tab.id ? "0 0 15px rgba(99, 102, 241, 0.35)" : "none",
+                boxShadow: activeTab === tab.id ? "0 0 15px rgba(99, 102, 241, 0.2)" : "none",
               }}
             >
               {tab.label}
@@ -236,8 +236,8 @@ All automated tasks executed successfully in browser sandbox.`;
           style={{
             borderRadius: "1.25rem",
             background: "rgba(10, 15, 29, 0.85)",
-            border: "1px solid rgba(99, 102, 241, 0.3)",
-            boxShadow: "0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(99, 102, 241, 0.15)",
+            border: "1px solid rgba(99, 102, 241, 0.2)",
+            boxShadow: "0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(99, 102, 241, 0.08)",
             backdropFilter: "blur(16px)",
             padding: "2rem",
             marginBottom: "3rem",
@@ -265,7 +265,7 @@ All automated tasks executed successfully in browser sandbox.`;
                   borderRadius: "0.5rem",
                   background: "rgba(15, 23, 42, 0.8)",
                   border: "1px solid rgba(255, 255, 255, 0.15)",
-                  color: "#22D3EE",
+                  color: "#0891B2",
                   fontWeight: 700,
                   fontSize: "0.9rem",
                   outline: "none",
@@ -287,7 +287,7 @@ All automated tasks executed successfully in browser sandbox.`;
                   padding: "0.4rem 0.8rem",
                   borderRadius: "0.4rem",
                   background: "transparent",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
                   color: "#94A3B8",
                   fontSize: "0.8rem",
                   cursor: "pointer",
@@ -344,7 +344,7 @@ All automated tasks executed successfully in browser sandbox.`;
                     padding: "0.9rem 1.25rem",
                     borderRadius: "0.85rem",
                     background: m.role === "user" ? "linear-gradient(135deg, #6366F1, #8B5CF6)" : "rgba(15, 23, 42, 0.8)",
-                    border: m.role === "user" ? "none" : "1px solid rgba(255, 255, 255, 0.08)",
+                    border: m.role === "user" ? "none" : "1px solid rgba(0, 0, 0, 0.08)",
                     color: "#FFFFFF",
                     fontSize: "0.95rem",
                     lineHeight: 1.5,
@@ -356,7 +356,7 @@ All automated tasks executed successfully in browser sandbox.`;
               </div>
             ))}
             {isLoading && (
-              <div style={{ color: "#22D3EE", fontSize: "0.85rem", fontStyle: "italic", padding: "0.5rem" }}>
+              <div style={{ color: "#0891B2", fontSize: "0.85rem", fontStyle: "italic", padding: "0.5rem" }}>
                 AI is thinking and synthesizing response...
               </div>
             )}
@@ -372,8 +372,8 @@ All automated tasks executed successfully in browser sandbox.`;
                 style={{
                   padding: "0.4rem 0.8rem",
                   borderRadius: "9999px",
-                  background: "rgba(99, 102, 241, 0.1)",
-                  border: "1px solid rgba(99, 102, 241, 0.25)",
+                  background: "rgba(99, 102, 241, 0.06)",
+                  border: "1px solid rgba(99, 102, 241, 0.15)",
                   color: "#CBD5E1",
                   fontSize: "0.8rem",
                   cursor: "pointer",
@@ -422,7 +422,7 @@ All automated tasks executed successfully in browser sandbox.`;
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+                borderTop: "1px solid rgba(0, 0, 0, 0.08)",
                 paddingTop: "0.75rem",
                 marginTop: "0.5rem",
               }}
@@ -462,7 +462,7 @@ All automated tasks executed successfully in browser sandbox.`;
                   fontSize: "0.9rem",
                   border: "none",
                   cursor: isLoading ? "not-allowed" : "pointer",
-                  boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+                  boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
                 }}
               >
                 <span>Send</span>
@@ -496,7 +496,7 @@ All automated tasks executed successfully in browser sandbox.`;
                     padding: "1.5rem",
                     borderRadius: "1rem",
                     background: "rgba(10, 15, 29, 0.75)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    border: "1px solid rgba(0, 0, 0, 0.08)",
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "1rem",
@@ -504,11 +504,11 @@ All automated tasks executed successfully in browser sandbox.`;
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-3px)";
-                    e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.4)";
+                    e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.25)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.08)";
+                    e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.08)";
                   }}
                 >
                   <div
@@ -516,8 +516,8 @@ All automated tasks executed successfully in browser sandbox.`;
                       width: "48px",
                       height: "48px",
                       borderRadius: "0.75rem",
-                      background: "rgba(99, 102, 241, 0.12)",
-                      border: "1px solid rgba(99, 102, 241, 0.25)",
+                      background: "rgba(99, 102, 241, 0.08)",
+                      border: "1px solid rgba(99, 102, 241, 0.15)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -538,8 +538,8 @@ All automated tasks executed successfully in browser sandbox.`;
                           fontSize: "0.7rem",
                           padding: "0.15rem 0.45rem",
                           borderRadius: "0.25rem",
-                          background: "rgba(34, 211, 238, 0.15)",
-                          color: "#22D3EE",
+                          background: "rgba(34, 211, 238, 0.06)",
+                          color: "#0891B2",
                           fontWeight: 600,
                         }}
                       >

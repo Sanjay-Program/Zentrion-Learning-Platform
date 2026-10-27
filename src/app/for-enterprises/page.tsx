@@ -24,7 +24,7 @@ const FEATURES = [
   },
   {
     icon: "🎯",
-    color: "#22D3EE",
+    color: "#0891B2",
     colorSubtle: "rgba(34,211,238,0.12)",
     colorBorder: "rgba(34,211,238,0.25)",
     title: "Custom Learning Paths",
@@ -40,7 +40,7 @@ const FEATURES = [
   },
   {
     icon: "🌐",
-    color: "#C084FC",
+    color: "#9333EA",
     colorSubtle: "rgba(192,132,252,0.12)",
     colorBorder: "rgba(192,132,252,0.25)",
     title: "Whitelabel Option",
@@ -56,7 +56,7 @@ const FEATURES = [
   },
   {
     icon: "📜",
-    color: "#22D3EE",
+    color: "#0891B2",
     colorSubtle: "rgba(34,211,238,0.12)",
     colorBorder: "rgba(34,211,238,0.25)",
     title: "Compliance & Audit",
@@ -64,7 +64,7 @@ const FEATURES = [
   },
   {
     icon: "🔬",
-    color: "#818CF8",
+    color: "#6366F1",
     colorSubtle: "rgba(129,140,248,0.12)",
     colorBorder: "rgba(129,140,248,0.25)",
     title: "Custom Labs & Simulations",
@@ -112,7 +112,7 @@ const TESTIMONIALS = [
     name: "VP Engineering",
     role: "Fortune 500 Manufacturing (NDA)",
     initials: "VP",
-    color: "#22D3EE",
+    color: "#0891B2",
   },
   {
     quote: "SSO with Azure AD was live in 3 hours. The whitelabel made it feel like our own internal platform. Employee NPS for the training jumped from 45 to 87.",
@@ -132,7 +132,7 @@ const STATS = [
 
 export default function ForEnterprisesPage() {
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO                                                          */}
@@ -142,11 +142,11 @@ export default function ForEnterprisesPage() {
           position: "relative",
           padding: "5.5rem 0 4.5rem",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.2), transparent 70%), radial-gradient(circle at 80% 60%, rgba(16, 185, 129, 0.1), transparent 50%)",
+          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.12), transparent 70%), radial-gradient(circle at 80% 60%, rgba(16, 185, 129, 0.1), transparent 50%)",
         }}
       >
         <div className="hero-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0, opacity: 0.35 }} />
-        <div className="animate-float" style={{ position: "absolute", top: "10%", left: "5%", width: 380, height: 380, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float" style={{ position: "absolute", top: "10%", left: "5%", width: 380, height: 380, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.06), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
         <div className="animate-float-medium" style={{ position: "absolute", bottom: "15%", right: "8%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
@@ -233,7 +233,7 @@ export default function ForEnterprisesPage() {
       {/* ============================================================ */}
       {/* INDUSTRY USE CASES                                           */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "44rem", margin: "0 auto 3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Industry Use Cases</div>
@@ -251,7 +251,7 @@ export default function ForEnterprisesPage() {
                   <p style={{ color: "#94A3B8", fontSize: "0.875rem", lineHeight: 1.55, margin: 0 }}>{uc.pain}</p>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.75rem", color: "#22D3EE", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.3rem" }}>Zentrion Solution</div>
+                  <div style={{ fontSize: "0.75rem", color: "#0891B2", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.3rem" }}>Zentrion Solution</div>
                   <p style={{ color: "#CBD5E1", fontSize: "0.875rem", lineHeight: 1.55, margin: 0 }}>{uc.solution}</p>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export default function ForEnterprisesPage() {
       {/* ============================================================ */}
       {/* IMPLEMENTATION PROCESS                                        */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container" style={{ maxWidth: "52rem" }}>
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Implementation</div>

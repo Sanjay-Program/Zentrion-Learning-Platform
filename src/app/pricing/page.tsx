@@ -82,7 +82,7 @@ export default async function PricingPage() {
   const paidCourses = paidCourseProducts.filter((c) => c.amountCents > 0);
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}
@@ -93,14 +93,14 @@ export default async function PricingPage() {
           padding: "5rem 0 4rem",
           textAlign: "center",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.2), transparent 70%), radial-gradient(circle at 80% 50%, rgba(34, 211, 238, 0.08), transparent 50%)",
+          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.12), transparent 70%), radial-gradient(circle at 80% 50%, rgba(34, 211, 238, 0.06), transparent 50%)",
         }}
       >
         {/* Grid bg */}
         <div className="hero-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0, opacity: 0.4 }} />
 
         {/* Floating orbs */}
-        <div className="animate-float" style={{ position: "absolute", top: "15%", left: "8%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float" style={{ position: "absolute", top: "15%", left: "8%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
         <div className="animate-float-medium" style={{ position: "absolute", top: "20%", right: "8%", width: 250, height: 250, borderRadius: "50%", background: "radial-gradient(circle, rgba(34, 211, 238, 0.1), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
@@ -141,7 +141,7 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* PRICING CARDS                                                 */}
       {/* ============================================================ */}
-      <section style={{ padding: "4rem 0 5rem", background: "#060913" }}>
+      <section style={{ padding: "4rem 0 5rem", background: "#ffffff" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(22rem, 1fr))", gap: "1.5rem", alignItems: "start", maxWidth: "75rem", margin: "0 auto" }}>
 
@@ -208,7 +208,7 @@ export default async function PricingPage() {
                 </div>
 
                 {/* Glow overlay */}
-                <div style={{ position: "absolute", top: "-40px", right: "-40px", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 70%)", pointerEvents: "none" }} />
+                <div style={{ position: "absolute", top: "-40px", right: "-40px", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%)", pointerEvents: "none" }} />
 
                 <div style={{ marginBottom: "1.75rem", position: "relative" }}>
                   <div className="icon-box" style={{ marginBottom: "1rem" }}>
@@ -257,7 +257,7 @@ export default async function PricingPage() {
                     color: "#FFFFFF",
                     fontWeight: 700,
                     textDecoration: "none",
-                    boxShadow: "0 0 25px rgba(99, 102, 241, 0.5)",
+                    boxShadow: "0 0 25px rgba(99, 102, 241, 0.3)",
                     fontSize: "1rem",
                     transition: "all 0.2s ease",
                   }}
@@ -271,7 +271,7 @@ export default async function PricingPage() {
                 <div style={{ position: "absolute", top: "1rem", right: "1rem" }}>
                   <span style={{ padding: "0.3rem 0.75rem", borderRadius: "9999px", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#fff", fontSize: "0.72rem", fontWeight: 700 }}>MOST POPULAR</span>
                 </div>
-                <div style={{ position: "absolute", top: "-40px", right: "-40px", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 70%)", pointerEvents: "none" }} />
+                <div style={{ position: "absolute", top: "-40px", right: "-40px", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%)", pointerEvents: "none" }} />
 
                 <div style={{ marginBottom: "1.75rem" }}>
                   <div className="icon-box" style={{ marginBottom: "1rem" }}>
@@ -369,7 +369,7 @@ export default async function PricingPage() {
                 <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
                   <th style={{ padding: "1.25rem 1.5rem", textAlign: "left", color: "#FFFFFF", fontWeight: 700, fontSize: "1rem" }}>Feature</th>
                   <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#94A3B8", fontWeight: 700, fontSize: "0.9rem", minWidth: 100 }}>Free</th>
-                  <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#818CF8", fontWeight: 700, fontSize: "0.9rem", minWidth: 100, background: "rgba(99,102,241,0.06)" }}>
+                  <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#6366F1", fontWeight: 700, fontSize: "0.9rem", minWidth: 100, background: "rgba(99,102,241,0.06)" }}>
                     Pro ⚡
                   </th>
                   <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#F59E0B", fontWeight: 700, fontSize: "0.9rem", minWidth: 100 }}>Enterprise</th>
@@ -400,7 +400,7 @@ export default async function PricingPage() {
       {/* INDIVIDUAL COURSE PURCHASES (if any)                         */}
       {/* ============================================================ */}
       {paidCourses.length > 0 && (
-        <section style={{ padding: "4rem 0 5rem", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <section style={{ padding: "4rem 0 5rem", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="container">
             <div style={{ marginBottom: "2.5rem" }}>
               <div className="section-eyebrow" style={{ display: "inline-flex" }}>À La Carte</div>
@@ -416,7 +416,7 @@ export default async function PricingPage() {
                   </div>
                   <div style={{ textAlign: "right", flexShrink: 0 }}>
                     <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF" }}>{formatPrice(c.amountCents)}</div>
-                    <Link href={`/courses/${c.slug}`} style={{ color: "#818CF8", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>View course →</Link>
+                    <Link href={`/courses/${c.slug}`} style={{ color: "#6366F1", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>View course →</Link>
                   </div>
                 </div>
               ))}
@@ -452,7 +452,7 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* FAQ SECTION                                                   */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container" style={{ maxWidth: "52rem" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>FAQ</div>

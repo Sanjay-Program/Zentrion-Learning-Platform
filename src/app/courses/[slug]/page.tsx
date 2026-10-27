@@ -30,7 +30,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
   );
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
       <div className="container">
         {/* Breadcrumbs */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", color: "#94A3B8", marginBottom: "1.5rem" }}>
@@ -38,7 +38,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
           <span>/</span>
           <Link href="/courses" style={{ color: "#94A3B8", textDecoration: "none" }}>Courses</Link>
           <span>/</span>
-          <span style={{ color: "#22D3EE" }}>{course.title}</span>
+          <span style={{ color: "#0891B2" }}>{course.title}</span>
         </div>
 
         {/* Top Header Banner */}
@@ -84,7 +84,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
             <div style={{ color: "#64748B" }}>·</div>
             <div>👥 120,000+ students</div>
             <div style={{ color: "#64748B" }}>·</div>
-            <div>Created by <span style={{ color: "#818CF8", fontWeight: 600 }}>Zentrion Team</span></div>
+            <div>Created by <span style={{ color: "#6366F1", fontWeight: 600 }}>Zentrion Team</span></div>
             <div style={{ color: "#64748B" }}>·</div>
             <div>Last updated Mar 2026</div>
             <div style={{ color: "#64748B" }}>·</div>
@@ -108,7 +108,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
               style={{
                 display: "flex",
                 gap: "1.5rem",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
                 marginBottom: "2rem",
                 overflowX: "auto",
               }}
@@ -147,7 +147,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 padding: "2rem",
                 borderRadius: "1rem",
                 background: "rgba(10, 15, 29, 0.75)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
+                border: "1px solid rgba(0, 0, 0, 0.08)",
                 marginBottom: "2.5rem",
               }}
             >
@@ -186,7 +186,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 padding: "2rem",
                 borderRadius: "1rem",
                 background: "rgba(10, 15, 29, 0.75)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
+                border: "1px solid rgba(0, 0, 0, 0.08)",
                 marginBottom: "2.5rem",
               }}
             >
@@ -202,11 +202,11 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 style={{
                   padding: "1.25rem 1.5rem",
                   borderRadius: "0.75rem",
-                  background: "rgba(99, 102, 241, 0.1)",
-                  border: "1px solid rgba(99, 102, 241, 0.25)",
+                  background: "rgba(99, 102, 241, 0.06)",
+                  border: "1px solid rgba(99, 102, 241, 0.15)",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#A5B4FC", fontWeight: 700, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.35rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#4338CA", fontWeight: 700, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.35rem" }}>
                   <span>🏆</span> Capstone Portfolio Deliverable
                 </div>
                 <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.35rem" }}>
@@ -236,7 +236,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                     style={{
                       borderRadius: "0.75rem",
                       background: "rgba(10, 15, 29, 0.75)",
-                      border: "1px solid rgba(255, 255, 255, 0.08)",
+                      border: "1px solid rgba(0, 0, 0, 0.08)",
                       overflow: "hidden",
                     }}
                   >
@@ -244,14 +244,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                       style={{
                         padding: "1.2rem 1.5rem",
                         background: "rgba(15, 23, 42, 0.4)",
-                        borderBottom: "1px solid rgba(255, 255, 255, 0.06)",
+                        borderBottom: "1px solid rgba(0, 0, 0, 0.06)",
                         display: "flex",
                         justifyContent: "space-between",
                         alignItems: "center",
                       }}
                     >
                       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                        <span style={{ color: "#818CF8", fontWeight: 700, fontSize: "0.85rem" }}>
+                        <span style={{ color: "#6366F1", fontWeight: 700, fontSize: "0.85rem" }}>
                           Module {i + 1}:
                         </span>
                         <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>
@@ -276,14 +276,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                             fontSize: "0.9rem",
                           }}
                         >
-                          <span style={{ color: "#22D3EE", width: "20px" }}>
+                          <span style={{ color: "#0891B2", width: "20px" }}>
                             {lesson.lessonType === "video" ? "▶" : lesson.lessonType === "lab" ? "⚗" : "📄"}
                           </span>
                           <span style={{ color: "#F1F5F9", flex: 1 }}>
                             {lesson.title}
                           </span>
                           {lesson.isPreview && (
-                            <span style={{ fontSize: "0.7rem", padding: "0.15rem 0.45rem", borderRadius: "0.25rem", background: "rgba(34, 211, 238, 0.15)", color: "#22D3EE", fontWeight: 600 }}>
+                            <span style={{ fontSize: "0.7rem", padding: "0.15rem 0.45rem", borderRadius: "0.25rem", background: "rgba(34, 211, 238, 0.06)", color: "#0891B2", fontWeight: 600 }}>
                               Preview
                             </span>
                           )}
@@ -306,7 +306,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 borderRadius: "1.25rem",
                 background: "rgba(10, 15, 29, 0.9)",
                 border: "1px solid rgba(255, 255, 255, 0.12)",
-                boxShadow: "0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(99, 102, 241, 0.2)",
+                boxShadow: "0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(99, 102, 241, 0.12)",
                 overflow: "hidden",
                 backdropFilter: "blur(16px)",
               }}
@@ -400,7 +400,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                 </div>
 
                 {/* Course Perks Checklist */}
-                <div style={{ borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "1.25rem" }}>
+                <div style={{ borderTop: "1px solid rgba(0, 0, 0, 0.08)", paddingTop: "1.25rem" }}>
                   <div style={{ fontWeight: 700, color: "#FFFFFF", fontSize: "0.9rem", marginBottom: "0.85rem" }}>
                     This course includes:
                   </div>

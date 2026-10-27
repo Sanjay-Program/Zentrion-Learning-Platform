@@ -52,7 +52,7 @@ export default async function CoursesPage({
   const hasFilters = !!(searchParamsResolved.q || searchParamsResolved.category || searchParamsResolved.level);
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HEADER SECTION                                               */}
@@ -72,7 +72,7 @@ export default async function CoursesPage({
             <Link href="/" style={{ color: "#64748B", textDecoration: "none" }}>Home</Link>
             <span>/</span>
             <span style={{ color: "#94A3B8" }}>Courses</span>
-            {searchParamsResolved.category && <><span>/</span><span style={{ color: "#22D3EE", textTransform: "capitalize" }}>{searchParamsResolved.category.replace(/-/g, " ")}</span></>}
+            {searchParamsResolved.category && <><span>/</span><span style={{ color: "#0891B2", textTransform: "capitalize" }}>{searchParamsResolved.category.replace(/-/g, " ")}</span></>}
           </div>
 
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1.5rem" }}>
@@ -175,7 +175,7 @@ export default async function CoursesPage({
             <div style={{ display: "flex", gap: "0.4rem" }}>
               <span style={{ color: "#64748B", fontSize: "0.82rem", fontWeight: 600, alignSelf: "center" }}>Level:</span>
               {["", ...LEVELS].map((l) => {
-                const levelStyle = l ? LEVEL_COLORS[l] : { bg: "rgba(99,102,241,0.12)", color: "#818CF8", border: "rgba(99,102,241,0.3)" };
+                const levelStyle = l ? LEVEL_COLORS[l] : { bg: "rgba(99,102,241,0.12)", color: "#6366F1", border: "rgba(99,102,241,0.3)" };
                 const isActive = (searchParamsResolved.level ?? "") === l;
                 return (
                   <a
@@ -232,7 +232,7 @@ export default async function CoursesPage({
       {/* CATEGORY QUICK FILTERS (if no query active)                 */}
       {/* ============================================================ */}
       {!hasFilters && categories.length > 0 && (
-        <section style={{ padding: "2rem 0 1rem", background: "#060913" }}>
+        <section style={{ padding: "2rem 0 1rem", background: "#ffffff" }}>
           <div className="container">
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
               {categories.map((cat) => {
@@ -270,7 +270,7 @@ export default async function CoursesPage({
       {/* ============================================================ */}
       {/* COURSE GRID                                                  */}
       {/* ============================================================ */}
-      <section style={{ padding: "2rem 0 5rem", background: "#060913" }}>
+      <section style={{ padding: "2rem 0 5rem", background: "#ffffff" }}>
         <div className="container">
           {courses.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", borderRadius: "1.25rem", background: "rgba(10,15,29,0.7)", border: "1px solid rgba(255,255,255,0.07)", marginTop: "1.5rem" }}>

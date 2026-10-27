@@ -12,9 +12,9 @@ const VALUES = [
         <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
       </svg>
     ),
-    color: "#22D3EE",
-    colorSubtle: "rgba(34, 211, 238, 0.12)",
-    colorBorder: "rgba(34, 211, 238, 0.25)",
+    color: "#0891B2",
+    colorSubtle: "rgba(34, 211, 238, 0.08)",
+    colorBorder: "rgba(34, 211, 238, 0.15)",
     title: "Hands-On First",
     desc: "Every concept is paired with a lab, project, or real-world prompt you can run — not just a video to watch passively.",
   },
@@ -24,7 +24,7 @@ const VALUES = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     ),
-    color: "#818CF8",
+    color: "#6366F1",
     colorSubtle: "rgba(129, 140, 248, 0.12)",
     colorBorder: "rgba(129, 140, 248, 0.25)",
     title: "Safe By Design",
@@ -36,7 +36,7 @@ const VALUES = [
         <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
       </svg>
     ),
-    color: "#C084FC",
+    color: "#9333EA",
     colorSubtle: "rgba(192, 132, 252, 0.12)",
     colorBorder: "rgba(192, 132, 252, 0.25)",
     title: "AI-Assisted, Not Dependent",
@@ -93,8 +93,8 @@ const PLATFORM_FEATURES = [
 
 const TEAM = [
   { name: "Sanjay Murugadoss", role: "Founder & CEO", avatar: "SM", color: "#6366F1", badge: "Cybersecurity & AI" },
-  { name: "Priya R.", role: "Head of Curriculum", avatar: "PR", color: "#22D3EE", badge: "ML & Data Science" },
-  { name: "Karthik V.", role: "Platform Architect", avatar: "KV", color: "#C084FC", badge: "Systems & DevOps" },
+  { name: "Priya R.", role: "Head of Curriculum", avatar: "PR", color: "#0891B2", badge: "ML & Data Science" },
+  { name: "Karthik V.", role: "Platform Architect", avatar: "KV", color: "#9333EA", badge: "Systems & DevOps" },
   { name: "Ananya B.", role: "Head of Community", avatar: "AB", color: "#10B981", badge: "Learner Success" },
 ];
 
@@ -108,7 +108,7 @@ const MILESTONES = [
 
 export default function AboutPage() {
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO                                                          */}
@@ -118,13 +118,13 @@ export default function AboutPage() {
           position: "relative",
           padding: "5.5rem 0 4.5rem",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.2), transparent 70%)",
+          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.12), transparent 70%)",
         }}
       >
         <div className="hero-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0, opacity: 0.35 }} />
 
-        <div className="animate-float" style={{ position: "absolute", top: "10%", left: "5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
-        <div className="animate-float-medium" style={{ position: "absolute", top: "15%", right: "5%", width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle, rgba(34, 211, 238, 0.08), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float" style={{ position: "absolute", top: "10%", left: "5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(99, 102, 241, 0.06), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
+        <div className="animate-float-medium" style={{ position: "absolute", top: "15%", right: "5%", width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle, rgba(34, 211, 238, 0.06), transparent 70%)", zIndex: 0, pointerEvents: "none" }} />
 
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           {/* Breadcrumb */}
@@ -165,11 +165,11 @@ export default function AboutPage() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.75rem" }}>
                 {[
                   { value: "250K+", label: "Active Learners", color: "#FFFFFF" },
-                  { value: "500+", label: "Courses & Labs", color: "#22D3EE" },
-                  { value: "50+", label: "Expert Instructors", color: "#818CF8" },
+                  { value: "500+", label: "Courses & Labs", color: "#0891B2" },
+                  { value: "50+", label: "Expert Instructors", color: "#6366F1" },
                   { value: "95%", label: "Job Success Rate", color: "#10B981" },
                   { value: "30+", label: "Enterprise Clients", color: "#F59E0B" },
-                  { value: "4.9★", label: "Average Rating", color: "#C084FC" },
+                  { value: "4.9★", label: "Average Rating", color: "#9333EA" },
                 ].map((stat) => (
                   <div key={stat.label} style={{ textAlign: "center" }}>
                     <div className="stat-number" style={{ color: stat.color, marginBottom: "0.25rem" }}>{stat.value}</div>
@@ -214,7 +214,7 @@ export default function AboutPage() {
       {/* ============================================================ */}
       {/* PLATFORM FEATURES                                             */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "44rem", margin: "0 auto 3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Platform Capabilities</div>
@@ -264,7 +264,7 @@ export default function AboutPage() {
       {/* ============================================================ */}
       {/* TEAM                                                          */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>The Team</div>
@@ -280,7 +280,7 @@ export default function AboutPage() {
                 </div>
                 <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.25rem" }}>{member.name}</h3>
                 <p style={{ color: "#64748B", fontSize: "0.85rem", marginBottom: "0.75rem" }}>{member.role}</p>
-                <span style={{ display: "inline-flex", padding: "0.25rem 0.65rem", borderRadius: "9999px", background: "rgba(99,102,241,0.12)", border: "1px solid rgba(99,102,241,0.25)", color: "#818CF8", fontSize: "0.72rem", fontWeight: 600 }}>
+                <span style={{ display: "inline-flex", padding: "0.25rem 0.65rem", borderRadius: "9999px", background: "rgba(99,102,241,0.12)", border: "1px solid rgba(99,102,241,0.25)", color: "#6366F1", fontSize: "0.72rem", fontWeight: 600 }}>
                   {member.badge}
                 </span>
               </div>

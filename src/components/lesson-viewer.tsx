@@ -312,14 +312,14 @@ export function LessonViewer({
                   style={{
                     marginTop: "var(--space-4)",
                     padding: "var(--space-4)",
-                    background: "rgba(99, 102, 241, 0.1)",
+                    background: "rgba(99, 102, 241, 0.06)",
                     borderRadius: "var(--radius-md)",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     flexWrap: "wrap",
                     gap: "var(--space-3)",
-                    border: "1px solid rgba(99, 102, 241, 0.25)",
+                    border: "1px solid rgba(99, 102, 241, 0.15)",
                   }}
                 >
                   <div>

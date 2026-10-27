@@ -57,7 +57,7 @@ export function SignInForm({ next }: { next: string }) {
         alignItems: "center",
         justifyContent: "center",
         padding: "3rem 1.5rem",
-        background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15), transparent 70%), var(--bg, #060913)",
+        background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08), transparent 70%), var(--bg, #060913)",
       }}
     >
       <div
@@ -67,7 +67,7 @@ export function SignInForm({ next }: { next: string }) {
           padding: "2.5rem",
           borderRadius: "1.25rem",
           background: "var(--card-bg, rgba(10, 15, 29, 0.85))",
-          border: "1px solid var(--border-strong, rgba(255, 255, 255, 0.1))",
+          border: "1px solid var(--border-strong, rgba(0, 0, 0, 0.1))",
           boxShadow: "var(--card-shadow, 0 25px 50px -12px rgba(0, 0, 0, 0.7))",
           backdropFilter: "blur(16px)",
           textAlign: "center",
@@ -92,7 +92,7 @@ export function SignInForm({ next }: { next: string }) {
             Z
           </div>
           <span style={{ fontWeight: 800, fontSize: "1.15rem", letterSpacing: "-0.02em", color: "var(--text-strong, #FFFFFF)" }}>
-            Zentrion <span style={{ color: "#22D3EE", fontSize: "0.85rem", fontWeight: 600 }}>LEARNTECH</span>
+            Zentrion <span style={{ color: "#0891B2", fontSize: "0.85rem", fontWeight: 600 }}>LEARNTECH</span>
           </span>
         </div>
 
@@ -107,7 +107,7 @@ export function SignInForm({ next }: { next: string }) {
         <div
           style={{
             background: "rgba(99, 102, 241, 0.08)",
-            border: "1px solid rgba(99, 102, 241, 0.25)",
+            border: "1px solid rgba(99, 102, 241, 0.15)",
             borderRadius: "0.75rem",
             padding: "0.85rem",
             marginBottom: "1.5rem",
@@ -115,7 +115,7 @@ export function SignInForm({ next }: { next: string }) {
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-            <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#818CF8", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#6366F1", textTransform: "uppercase", letterSpacing: "0.05em" }}>
               ⚡ 1-Click Quick Demo Login
             </span>
             <span style={{ fontSize: "0.72rem", color: "var(--text-subtle, #64748B)" }}>Instant Access</span>
@@ -129,9 +129,9 @@ export function SignInForm({ next }: { next: string }) {
                 flex: 1,
                 padding: "0.45rem 0.6rem",
                 borderRadius: "0.4rem",
-                background: "rgba(99, 102, 241, 0.2)",
-                border: "1px solid rgba(99, 102, 241, 0.4)",
-                color: "#A5B4FC",
+                background: "rgba(99, 102, 241, 0.08)",
+                border: "1px solid rgba(99, 102, 241, 0.15)",
+                color: "#4338CA",
                 fontSize: "0.78rem",
                 fontWeight: 600,
                 cursor: loading ? "not-allowed" : "pointer",
@@ -220,7 +220,7 @@ export function SignInForm({ next }: { next: string }) {
               </label>
               <Link
                 href="/auth/forgot-password"
-                style={{ fontSize: "0.8rem", color: "#818CF8", textDecoration: "none" }}
+                style={{ fontSize: "0.8rem", color: "#6366F1", textDecoration: "none" }}
               >
                 Forgot password?
               </Link>
@@ -281,7 +281,7 @@ export function SignInForm({ next }: { next: string }) {
               fontSize: "1rem",
               border: "none",
               cursor: loading ? "not-allowed" : "pointer",
-              boxShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
+              boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
               marginTop: "0.25rem",
               transition: "opacity 0.2s ease",
             }}
@@ -300,9 +300,9 @@ export function SignInForm({ next }: { next: string }) {
             fontSize: "0.8rem",
           }}
         >
-          <div style={{ flex: 1, height: "1px", background: "var(--border, rgba(255, 255, 255, 0.08))" }} />
+          <div style={{ flex: 1, height: "1px", background: "var(--border, rgba(0, 0, 0, 0.08))" }} />
           <span style={{ padding: "0 0.75rem" }}>or continue with</span>
-          <div style={{ flex: 1, height: "1px", background: "var(--border, rgba(255, 255, 255, 0.08))" }} />
+          <div style={{ flex: 1, height: "1px", background: "var(--border, rgba(0, 0, 0, 0.08))" }} />
         </div>
 
         {/* Social Buttons */}
@@ -318,7 +318,7 @@ export function SignInForm({ next }: { next: string }) {
               padding: "0.65rem",
               borderRadius: "0.6rem",
               background: "var(--surface, rgba(15, 23, 42, 0.8))",
-              border: "1px solid var(--border, rgba(255, 255, 255, 0.1))",
+              border: "1px solid var(--border, rgba(0, 0, 0, 0.1))",
               color: "var(--text, #FFFFFF)",
               fontSize: "0.9rem",
               cursor: "pointer",
@@ -337,7 +337,7 @@ export function SignInForm({ next }: { next: string }) {
               padding: "0.65rem",
               borderRadius: "0.6rem",
               background: "var(--surface, rgba(15, 23, 42, 0.8))",
-              border: "1px solid var(--border, rgba(255, 255, 255, 0.1))",
+              border: "1px solid var(--border, rgba(0, 0, 0, 0.1))",
               color: "var(--text, #FFFFFF)",
               fontSize: "0.9rem",
               cursor: "pointer",
@@ -356,7 +356,7 @@ export function SignInForm({ next }: { next: string }) {
               padding: "0.65rem",
               borderRadius: "0.6rem",
               background: "var(--surface, rgba(15, 23, 42, 0.8))",
-              border: "1px solid var(--border, rgba(255, 255, 255, 0.1))",
+              border: "1px solid var(--border, rgba(0, 0, 0, 0.1))",
               color: "var(--text, #FFFFFF)",
               fontSize: "0.9rem",
               cursor: "pointer",
@@ -370,7 +370,7 @@ export function SignInForm({ next }: { next: string }) {
           Don&apos;t have an account?{" "}
           <Link
             href={`/auth/sign-up?next=${encodeURIComponent(next)}`}
-            style={{ color: "#818CF8", fontWeight: 600, textDecoration: "none" }}
+            style={{ color: "#6366F1", fontWeight: 600, textDecoration: "none" }}
           >
             Sign Up
           </Link>

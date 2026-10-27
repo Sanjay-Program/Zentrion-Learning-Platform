@@ -24,7 +24,7 @@ const CONTACT_CARDS = [
     title: "General Enquiries",
     value: "hello@zentrion.dev",
     href: "mailto:hello@zentrion.dev",
-    color: "#818CF8",
+    color: "#6366F1",
     desc: "We reply within 2 business days",
   },
   {
@@ -47,7 +47,7 @@ export default function ContactClientPage() {
   };
 
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO                                                          */}
@@ -118,7 +118,7 @@ export default function ContactClientPage() {
       {/* ============================================================ */}
       {/* CONTACT FORM + INFO                                          */}
       {/* ============================================================ */}
-      <section style={{ padding: "3rem 0 6rem", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "3rem 0 6rem", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(24rem, 1fr))", gap: "3rem", alignItems: "start" }}>
 
@@ -293,7 +293,7 @@ export default function ContactClientPage() {
                 <div style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.7 }}>
                   <strong style={{ color: "#FFFFFF" }}>Zentrion Learntech Pvt. Ltd.</strong><br />
                   India · Serving learners globally<br />
-                  <a href="mailto:support@zentrion.dev" style={{ color: "#818CF8", textDecoration: "none", fontWeight: 600 }}>support@zentrion.dev</a>
+                  <a href="mailto:support@zentrion.dev" style={{ color: "#6366F1", textDecoration: "none", fontWeight: 600 }}>support@zentrion.dev</a>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export default async function AppDashboardPage() {
   const displayName = user.displayName ? user.displayName.split(" ")[0] : "Alex";
 
   return (
-    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh", padding: "2.5rem 0 5rem", transition: "background 0.2s ease, color 0.2s ease" }}>
+    <div style={{ background: "var(--bg, #ffffff)", color: "var(--text, #F8FAFC)", minHeight: "100vh", padding: "2.5rem 0 5rem", transition: "background 0.2s ease, color 0.2s ease" }}>
       <div className="container">
         {/* Dashboard Title & Top Greeting */}
         <div style={{ marginBottom: "2rem" }}>
@@ -41,7 +41,7 @@ export default async function AppDashboardPage() {
               padding: "2rem 2.5rem",
               borderRadius: "1.25rem",
               background: "linear-gradient(135deg, rgba(99, 102, 241, 0.18) 0%, rgba(34, 211, 238, 0.1) 100%)",
-              border: "1px solid rgba(99, 102, 241, 0.35)",
+              border: "1px solid rgba(99, 102, 241, 0.2)",
               boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
               display: "flex",
               justifyContent: "space-between",
@@ -95,10 +95,10 @@ export default async function AppDashboardPage() {
               padding: "1.5rem",
               borderRadius: "1rem",
               background: "rgba(10, 15, 29, 0.8)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
             }}
           >
-            <div style={{ fontSize: "2rem", fontWeight: 900, color: "#22D3EE" }}>{totalCoursesCount}</div>
+            <div style={{ fontSize: "2rem", fontWeight: 900, color: "#0891B2" }}>{totalCoursesCount}</div>
             <div style={{ color: "#94A3B8", fontSize: "0.875rem", fontWeight: 600, marginTop: "0.25rem" }}>
               Courses in Progress
             </div>
@@ -109,10 +109,10 @@ export default async function AppDashboardPage() {
               padding: "1.5rem",
               borderRadius: "1rem",
               background: "rgba(10, 15, 29, 0.8)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
             }}
           >
-            <div style={{ fontSize: "2rem", fontWeight: 900, color: "#818CF8" }}>{completedLessonsCount}</div>
+            <div style={{ fontSize: "2rem", fontWeight: 900, color: "#6366F1" }}>{completedLessonsCount}</div>
             <div style={{ color: "#94A3B8", fontSize: "0.875rem", fontWeight: 600, marginTop: "0.25rem" }}>
               Completed Lessons
             </div>
@@ -123,7 +123,7 @@ export default async function AppDashboardPage() {
               padding: "1.5rem",
               borderRadius: "1rem",
               background: "rgba(10, 15, 29, 0.8)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
             }}
           >
             <div style={{ fontSize: "2rem", fontWeight: 900, color: "#10B981" }}>{certificatesCount}</div>
@@ -137,7 +137,7 @@ export default async function AppDashboardPage() {
               padding: "1.5rem",
               borderRadius: "1rem",
               background: "rgba(10, 15, 29, 0.8)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
+              border: "1px solid rgba(0, 0, 0, 0.08)",
             }}
           >
             <div style={{ fontSize: "2rem", fontWeight: 900, color: "#F59E0B" }}>45</div>
@@ -169,7 +169,7 @@ export default async function AppDashboardPage() {
                   padding: "1.75rem",
                   borderRadius: "1rem",
                   background: "rgba(10, 15, 29, 0.85)",
-                  border: "1px solid rgba(99, 102, 241, 0.3)",
+                  border: "1px solid rgba(99, 102, 241, 0.2)",
                   boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5)",
                 }}
               >
@@ -198,7 +198,7 @@ export default async function AppDashboardPage() {
                       <span style={{ fontSize: "0.85rem", color: "#94A3B8" }}>
                         Progress: {inProgress[0]?.percent || 60}%
                       </span>
-                      <span style={{ fontSize: "0.85rem", color: "#22D3EE", fontWeight: 600 }}>
+                      <span style={{ fontSize: "0.85rem", color: "#0891B2", fontWeight: 600 }}>
                         {inProgress[0]?.completedLessons || 6} / {inProgress[0]?.totalLessons || 10} lessons
                       </span>
                     </div>
@@ -209,7 +209,7 @@ export default async function AppDashboardPage() {
                         width: "100%",
                         height: "8px",
                         borderRadius: "9999px",
-                        background: "rgba(255, 255, 255, 0.1)",
+                        background: "rgba(0, 0, 0, 0.1)",
                         overflow: "hidden",
                         marginBottom: "1.25rem",
                       }}
@@ -250,7 +250,7 @@ export default async function AppDashboardPage() {
                 <h2 style={{ fontSize: "1.35rem", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>
                   Recommended For You
                 </h2>
-                <Link href="/courses" style={{ color: "#818CF8", fontSize: "0.85rem", textDecoration: "none" }}>
+                <Link href="/courses" style={{ color: "#6366F1", fontSize: "0.85rem", textDecoration: "none" }}>
                   View All →
                 </Link>
               </div>
@@ -263,7 +263,7 @@ export default async function AppDashboardPage() {
                       padding: "1.25rem",
                       borderRadius: "0.75rem",
                       background: "rgba(10, 15, 29, 0.75)",
-                      border: "1px solid rgba(255, 255, 255, 0.08)",
+                      border: "1px solid rgba(0, 0, 0, 0.08)",
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
@@ -282,9 +282,9 @@ export default async function AppDashboardPage() {
                       style={{
                         padding: "0.45rem 0.9rem",
                         borderRadius: "0.4rem",
-                        background: "rgba(99, 102, 241, 0.15)",
-                        border: "1px solid rgba(99, 102, 241, 0.3)",
-                        color: "#A5B4FC",
+                        background: "rgba(99, 102, 241, 0.08)",
+                        border: "1px solid rgba(99, 102, 241, 0.2)",
+                        color: "#4338CA",
                         fontSize: "0.85rem",
                         fontWeight: 600,
                         textDecoration: "none",
@@ -306,7 +306,7 @@ export default async function AppDashboardPage() {
                 padding: "1.75rem",
                 borderRadius: "1rem",
                 background: "rgba(10, 15, 29, 0.8)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
+                border: "1px solid rgba(0, 0, 0, 0.08)",
                 marginBottom: "2rem",
               }}
             >
@@ -323,13 +323,13 @@ export default async function AppDashboardPage() {
                     padding: "1rem",
                     borderRadius: "0.6rem",
                     background: "rgba(15, 23, 42, 0.6)",
-                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                    border: "1px solid rgba(0, 0, 0, 0.06)",
                   }}
                 >
                   <div style={{ fontWeight: 700, color: "#FFFFFF", fontSize: "0.9rem", marginBottom: "0.2rem" }}>
                     Build Your First AI Agent
                   </div>
-                  <div style={{ color: "#22D3EE", fontSize: "0.8rem", marginBottom: "0.75rem" }}>
+                  <div style={{ color: "#0891B2", fontSize: "0.8rem", marginBottom: "0.75rem" }}>
                     Today, 7:00 PM
                   </div>
                   <Link
@@ -354,7 +354,7 @@ export default async function AppDashboardPage() {
                     padding: "1rem",
                     borderRadius: "0.6rem",
                     background: "rgba(15, 23, 42, 0.6)",
-                    border: "1px solid rgba(255, 255, 255, 0.06)",
+                    border: "1px solid rgba(0, 0, 0, 0.06)",
                   }}
                 >
                   <div style={{ fontWeight: 700, color: "#FFFFFF", fontSize: "0.9rem", marginBottom: "0.2rem" }}>
@@ -369,8 +369,8 @@ export default async function AppDashboardPage() {
                       display: "inline-block",
                       padding: "0.4rem 0.85rem",
                       borderRadius: "0.4rem",
-                      background: "rgba(255, 255, 255, 0.08)",
-                      border: "1px solid rgba(255, 255, 255, 0.1)",
+                      background: "rgba(0, 0, 0, 0.08)",
+                      border: "1px solid rgba(0, 0, 0, 0.1)",
                       color: "#FFFFFF",
                       fontSize: "0.8rem",
                       fontWeight: 600,
@@ -389,7 +389,7 @@ export default async function AppDashboardPage() {
                 padding: "1.75rem",
                 borderRadius: "1rem",
                 background: "var(--card-bg, rgba(10, 15, 29, 0.8))",
-                border: "1px solid var(--border, rgba(255, 255, 255, 0.08))",
+                border: "1px solid var(--border, rgba(0, 0, 0, 0.08))",
                 boxShadow: "var(--card-shadow, 0 10px 30px rgba(0, 0, 0, 0.5))",
                 marginBottom: "1.5rem",
               }}
@@ -418,7 +418,7 @@ export default async function AppDashboardPage() {
                       padding: "0.7rem 0.9rem",
                       borderRadius: "0.5rem",
                       background: "var(--surface, rgba(15, 23, 42, 0.6))",
-                      border: "1px solid var(--border, rgba(255, 255, 255, 0.06))",
+                      border: "1px solid var(--border, rgba(0, 0, 0, 0.06))",
                       color: "var(--text, #E2E8F0)",
                       fontSize: "0.875rem",
                       fontWeight: 600,
@@ -433,8 +433,8 @@ export default async function AppDashboardPage() {
                         fontSize: "0.7rem",
                         padding: "0.15rem 0.45rem",
                         borderRadius: "0.3rem",
-                        background: "rgba(99, 102, 241, 0.15)",
-                        color: "#A5B4FC",
+                        background: "rgba(99, 102, 241, 0.08)",
+                        color: "#4338CA",
                         fontWeight: 600,
                       }}
                     >
@@ -450,7 +450,7 @@ export default async function AppDashboardPage() {
               style={{
                 padding: "1.5rem",
                 borderRadius: "1rem",
-                background: "linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(34, 211, 238, 0.08))",
+                background: "linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(34, 211, 238, 0.06))",
                 border: "1px solid rgba(37, 211, 102, 0.3)",
                 boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)",
               }}
@@ -495,7 +495,7 @@ export default async function AppDashboardPage() {
                     gap: "0.5rem",
                     padding: "0.55rem 1rem",
                     borderRadius: "0.5rem",
-                    background: "rgba(255, 255, 255, 0.08)",
+                    background: "rgba(0, 0, 0, 0.08)",
                     border: "1px solid var(--border, rgba(255, 255, 255, 0.15))",
                     color: "var(--text, #E2E8F0)",
                     fontSize: "0.85rem",

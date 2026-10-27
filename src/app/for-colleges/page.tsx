@@ -8,7 +8,7 @@ export const metadata = {
 const FEATURES = [
   {
     icon: "🏛️",
-    color: "#22D3EE",
+    color: "#0891B2",
     colorSubtle: "rgba(34,211,238,0.12)",
     colorBorder: "rgba(34,211,238,0.25)",
     title: "Organisation Portals",
@@ -16,7 +16,7 @@ const FEATURES = [
   },
   {
     icon: "👥",
-    color: "#818CF8",
+    color: "#6366F1",
     colorSubtle: "rgba(129,140,248,0.12)",
     colorBorder: "rgba(129,140,248,0.25)",
     title: "Cohort Management",
@@ -24,7 +24,7 @@ const FEATURES = [
   },
   {
     icon: "📨",
-    color: "#C084FC",
+    color: "#9333EA",
     colorSubtle: "rgba(192,132,252,0.12)",
     colorBorder: "rgba(192,132,252,0.25)",
     title: "Bulk Invitations",
@@ -56,7 +56,7 @@ const FEATURES = [
   },
   {
     icon: "🔬",
-    color: "#22D3EE",
+    color: "#0891B2",
     colorSubtle: "rgba(34,211,238,0.12)",
     colorBorder: "rgba(34,211,238,0.25)",
     title: "In-Browser Labs",
@@ -64,7 +64,7 @@ const FEATURES = [
   },
   {
     icon: "🤖",
-    color: "#818CF8",
+    color: "#6366F1",
     colorSubtle: "rgba(129,140,248,0.12)",
     colorBorder: "rgba(129,140,248,0.25)",
     title: "AI-Powered Tutor",
@@ -108,14 +108,14 @@ const TESTIMONIALS = [
     name: "Prof. Rajiv N.",
     role: "Dean — Technology, Manipal Institute",
     initials: "RN",
-    color: "#22D3EE",
+    color: "#0891B2",
   },
   {
     quote: "Our placement rate jumped from 72% to 91% after integrating Zentrion's AI and Cybersecurity tracks. The certificates are recognised by our top hiring partners.",
     name: "Dr. Kavitha P.",
     role: "Director — NIIT University",
     initials: "KP",
-    color: "#C084FC",
+    color: "#9333EA",
   },
 ];
 
@@ -128,7 +128,7 @@ const STATS = [
 
 export default function ForCollegesPage() {
   return (
-    <div style={{ background: "#060913", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO                                                          */}
@@ -138,7 +138,7 @@ export default function ForCollegesPage() {
           position: "relative",
           padding: "5.5rem 0 4.5rem",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(34, 211, 238, 0.18), transparent 70%), radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.12), transparent 50%)",
+          background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(34, 211, 238, 0.18), transparent 70%), radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.08), transparent 50%)",
         }}
       >
         <div className="hero-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0, opacity: 0.35 }} />
@@ -189,7 +189,7 @@ export default function ForCollegesPage() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem" }}>
               {STATS.map((s) => (
                 <div key={s.label} className="holo-card" style={{ padding: "2rem", textAlign: "center" }}>
-                  <div className="stat-number" style={{ color: "#22D3EE", marginBottom: "0.4rem" }}>{s.value}</div>
+                  <div className="stat-number" style={{ color: "#0891B2", marginBottom: "0.4rem" }}>{s.value}</div>
                   <div style={{ color: "#64748B", fontSize: "0.8rem", fontWeight: 500 }}>{s.label}</div>
                 </div>
               ))}
@@ -230,7 +230,7 @@ export default function ForCollegesPage() {
       {/* ============================================================ */}
       {/* HOW IT WORKS (Timeline)                                       */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container" style={{ maxWidth: "56rem" }}>
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Deployment Process</div>
@@ -285,7 +285,7 @@ export default function ForCollegesPage() {
       {/* ============================================================ */}
       {/* CURRICULUM PACKAGES                                           */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#060913", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Curriculum Tracks</div>
@@ -305,7 +305,7 @@ export default function ForCollegesPage() {
               <div key={track.title} className="holo-card" style={{ padding: "1.75rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1rem" }}>
                   <span style={{ fontSize: "1.75rem" }}>{track.icon}</span>
-                  <span style={{ padding: "0.2rem 0.55rem", borderRadius: "9999px", background: "rgba(34,211,238,0.1)", border: "1px solid rgba(34,211,238,0.25)", color: "#22D3EE", fontSize: "0.7rem", fontWeight: 700 }}>
+                  <span style={{ padding: "0.2rem 0.55rem", borderRadius: "9999px", background: "rgba(34,211,238,0.1)", border: "1px solid rgba(34,211,238,0.25)", color: "#0891B2", fontSize: "0.7rem", fontWeight: 700 }}>
                     {track.badge}
                   </span>
                 </div>
