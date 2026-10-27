@@ -251,6 +251,20 @@ export default async function HomePage() {
 
   return (
     <div style={{ background: "var(--bg, #ffffff)", color: "var(--text, #0f172a)", minHeight: "100vh", transition: "background 0.2s ease, color 0.2s ease" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            name: "Zentrion Learntech",
+            url: process.env.APP_BASE_URL || "https://zentrion.example.com",
+            description:
+              "Integrated AI and practical-skills learning platform with courses, labs, and projects.",
+            sameAs: [],
+          }),
+        }}
+      />
       {/* ======================================================== */}
       {/* 1. HERO SECTION (Mockup Left Text + Right Hologram Card) */}
       {/* ======================================================== */}
