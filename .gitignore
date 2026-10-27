@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+
+# OpenNext (Cloudflare)
+.open-next/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Local data & storage
+data/
+storage/
+logs/
+*.log
+
+# Test
+coverage/
+.vitest/
+*.lcov
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+.turbo/
+.vercel/
+.wrangler/
+EOF

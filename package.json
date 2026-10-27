@@ -1,0 +1,46 @@
+{
+  "name": "zention-learningplatform",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cf-typegen": "wrangler types --env=production",
+    "cf-dev": "opennextjs-cloudflare preview --port 3001",
+    "cf-build": "opennextjs-cloudflare build cloudflare --dangerouslyUseUnsupportedNextVersion",
+    "deploy": "opennextjs-cloudflare build cloudflare --dangerouslyUseUnsupportedNextVersion && opennextjs-cloudflare deploy",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:dump-sql": "tsx scripts/dump-seed-sql.ts",
+    "db:seed:cf": "npm run db:dump-sql | npx wrangler d1 execute zention-db --remote --file=/dev/stdin",
+    "db:migrate:cf": "wrangler d1 migrations apply zention-db --remote",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.15.2",
+    "@opennextjs/cloudflare": "^1.9.5",
+    "@types/qrcode": "^1.5.6",
+    "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^0.44.2",
+    "esbuild": "^0.28.2",
+    "next": "^15.3.3",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.15.14",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "drizzle-kit": "^0.31.11",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3",
+    "wrangler": "^4.149.0"
+  }
+}

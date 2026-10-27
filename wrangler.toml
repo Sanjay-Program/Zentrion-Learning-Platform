@@ -1,0 +1,52 @@
+# Cloudflare Workers configuration for Zentrion Learntech (OpenNext)
+# Deploy with: npm run deploy
+# Local CF dev: npm run cf-dev
+
+name = "zention-learn"
+compatibility_date = "2025-05-14"
+
+# OpenNext builds the Worker entry into .open-next/worker.js
+main = "./.open-next/worker.js"
+
+[vars]
+APP_ENV = "production"
+APP_BASE_URL = "https://zention.example.com"
+# AI provider (OpenAI-compatible). Set values as secrets via wrangler:
+#   wrangler secret put AI_API_KEY
+AI_PROVIDER = "none"
+AI_BASE_URL = "https://api.openai.com/v1"
+AI_DEFAULT_MODEL = "gpt-4o-mini"
+AI_EMBEDDING_MODEL = "text-embedding-3-small"
+AI_MAX_TOKENS_PER_DAY = "50000"
+
+LAB_EXECUTOR = "simulated"
+LAB_MAX_SESSION_MINUTES = "120"
+
+STORAGE_BACKEND = "r2" # r2 in production, local in development
+
+# --- D1 database (production) ---
+[[d1_databases]]
+binding = "DB"
+database_name = "zention-db"
+database_id = "replace-with-your-d1-id"
+preview_database_id = "replace-with-preview-d1-id"
+migrations_dir = "./drizzle"
+
+# --- R2 object storage ---
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "zention-assets"
+preview_bucket_name = "zention-assets-dev"
+
+# --- KV for caching (optional) ---
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "replace-with-kv-id"
+
+[dev]
+port = 8000
+ip = "127.0.0.1"
+
+# Secret names (set via wrangler, never commit values):
+#   APP_SECRET_KEY, AI_API_KEY, SMTP_HOST, SMTP_USERNAME, SMTP_PASSWORD,
+#   STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
