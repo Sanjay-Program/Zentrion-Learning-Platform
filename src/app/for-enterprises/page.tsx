@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Zentrion for Enterprises — Corporate AI & Cybersecurity Training",
+  title: "For Enterprises",
   description: "Upskill your entire workforce in AI, Cybersecurity, and Future Tech. Custom LMS, team analytics, SSO integration, and dedicated success management for enterprise teams.",
 };
 

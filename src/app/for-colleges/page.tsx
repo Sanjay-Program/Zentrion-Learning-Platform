@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Zentrion for Colleges & Universities — Institutional Learning Platform",
+  title: "For Colleges & Universities",
   description: "Deploy Zentrion across your campus. Cohort management, AI-powered labs, bulk invitations, skills-gap analytics, and audit-ready compliance reports for universities and colleges.",
 };
 
@@ -121,7 +121,7 @@ const TESTIMONIALS = [
 
 const STATS = [
   { value: "50+", label: "Partner Institutions" },
-  { value: "2,500+", label: "Avg Students/Campus" },
+  { value: "Scalable", label: "Avg Students/Campus" },
   { value: "40%", label: "Placement Rate Lift" },
   { value: "60%", label: "Lab Cost Reduction" },
 ];

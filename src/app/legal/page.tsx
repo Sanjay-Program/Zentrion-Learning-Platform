@@ -2,7 +2,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Legal — Zentrion",
+  title: "Legal",
 };
 
 export default function LegalIndexPage() {

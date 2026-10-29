@@ -1,6 +1,6 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
-export const metadata = { title: "Cookie Policy — Zentrion" };
+export const metadata = { title: "Cookie Policy" };
 
 export default function CookiesPage() {
   return (

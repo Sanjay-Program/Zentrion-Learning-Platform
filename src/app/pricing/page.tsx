@@ -5,7 +5,7 @@ import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Zentrion Learntech",
+  title: "Pricing",
   description: "Transparent pricing for AI, Cybersecurity & Future-Tech learning. Free tier, individual courses, and Pro plans available.",
 };
 
@@ -14,7 +14,7 @@ const FEATURES_COMPARE = [
   { feature: "Hands-on browser labs", free: true, pro: true, enterprise: true },
   { feature: "AI Tutor (basic)", free: true, pro: true, enterprise: true },
   { feature: "Community forums", free: true, pro: true, enterprise: true },
-  { feature: "All premium courses (500+)", free: false, pro: true, enterprise: true },
+  { feature: "All premium courses (7+)", free: false, pro: true, enterprise: true },
   { feature: "Unlimited lab sessions", free: false, pro: true, enterprise: true },
   { feature: "Live masterclass access", free: false, pro: true, enterprise: true },
   { feature: "Downloadable resources", free: false, pro: true, enterprise: true },
@@ -82,7 +82,7 @@ export default async function PricingPage() {
   const paidCourses = paidCourseProducts.filter((c) => c.amountCents > 0);
 
   return (
-    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "#ffffff", color: "#0f172a", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}
@@ -112,7 +112,7 @@ export default async function PricingPage() {
             style={{
               fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
               fontWeight: 900,
-              color: "#FFFFFF",
+              color: "#0f172a",
               letterSpacing: "-0.03em",
               lineHeight: 1.1,
               marginBottom: "1.25rem",
@@ -123,14 +123,14 @@ export default async function PricingPage() {
               AI Future
             </span>
           </h1>
-          <p style={{ fontSize: "1.15rem", color: "#94A3B8", maxWidth: "40rem", margin: "0 auto 2rem", lineHeight: 1.65 }}>
+          <p style={{ fontSize: "1.15rem", color: "#475569", maxWidth: "40rem", margin: "0 auto 2rem", lineHeight: 1.65 }}>
             Hundreds of free lessons, no credit card needed. Upgrade anytime for unlimited premium access, live classes, certificates and AI-powered mentorship.
           </p>
 
           {/* Trust micro-badges */}
           <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap", marginBottom: "1rem" }}>
             {["✅ Cancel anytime", "🔒 Secure payments", "🎓 Verifiable certificates", "⚡ Instant access"].map((item) => (
-              <span key={item} style={{ fontSize: "0.85rem", color: "#94A3B8", fontWeight: 500 }}>{item}</span>
+              <span key={item} style={{ fontSize: "0.85rem", color: "#475569", fontWeight: 500 }}>{item}</span>
             ))}
           </div>
         </div>
@@ -151,13 +151,13 @@ export default async function PricingPage() {
                 <div className="icon-box icon-box-cyan" style={{ marginBottom: "1rem" }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" strokeWidth="2"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M12 8v4l3 3"/></svg>
                 </div>
-                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF", marginBottom: "0.35rem" }}>Free Tier</h2>
-                <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Get started with hundreds of free lessons. No card needed.</p>
+                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a", marginBottom: "0.35rem" }}>Free Tier</h2>
+                <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Get started with hundreds of free lessons. No card needed.</p>
               </div>
 
               <div style={{ marginBottom: "2rem" }}>
-                <span style={{ fontSize: "3rem", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.04em" }}>₹0</span>
-                <span style={{ color: "#64748B", fontSize: "0.9rem", marginLeft: "0.4rem" }}>forever</span>
+                <span style={{ fontSize: "3rem", fontWeight: 900, color: "#0f172a", letterSpacing: "-0.04em" }}>₹0</span>
+                <span style={{ color: "#64748b", fontSize: "0.9rem", marginLeft: "0.4rem" }}>forever</span>
               </div>
 
               <div style={{ marginBottom: "2rem" }}>
@@ -170,7 +170,7 @@ export default async function PricingPage() {
                 ].map((f) => (
                   <div className="feature-check" key={f}>
                     <div className="feature-check-icon">✓</div>
-                    <span style={{ color: "#CBD5E1", fontSize: "0.9rem" }}>{f}</span>
+                    <span style={{ color: "#334155", fontSize: "0.9rem" }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -184,7 +184,7 @@ export default async function PricingPage() {
                   borderRadius: "0.75rem",
                   background: "transparent",
                   border: "1px solid rgba(255, 255, 255, 0.15)",
-                  color: "#F8FAFC",
+                  color: "#0f172a",
                   fontWeight: 700,
                   textDecoration: "none",
                   transition: "all 0.2s ease",
@@ -214,13 +214,13 @@ export default async function PricingPage() {
                   <div className="icon-box" style={{ marginBottom: "1rem" }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818CF8" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                   </div>
-                  <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF", marginBottom: "0.35rem" }}>{sub.name}</h2>
-                  <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Full access to every course, lab, live session and AI tool.</p>
+                  <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a", marginBottom: "0.35rem" }}>{sub.name}</h2>
+                  <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Full access to every course, lab, live session and AI tool.</p>
                 </div>
 
                 <div style={{ marginBottom: "2rem" }}>
-                  <span style={{ fontSize: "3rem", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.04em" }}>{formatPrice(sub.amountCents)}</span>
-                  <span style={{ color: "#64748B", fontSize: "0.9rem", marginLeft: "0.4rem" }}>/ {sub.interval === "year" ? "year" : "month"}</span>
+                  <span style={{ fontSize: "3rem", fontWeight: 900, color: "#0f172a", letterSpacing: "-0.04em" }}>{formatPrice(sub.amountCents)}</span>
+                  <span style={{ color: "#64748b", fontSize: "0.9rem", marginLeft: "0.4rem" }}>/ {sub.interval === "year" ? "year" : "month"}</span>
                   {sub.interval === "year" && (
                     <div style={{ marginTop: "0.35rem", fontSize: "0.8rem", color: "#10B981", fontWeight: 600 }}>
                       🎉 Save 40% vs monthly billing
@@ -230,7 +230,7 @@ export default async function PricingPage() {
 
                 <div style={{ marginBottom: "2rem" }}>
                   {[
-                    "All 500+ premium courses",
+                    "All premium courses",
                     "Unlimited lab sessions",
                     "Live masterclasses & recordings",
                     "AI Tutor with advanced RAG",
@@ -241,7 +241,7 @@ export default async function PricingPage() {
                   ].map((f) => (
                     <div className="feature-check" key={f}>
                       <div className="feature-check-icon">✓</div>
-                      <span style={{ color: "#CBD5E1", fontSize: "0.9rem" }}>{f}</span>
+                      <span style={{ color: "#334155", fontSize: "0.9rem" }}>{f}</span>
                     </div>
                   ))}
                 </div>
@@ -254,7 +254,7 @@ export default async function PricingPage() {
                     padding: "0.9rem 1.5rem",
                     borderRadius: "0.75rem",
                     background: "linear-gradient(135deg, #6366F1, #8B5CF6)",
-                    color: "#FFFFFF",
+                    color: "#0f172a",
                     fontWeight: 700,
                     textDecoration: "none",
                     boxShadow: "0 0 25px rgba(99, 102, 241, 0.3)",
@@ -277,19 +277,19 @@ export default async function PricingPage() {
                   <div className="icon-box" style={{ marginBottom: "1rem" }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818CF8" strokeWidth="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                   </div>
-                  <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF", marginBottom: "0.35rem" }}>Zentrion Pro</h2>
-                  <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Full access to every course, lab, live session and AI tool.</p>
+                  <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a", marginBottom: "0.35rem" }}>Zentrion Pro</h2>
+                  <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>Full access to every course, lab, live session and AI tool.</p>
                 </div>
                 <div style={{ marginBottom: "2rem" }}>
-                  <span style={{ fontSize: "3rem", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.04em" }}>₹4,999</span>
-                  <span style={{ color: "#64748B", fontSize: "0.9rem", marginLeft: "0.4rem" }}>/month</span>
+                  <span style={{ fontSize: "3rem", fontWeight: 900, color: "#0f172a", letterSpacing: "-0.04em" }}>₹4,999</span>
+                  <span style={{ color: "#64748b", fontSize: "0.9rem", marginLeft: "0.4rem" }}>/month</span>
                 </div>
                 <div style={{ marginBottom: "2rem" }}>
-                  {["All 500+ premium courses", "Unlimited lab sessions", "Live masterclasses", "AI Tutor advanced", "Industry certificates", "Portfolio builder", "Priority support"].map((f) => (
-                    <div className="feature-check" key={f}><div className="feature-check-icon">✓</div><span style={{ color: "#CBD5E1", fontSize: "0.9rem" }}>{f}</span></div>
+                  {["All premium courses", "Unlimited lab sessions", "Live masterclasses", "AI Tutor advanced", "Industry certificates", "Portfolio builder", "Priority support"].map((f) => (
+                    <div className="feature-check" key={f}><div className="feature-check-icon">✓</div><span style={{ color: "#334155", fontSize: "0.9rem" }}>{f}</span></div>
                   ))}
                 </div>
-                <Link href="/contact" style={{ display: "block", textAlign: "center", padding: "0.9rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#fff", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 25px rgba(99,102,241,0.5)" }}>
+                <Link href="/contact" style={{ display: "block", textAlign: "center", padding: "0.9rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#fff", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 8px rgba(99,102,241,0.1)" }}>
                   Contact for Access →
                 </Link>
               </div>
@@ -301,13 +301,13 @@ export default async function PricingPage() {
                 <div className="icon-box icon-box-amber" style={{ marginBottom: "1rem" }}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                 </div>
-                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF", marginBottom: "0.35rem" }}>Enterprise</h2>
-                <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>For colleges, corporates, and teams of 10+. Custom SLAs and admin tools.</p>
+                <h2 style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a", marginBottom: "0.35rem" }}>Enterprise</h2>
+                <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: 1.5, margin: 0 }}>For colleges, corporates, and teams of 10+. Custom SLAs and admin tools.</p>
               </div>
 
               <div style={{ marginBottom: "2rem" }}>
-                <span style={{ fontSize: "2.25rem", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.03em" }}>Custom</span>
-                <div style={{ color: "#64748B", fontSize: "0.85rem", marginTop: "0.25rem" }}>Talk to us for a tailored quote</div>
+                <span style={{ fontSize: "2.25rem", fontWeight: 900, color: "#0f172a", letterSpacing: "-0.03em" }}>Custom</span>
+                <div style={{ color: "#64748b", fontSize: "0.85rem", marginTop: "0.25rem" }}>Talk to us for a tailored quote</div>
               </div>
 
               <div style={{ marginBottom: "2rem" }}>
@@ -323,7 +323,7 @@ export default async function PricingPage() {
                 ].map((f) => (
                   <div className="feature-check" key={f}>
                     <div className="feature-check-icon" style={{ background: "rgba(245, 158, 11, 0.15)", borderColor: "rgba(245, 158, 11, 0.4)", color: "#F59E0B" }}>✓</div>
-                    <span style={{ color: "#CBD5E1", fontSize: "0.9rem" }}>{f}</span>
+                    <span style={{ color: "#334155", fontSize: "0.9rem" }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -355,20 +355,20 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* FEATURE COMPARISON TABLE                                     */}
       {/* ============================================================ */}
-      <section style={{ padding: "4rem 0 5rem", background: "#0A0F1D", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "4rem 0 5rem", background: "#f8fafc", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Full Feature Comparison</div>
-            <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#FFFFFF", margin: "1rem 0 0.5rem" }}>What&apos;s Included in Each Plan</h2>
-            <p style={{ color: "#94A3B8" }}>Compare every feature across Free, Pro, and Enterprise.</p>
+            <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#0f172a", margin: "1rem 0 0.5rem" }}>What&apos;s Included in Each Plan</h2>
+            <p style={{ color: "#475569" }}>Compare every feature across Free, Pro, and Enterprise.</p>
           </div>
 
-          <div style={{ overflowX: "auto", borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 20px 60px rgba(0,0,0,0.4)" }}>
-            <table className="compare-table" style={{ width: "100%", borderCollapse: "collapse", background: "rgba(10,15,29,0.9)" }}>
+          <div style={{ overflowX: "auto", borderRadius: "1.25rem", border: "1px solid rgba(0,0,0,0.08)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}>
+            <table className="compare-table" style={{ width: "100%", borderCollapse: "collapse", background: "rgba(255,255,255,0.9)" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-                  <th style={{ padding: "1.25rem 1.5rem", textAlign: "left", color: "#FFFFFF", fontWeight: 700, fontSize: "1rem" }}>Feature</th>
-                  <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#94A3B8", fontWeight: 700, fontSize: "0.9rem", minWidth: 100 }}>Free</th>
+                  <th style={{ padding: "1.25rem 1.5rem", textAlign: "left", color: "#0f172a", fontWeight: 700, fontSize: "1rem" }}>Feature</th>
+                  <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#475569", fontWeight: 700, fontSize: "0.9rem", minWidth: 100 }}>Free</th>
                   <th style={{ padding: "1.25rem 1rem", textAlign: "center", color: "#6366F1", fontWeight: 700, fontSize: "0.9rem", minWidth: 100, background: "rgba(99,102,241,0.06)" }}>
                     Pro ⚡
                   </th>
@@ -378,7 +378,7 @@ export default async function PricingPage() {
               <tbody>
                 {FEATURES_COMPARE.map((row, i) => (
                   <tr key={row.feature} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.015)" }}>
-                    <td style={{ padding: "0.9rem 1.5rem", color: "#CBD5E1", fontSize: "0.9rem" }}>{row.feature}</td>
+                    <td style={{ padding: "0.9rem 1.5rem", color: "#334155", fontSize: "0.9rem" }}>{row.feature}</td>
                     <td style={{ padding: "0.9rem 1rem", textAlign: "center" }}>
                       <span className={row.free ? "compare-check" : "compare-dash"}>{row.free ? "✓" : "—"}</span>
                     </td>
@@ -400,22 +400,22 @@ export default async function PricingPage() {
       {/* INDIVIDUAL COURSE PURCHASES (if any)                         */}
       {/* ============================================================ */}
       {paidCourses.length > 0 && (
-        <section style={{ padding: "4rem 0 5rem", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <section style={{ padding: "4rem 0 5rem", background: "#ffffff", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
           <div className="container">
             <div style={{ marginBottom: "2.5rem" }}>
               <div className="section-eyebrow" style={{ display: "inline-flex" }}>À La Carte</div>
-              <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#FFFFFF", margin: "1rem 0 0.5rem" }}>Individual Course Purchases</h2>
-              <p style={{ color: "#94A3B8" }}>Own these courses outright — one-time payment, lifetime access, no subscription needed.</p>
+              <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#0f172a", margin: "1rem 0 0.5rem" }}>Individual Course Purchases</h2>
+              <p style={{ color: "#475569" }}>Own these courses outright — one-time payment, lifetime access, no subscription needed.</p>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 1fr))", gap: "1.25rem" }}>
               {paidCourses.map((c) => (
                 <div key={c.slug} className="holo-card" style={{ padding: "1.75rem", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
                   <div>
-                    <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.25rem" }}>{c.name}</h3>
-                    <p style={{ color: "#94A3B8", fontSize: "0.8rem", margin: 0 }}>Lifetime access · Certificate included</p>
+                    <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#0f172a", marginBottom: "0.25rem" }}>{c.name}</h3>
+                    <p style={{ color: "#475569", fontSize: "0.8rem", margin: 0 }}>Lifetime access · Certificate included</p>
                   </div>
                   <div style={{ textAlign: "right", flexShrink: 0 }}>
-                    <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#FFFFFF" }}>{formatPrice(c.amountCents)}</div>
+                    <div style={{ fontSize: "1.35rem", fontWeight: 800, color: "#0f172a" }}>{formatPrice(c.amountCents)}</div>
                     <Link href={`/courses/${c.slug}`} style={{ color: "#6366F1", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>View course →</Link>
                   </div>
                 </div>
@@ -428,7 +428,7 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* TRUST SECTION                                                 */}
       {/* ============================================================ */}
-      <section style={{ padding: "4rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "4rem 0", background: "#f8fafc", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))", gap: "1.5rem" }}>
             {[
@@ -437,11 +437,11 @@ export default async function PricingPage() {
               { icon: "♻️", title: "Cancel Anytime", desc: "No lock-in contracts. Cancel your subscription instantly from your account settings." },
               { icon: "🌍", title: "Global Access", desc: "Learn from anywhere. Platform available 24/7 with 99.9% uptime SLA." },
             ].map((item) => (
-              <div key={item.title} style={{ display: "flex", gap: "1rem", alignItems: "flex-start", padding: "1.5rem", borderRadius: "1rem", background: "rgba(10,15,29,0.7)", border: "1px solid rgba(255,255,255,0.06)" }}>
+              <div key={item.title} style={{ display: "flex", gap: "1rem", alignItems: "flex-start", padding: "1.5rem", borderRadius: "1rem", background: "rgba(255,255,255,0.7)", border: "1px solid rgba(0,0,0,0.06)" }}>
                 <span style={{ fontSize: "1.75rem", flexShrink: 0 }}>{item.icon}</span>
                 <div>
-                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.35rem" }}>{item.title}</h3>
-                  <p style={{ color: "#94A3B8", fontSize: "0.85rem", lineHeight: 1.55, margin: 0 }}>{item.desc}</p>
+                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#0f172a", marginBottom: "0.35rem" }}>{item.title}</h3>
+                  <p style={{ color: "#475569", fontSize: "0.85rem", lineHeight: 1.55, margin: 0 }}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -452,28 +452,28 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* FAQ SECTION                                                   */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="container" style={{ maxWidth: "52rem" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>FAQ</div>
-            <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#FFFFFF", margin: "1rem 0 0.5rem" }}>Frequently Asked Questions</h2>
-            <p style={{ color: "#94A3B8" }}>Everything you need to know before getting started.</p>
+            <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "#0f172a", margin: "1rem 0 0.5rem" }}>Frequently Asked Questions</h2>
+            <p style={{ color: "#475569" }}>Everything you need to know before getting started.</p>
           </div>
 
-          <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: "1.25rem", background: "rgba(10,15,29,0.85)", overflow: "hidden" }}>
+          <div style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: "1.25rem", background: "rgba(255,255,255,0.85)", overflow: "hidden" }}>
             {FAQS.map((faq, i) => (
               <div key={faq.q} style={{ padding: "1.5rem 2rem", borderBottom: i < FAQS.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
-                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#FFFFFF", margin: 0, lineHeight: 1.4 }}>{faq.q}</h3>
+                  <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#0f172a", margin: 0, lineHeight: 1.4 }}>{faq.q}</h3>
                   <span style={{ color: "#6366F1", fontWeight: 700, flexShrink: 0, marginTop: "1px" }}>+</span>
                 </div>
-                <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.65, margin: "0.75rem 0 0" }}>{faq.a}</p>
+                <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: 1.65, margin: "0.75rem 0 0" }}>{faq.a}</p>
               </div>
             ))}
           </div>
 
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <p style={{ color: "#94A3B8", fontSize: "0.9rem" }}>
+            <p style={{ color: "#475569", fontSize: "0.9rem" }}>
               Still have questions?{" "}
               <a href="https://wa.me/917305771789" target="_blank" rel="noopener noreferrer" style={{ color: "#25D366", fontWeight: 600, textDecoration: "none" }}>
                 Chat with us on WhatsApp →
@@ -486,20 +486,20 @@ export default async function PricingPage() {
       {/* ============================================================ */}
       {/* BOTTOM CTA                                                    */}
       {/* ============================================================ */}
-      <section style={{ padding: "5rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "#f8fafc", borderTop: "1px solid rgba(0,0,0,0.06)" }}>
         <div className="container">
-          <div style={{ textAlign: "center", padding: "4rem 2rem", borderRadius: "1.5rem", background: "linear-gradient(135deg, rgba(99,102,241,0.15), rgba(34,211,238,0.08))", border: "1px solid rgba(99,102,241,0.3)", boxShadow: "0 20px 60px rgba(0,0,0,0.4)" }}>
-            <h2 style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 900, color: "#FFFFFF", marginBottom: "1rem" }}>
+          <div style={{ textAlign: "center", padding: "4rem 2rem", borderRadius: "1.5rem", background: "linear-gradient(135deg, rgba(99,102,241,0.15), rgba(34,211,238,0.08))", border: "1px solid rgba(99,102,241,0.3)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}>
+            <h2 style={{ fontSize: "clamp(2rem, 4vw, 2.75rem)", fontWeight: 900, color: "#0f172a", marginBottom: "1rem" }}>
               Start Learning for Free Today
             </h2>
-            <p style={{ color: "#94A3B8", fontSize: "1.1rem", maxWidth: "34rem", margin: "0 auto 2rem", lineHeight: 1.65 }}>
-              Join 250,000+ learners. No credit card required. Upgrade to Pro when you&apos;re ready.
+            <p style={{ color: "#475569", fontSize: "1.1rem", maxWidth: "34rem", margin: "0 auto 2rem", lineHeight: 1.65 }}>
+              Join thousands of learners. No credit card required. Upgrade to Pro when you&apos;re ready.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/auth/sign-up" style={{ padding: "0.9rem 2rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#fff", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 25px rgba(99,102,241,0.5)", fontSize: "1rem" }}>
+              <Link href="/auth/sign-up" style={{ padding: "0.9rem 2rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#fff", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 8px rgba(99,102,241,0.1)", fontSize: "1rem" }}>
                 Create Free Account
               </Link>
-              <Link href="/courses" style={{ padding: "0.9rem 2rem", borderRadius: "0.75rem", background: "rgba(15,23,42,0.6)", border: "1px solid rgba(255,255,255,0.15)", color: "#F8FAFC", fontWeight: 600, textDecoration: "none", fontSize: "1rem" }}>
+              <Link href="/courses" style={{ padding: "0.9rem 2rem", borderRadius: "0.75rem", background: "rgba(248,250,252,0.6)", border: "1px solid rgba(0,0,0,0.15)", color: "#0f172a", fontWeight: 600, textDecoration: "none", fontSize: "1rem" }}>
                 Browse Courses
               </Link>
             </div>

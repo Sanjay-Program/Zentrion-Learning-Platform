@@ -3,8 +3,8 @@ import { CourseCard, Pagination } from "@/components/ui";
 import Link from "next/link";
 
 export const metadata = {
-  title: "All Courses — Zentrion Learntech",
-  description: "Browse 500+ AI, Cybersecurity, Data Science, and Future-Tech courses. Filter by level, category, and topic to find your perfect learning path.",
+  title: "All Courses",
+  description: "Browse AI, Cybersecurity, Data Science, and Future-Tech courses. Filter by level, category, and topic to find your perfect learning path.",
 };
 
 const LEVELS = ["beginner", "intermediate", "advanced"];

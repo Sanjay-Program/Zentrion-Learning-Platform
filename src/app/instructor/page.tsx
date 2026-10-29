@@ -5,7 +5,7 @@ import { Breadcrumbs, Card, LevelBadge, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 
-export const metadata = { title: "Instructor Studio — Zentrion" };
+export const metadata = { title: "Instructor Studio" };
 
 export default async function InstructorDashboardPage() {
   const user = await requireUser();

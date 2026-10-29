@@ -3,7 +3,7 @@ import { listAgents, listTools } from "@/lib/ai";
 import { Breadcrumbs, PageHeader } from "@/components/ui";
 import { AgentsClient } from "./agents-client";
 
-export const metadata = { title: "Agent Builder — Zentrion" };
+export const metadata = { title: "Agent Builder" };
 
 export default async function AgentsPage() {
   const user = await requireUser();

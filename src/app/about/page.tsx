@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About — Zentrion Learntech",
+  title: "About",
   description: "Learn about Zentrion Learntech — the #1 AI, Cybersecurity & Future-Tech learning platform built for engineers and creators of tomorrow.",
 };
 
@@ -64,7 +64,7 @@ const VALUES = [
     colorSubtle: "rgba(245, 158, 11, 0.12)",
     colorBorder: "rgba(245, 158, 11, 0.25)",
     title: "Community Powered",
-    desc: "250,000+ learners, instructors, and mentors collaborate, review each other's code, and grow together every day.",
+    desc: "thousands of learners, instructors, and mentors collaborate, review each other's code, and grow together every day.",
   },
   {
     icon: (
@@ -81,7 +81,7 @@ const VALUES = [
 ];
 
 const PLATFORM_FEATURES = [
-  { icon: "📚", title: "500+ Courses", desc: "Video lessons, reading, quizzes and capstone projects across 7 specialisations." },
+  { icon: "📚", title: "7+ Courses", desc: "Video lessons, reading, quizzes and capstone projects across 7 specialisations." },
   { icon: "🛤️", title: "Learning Paths", desc: "Sequenced curricula with prerequisites, milestones, and structured progression." },
   { icon: "🔬", title: "Browser Labs", desc: "Sandboxed terminals, SIEM triage, injection labs — zero setup required." },
   { icon: "🚩", title: "CTF Challenges", desc: "Capture-the-flag style flag challenges with instant automated verification." },
@@ -103,7 +103,7 @@ const MILESTONES = [
   { year: "2023", event: "Launched first 50 courses with in-browser sandboxed lab infrastructure" },
   { year: "2024", event: "Reached 100,000 learners; partnered with 30+ enterprise clients" },
   { year: "2025", event: "Launched AI Workspace with Agentic AI courses and prompt engineering studio" },
-  { year: "2026", event: "250,000+ active learners; expanding globally with multi-language support" },
+  { year: "2026", event: "growing learner base; expanding globally with multi-language support" },
 ];
 
 export default function AboutPage() {
@@ -164,10 +164,10 @@ export default function AboutPage() {
             <div className="holo-card" style={{ padding: "2.5rem" }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.75rem" }}>
                 {[
-                  { value: "250K+", label: "Active Learners", color: "#FFFFFF" },
-                  { value: "500+", label: "Courses & Labs", color: "#0891B2" },
+                  { value: "Growing", label: "Active Learners", color: "#FFFFFF" },
+                  { value: "7+", label: "Courses & Labs", color: "#0891B2" },
                   { value: "50+", label: "Expert Instructors", color: "#6366F1" },
-                  { value: "95%", label: "Job Success Rate", color: "#10B981" },
+                  { value: "High", label: "Job Success Rate", color: "#10B981" },
                   { value: "30+", label: "Enterprise Clients", color: "#F59E0B" },
                   { value: "4.9★", label: "Average Rating", color: "#9333EA" },
                 ].map((stat) => (
@@ -244,7 +244,7 @@ export default function AboutPage() {
           <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex" }}>Our Journey</div>
             <h2 style={{ fontSize: "2.25rem", fontWeight: 800, color: "#FFFFFF", margin: "1rem 0 0.75rem" }}>Built Year by Year</h2>
-            <p style={{ color: "#94A3B8", fontSize: "1.05rem" }}>From a bold idea to 250,000+ learners across the globe.</p>
+            <p style={{ color: "#94A3B8", fontSize: "1.05rem" }}>From a bold idea to thousands of learners across the globe.</p>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
@@ -296,7 +296,7 @@ export default function AboutPage() {
         <div className="container">
           <div style={{ textAlign: "center", padding: "4rem 2rem", borderRadius: "1.5rem", background: "linear-gradient(135deg, rgba(99,102,241,0.15), rgba(34,211,238,0.08))", border: "1px solid rgba(99,102,241,0.3)", boxShadow: "0 20px 60px rgba(0,0,0,0.4)" }}>
             <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#FFFFFF", marginBottom: "1rem" }}>
-              Join 250,000+ Learners Building the Future
+              Join Growing Learners Building the Future
             </h2>
             <p style={{ color: "#94A3B8", fontSize: "1.05rem", maxWidth: "34rem", margin: "0 auto 2rem", lineHeight: 1.65 }}>
               Whether you&apos;re a student, engineer, or team leader — Zentrion has a path for you.

@@ -1,6 +1,6 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
-export const metadata = { title: "Accessibility — Zentrion" };
+export const metadata = { title: "Accessibility" };
 
 export default function AccessibilityPage() {
   return (

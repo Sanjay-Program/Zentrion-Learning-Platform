@@ -3,7 +3,7 @@ import { CourseArtwork } from "@/components/course-artwork";
 import { listProjects } from "@/lib/catalogue";
 import Link from "next/link";
 
-export const metadata = { title: "Capstone Projects — Zentrion" };
+export const metadata = { title: "Capstone Projects" };
 
 export default async function ProjectsPage() {
   const projects = await listProjects();

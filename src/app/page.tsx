@@ -421,11 +421,11 @@ export default async function HomePage() {
                 }}
               >
                 <div>
-                  <div className="stat-number" style={{ color: "#FFFFFF", fontSize: "1.4rem" }}>250K+</div>
+                  <div className="stat-number" style={{ color: "#FFFFFF", fontSize: "1.4rem" }}>Growing</div>
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Learners</div>
                 </div>
                 <div>
-                  <div className="stat-number" style={{ color: "#0891B2", fontSize: "1.4rem" }}>500+</div>
+                  <div className="stat-number" style={{ color: "#0891B2", fontSize: "1.4rem" }}>7+</div>
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Hands-on Projects</div>
                 </div>
                 <div>
@@ -433,7 +433,7 @@ export default async function HomePage() {
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Industry Experts</div>
                 </div>
                 <div>
-                  <div className="stat-number" style={{ color: "#10B981", fontSize: "1.4rem" }}>95%</div>
+                  <div className="stat-number" style={{ color: "#10B981", fontSize: "1.4rem" }}>High</div>
                   <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>Job Success</div>
                 </div>
               </div>
@@ -879,7 +879,7 @@ export default async function HomePage() {
       )}
 
       {/* ======================================================== */}
-      {/* 6. LOVED BY 250,000+ LEARNERS WORLDWIDE (Testimonials)     */}
+      {/* 6. LOVED BY Growing LEARNERS WORLDWIDE (Testimonials)     */}
       {/* ======================================================== */}
       <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(0, 0, 0, 0.06)" }}>
         <div className="container">
@@ -887,7 +887,7 @@ export default async function HomePage() {
             <div>
               <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>💬 Testimonials</div>
               <h2 style={{ fontSize: "2.25rem", fontWeight: 800, color: "#FFFFFF", margin: "0 0 0.5rem" }}>
-                Loved by 250,000+ Learners Worldwide
+                Loved by Growing Learners Worldwide
               </h2>
               <p style={{ color: "#94A3B8", fontSize: "1.05rem", margin: 0 }}>
                 Real stories from engineers, analysts, and tech leads who transformed their careers.
@@ -1066,7 +1066,7 @@ export default async function HomePage() {
               Ready to Build Your AI & Cyber Future?
             </h2>
             <p style={{ color: "#94A3B8", fontSize: "1.1rem", maxWidth: "36rem", margin: "0 auto 2rem" }}>
-              Join 250,000+ engineers mastering autonomous agents, prompt architectures, and hands-on defense labs.
+              Join Growing engineers mastering autonomous agents, prompt architectures, and hands-on defense labs.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link

@@ -3,7 +3,7 @@ import { listInstructorSubmissions } from "@/lib/instructor";
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { SubmissionsClient } from "./submissions-client";
 
-export const metadata = { title: "Grading Queue — Zentrion" };
+export const metadata = { title: "Grading Queue" };
 
 export default async function InstructorSubmissionsPage() {
   const user = await requireUser();

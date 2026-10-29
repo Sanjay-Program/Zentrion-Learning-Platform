@@ -6,7 +6,7 @@ import { Breadcrumbs, Card, PageHeader, Progress } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import { LabConsoleClient } from "./lab-console-client";
 
-export const metadata = { title: "Lab Console — Zentrion" };
+export const metadata = { title: "Lab Console" };
 
 export default async function LabSessionPage({
   params,

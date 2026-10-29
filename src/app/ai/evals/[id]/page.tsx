@@ -5,7 +5,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import { EvalDetailClient } from "./eval-detail-client";
 
-export const metadata = { title: "Evaluation — Zentrion" };
+export const metadata = { title: "Evaluation" };
 
 export default async function EvalDetailPage({
   params,

@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/ui";
 import { notFound } from "next/navigation";
 import { CourseEditorClient } from "./course-editor-client";
 
-export const metadata = { title: "Course Editor — Zentrion" };
+export const metadata = { title: "Course Editor" };
 
 export default async function InstructorCoursePage({
   params,

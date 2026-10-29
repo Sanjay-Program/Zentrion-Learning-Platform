@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm";
 import { Card, PageHeader } from "@/components/ui";
 import Link from "next/link";
 
-export const metadata = { title: "Verify email — Zentrion" };
+export const metadata = { title: "Verify email" };
 
 export default async function VerifyEmailPage({
   searchParams,

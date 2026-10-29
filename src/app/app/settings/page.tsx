@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { Breadcrumbs, Card, Field, PageHeader, Select, Textarea, Input } from "@/components/ui";
 import { SettingsForm } from "./settings-form";
 
-export const metadata = { title: "Settings — Zentrion" };
+export const metadata = { title: "Settings" };
 
 export default async function SettingsPage() {
   const user = await requireUser();

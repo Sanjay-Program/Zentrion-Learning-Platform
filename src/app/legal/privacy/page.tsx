@@ -1,7 +1,7 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
 export const metadata = {
-  title: "Privacy Policy — Zentrion",
+  title: "Privacy Policy",
 };
 
 export default function PrivacyPage() {

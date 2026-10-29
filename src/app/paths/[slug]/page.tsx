@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const path = await getPathBySlug(slug);
   return {
-    title: path ? `${path.title} — Zentrion` : "Path not found",
+    title: path ? `${path.title}` : "Path not found",
     description: path?.description ?? "",
   };
 }

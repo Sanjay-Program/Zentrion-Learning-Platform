@@ -1,7 +1,7 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
 export const metadata = {
-  title: "Security — Zentrion",
+  title: "Security",
 };
 
 export default function SecurityPage() {

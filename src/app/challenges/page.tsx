@@ -2,7 +2,7 @@ import { listChallenges } from "@/lib/catalogue";
 import { Breadcrumbs, Card, LevelBadge, PageHeader } from "@/components/ui";
 import Link from "next/link";
 
-export const metadata = { title: "Challenges — Zentrion" };
+export const metadata = { title: "Challenges" };
 
 export default async function ChallengesPage() {
   const challenges = await listChallenges();

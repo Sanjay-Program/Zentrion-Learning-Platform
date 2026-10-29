@@ -5,7 +5,7 @@ import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Live Events — Zentrion",
+  title: "Live Events",
   description: "Live sessions, office hours, and workshops on Zentrion.",
 };
 

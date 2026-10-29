@@ -1,7 +1,7 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { CertificateClient } from "./certificate-client";
 
-export const metadata = { title: "Verify Certificate — Zentrion" };
+export const metadata = { title: "Verify Certificate" };
 
 export default function CertificateVerifyPage({
   params,

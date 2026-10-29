@@ -330,7 +330,7 @@ export function SignUpForm({ next }: { next: string }) {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
             {[
-              "Access 500+ courses & hands-on modules",
+              "Access 7+ courses & hands-on modules",
               "Hands-on projects & simulated labs",
               "Live classes & mentorship",
               "Globally recognized certificates",
@@ -375,7 +375,7 @@ export function SignUpForm({ next }: { next: string }) {
           >
             <div style={{ fontSize: "1.5rem" }}>🚀</div>
             <div>
-              <div style={{ color: "#FFFFFF", fontWeight: 700, fontSize: "0.85rem" }}>250K+ Learners Worldwide</div>
+              <div style={{ color: "#FFFFFF", fontWeight: 700, fontSize: "0.85rem" }}>Growing Learner Community</div>
               <div style={{ color: "#94A3B8", fontSize: "0.75rem" }}>Join Google, Microsoft & Amazon alumni</div>
             </div>
           </div>

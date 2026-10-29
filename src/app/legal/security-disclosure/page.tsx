@@ -1,6 +1,6 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
-export const metadata = { title: "Security Disclosure — Zentrion" };
+export const metadata = { title: "Security Disclosure" };
 
 export default function SecurityDisclosurePage() {
   return (

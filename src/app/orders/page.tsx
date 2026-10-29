@@ -4,7 +4,7 @@ import { Breadcrumbs, Card, EmptyState, PageHeader } from "@/components/ui";
 import { formatDateTime, formatPrice } from "@/lib/utils";
 import Link from "next/link";
 
-export const metadata = { title: "Orders — Zentrion" };
+export const metadata = { title: "Orders" };
 
 export default async function OrdersPage() {
   const user = await requireUser();

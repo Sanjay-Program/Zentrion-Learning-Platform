@@ -3,7 +3,7 @@ import { usageToday } from "@/lib/ai";
 import { getSettings } from "@/lib/config";
 import { AiLabWorkspace } from "./ai-lab-workspace";
 
-export const metadata = { title: "AI Lab — Zentrion Learntech" };
+export const metadata = { title: "AI Lab" };
 
 export default async function AiWorkspacePage() {
   const user = await requireUser();

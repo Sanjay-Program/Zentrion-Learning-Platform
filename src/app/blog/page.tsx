@@ -2,7 +2,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 
-export const metadata = { title: "Blog — Zentrion" };
+export const metadata = { title: "Blog" };
 
 interface Post {
   slug: string;

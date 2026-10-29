@@ -1,6 +1,6 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
-export const metadata = { title: "Refund Policy — Zentrion" };
+export const metadata = { title: "Refund Policy" };
 
 export default function RefundPage() {
   return (

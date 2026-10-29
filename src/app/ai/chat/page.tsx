@@ -4,7 +4,7 @@ import { listConversations } from "@/lib/ai";
 import { Breadcrumbs } from "@/components/ui";
 import { ChatClient } from "./chat-client";
 
-export const metadata = { title: "AI Tutor — Zentrion" };
+export const metadata = { title: "AI Tutor" };
 
 export default async function AiChatPage({
   searchParams,

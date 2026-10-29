@@ -5,7 +5,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 
-export const metadata = { title: "Admin — Zentrion" };
+export const metadata = { title: "Admin" };
 
 export default async function AdminPage() {
   const user = await requireUser();

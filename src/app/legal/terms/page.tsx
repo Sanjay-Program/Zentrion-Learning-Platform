@@ -1,7 +1,7 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 
 export const metadata = {
-  title: "Terms of Service — Zentrion",
+  title: "Terms of Service",
 };
 
 export default function TermsPage() {

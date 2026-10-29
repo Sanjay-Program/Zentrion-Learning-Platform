@@ -1,6 +1,6 @@
 import { SignUpForm } from "./sign-up-form";
 
-export const metadata = { title: "Sign up — Zentrion" };
+export const metadata = { title: "Sign up" };
 
 export default function SignUpPage({
   searchParams,

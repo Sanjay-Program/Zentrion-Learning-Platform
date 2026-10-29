@@ -6,7 +6,7 @@ import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 import { LabClient } from "./lab-client";
 
-export const metadata = { title: "Lab — Zentrion" };
+export const metadata = { title: "Lab" };
 
 export default async function LabDetailPage({
   params,

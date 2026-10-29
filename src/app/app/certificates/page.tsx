@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { formatDate } from "@/lib/utils";
 
-export const metadata = { title: "Certificates — Zentrion" };
+export const metadata = { title: "Certificates" };
 
 export default async function CertificatesPage() {
   const user = await requireUser();

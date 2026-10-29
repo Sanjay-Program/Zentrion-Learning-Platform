@@ -4,7 +4,7 @@ import { formatHours } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Learning Paths — Zentrion",
+  title: "Learning Paths",
   description: "Structured learning paths that bundle courses into career tracks.",
 };
 

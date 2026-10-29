@@ -5,7 +5,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import { KnowledgeDetailClient } from "./knowledge-detail-client";
 
-export const metadata = { title: "Knowledge Base — Zentrion" };
+export const metadata = { title: "Knowledge Base" };
 
 export default async function KnowledgeDetailPage({
   params,

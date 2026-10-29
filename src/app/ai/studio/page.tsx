@@ -6,7 +6,7 @@ import {
 import { Breadcrumbs, PageHeader } from "@/components/ui";
 import { PromptStudioClient } from "./studio-client";
 
-export const metadata = { title: "Prompt Studio — Zentrion" };
+export const metadata = { title: "Prompt Studio" };
 
 export default async function PromptStudioPage() {
   const user = await requireUser();

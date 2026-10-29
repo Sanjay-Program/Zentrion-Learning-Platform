@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const course = await getCourseBySlug(slug);
   return {
-    title: course ? `${course.title} — Zentrion Learntech` : "Course not found",
+    title: course ? `${course.title}` : "Course not found",
     description: course?.subtitle ?? "",
   };
 }
@@ -410,7 +410,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
                       <span>♾️</span> Lifetime access
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span>📚</span> 500+ lessons (80+ hours)
+                      <span>📚</span> 64 lessons across 7 courses
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                       <span>🛠️</span> Hands-on projects

@@ -3,7 +3,7 @@ import { listEvalDatasets } from "@/lib/ai";
 import { Breadcrumbs, PageHeader } from "@/components/ui";
 import { EvalsClient } from "./evals-client";
 
-export const metadata = { title: "Evaluation Harness — Zentrion" };
+export const metadata = { title: "Evaluation Harness" };
 
 export default async function EvalsPage() {
   const user = await requireUser();

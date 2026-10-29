@@ -6,7 +6,7 @@ import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 import { AgentDetailClient } from "./agent-detail-client";
 
-export const metadata = { title: "Agent — Zentrion" };
+export const metadata = { title: "Agent" };
 
 export default async function AgentDetailPage({
   params,

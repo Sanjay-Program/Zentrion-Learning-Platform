@@ -3,7 +3,7 @@ import { Breadcrumbs, Card, LevelBadge, PageHeader } from "@/components/ui";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Cyber Labs — Zentrion",
+  title: "Cyber Labs",
   description: "Hands-on cybersecurity labs and CTF challenges in a simulated environment.",
 };
 

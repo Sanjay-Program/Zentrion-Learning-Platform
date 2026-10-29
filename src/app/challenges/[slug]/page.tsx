@@ -5,7 +5,7 @@ import { Breadcrumbs, Card, LevelBadge, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import { ChallengeClient } from "./challenge-client";
 
-export const metadata = { title: "Challenge — Zentrion" };
+export const metadata = { title: "Challenge" };
 
 export default async function ChallengeDetailPage({
   params,

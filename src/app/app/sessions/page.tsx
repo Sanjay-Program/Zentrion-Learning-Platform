@@ -4,7 +4,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { formatDateTime } from "@/lib/utils";
 import Link from "next/link";
 
-export const metadata = { title: "Active Sessions — Zentrion" };
+export const metadata = { title: "Active Sessions" };
 
 export default async function SessionsPage() {
   const user = await requireUser();

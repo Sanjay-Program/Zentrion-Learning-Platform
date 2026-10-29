@@ -7,7 +7,7 @@ import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import { Tabs } from "@/components/interactive";
 import { formatDate } from "@/lib/utils";
 
-export const metadata = { title: "Notes & Bookmarks — Zentrion" };
+export const metadata = { title: "Notes & Bookmarks" };
 
 export default async function NotesPage() {
   const user = await requireUser();

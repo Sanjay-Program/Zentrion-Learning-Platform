@@ -1,7 +1,7 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
 import Link from "next/link";
 
-export const metadata = { title: "Help Centre — Zentrion" };
+export const metadata = { title: "Help Centre" };
 
 const faqs = [
   {

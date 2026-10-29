@@ -3,7 +3,7 @@ import { listKnowledgeBases } from "@/lib/ai";
 import { Breadcrumbs, PageHeader } from "@/components/ui";
 import { KnowledgeClient } from "./knowledge-client";
 
-export const metadata = { title: "Knowledge Bases — Zentrion" };
+export const metadata = { title: "Knowledge Bases" };
 
 export default async function KnowledgePage() {
   const user = await requireUser();

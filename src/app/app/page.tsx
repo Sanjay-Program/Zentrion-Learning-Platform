@@ -5,7 +5,7 @@ import { listLiveSessions } from "@/lib/catalogue";
 import { getUserWithRoles } from "@/lib/auth";
 import Link from "next/link";
 
-export const metadata = { title: "My Learning Dashboard — Zentrion Learntech" };
+export const metadata = { title: "My Learning Dashboard" };
 
 export default async function AppDashboardPage() {
   const user = await requireUser();

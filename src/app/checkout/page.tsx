@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/ui";
 import { notFound } from "next/navigation";
 import { CheckoutClient } from "./checkout-client";
 
-export const metadata = { title: "Checkout — Zentrion" };
+export const metadata = { title: "Checkout" };
 
 export default async function CheckoutPage({
   searchParams,

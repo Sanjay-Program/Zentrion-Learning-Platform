@@ -5,7 +5,7 @@ import { formatDateTime, formatDate } from "@/lib/utils";
 import Link from "next/link";
 import { BillingClient } from "./billing-client";
 
-export const metadata = { title: "Billing — Zentrion" };
+export const metadata = { title: "Billing" };
 
 export default async function BillingPage() {
   const user = await requireUser();

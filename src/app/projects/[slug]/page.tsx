@@ -4,7 +4,7 @@ import { CourseArtwork } from "@/components/course-artwork";
 import { getProjectBySlug } from "@/lib/catalogue";
 import Link from "next/link";
 
-export const metadata = { title: "Capstone Project — Zentrion" };
+export const metadata = { title: "Capstone Project" };
 
 export default async function ProjectDetailPage({
   params,

@@ -2,7 +2,7 @@ import { Breadcrumbs, Button, Card, LevelBadge, PageHeader } from "@/components/
 import { listLabs, listChallenges } from "@/lib/catalogue";
 import Link from "next/link";
 
-export const metadata = { title: "Cybersecurity Academy — Zentrion" };
+export const metadata = { title: "Cybersecurity Academy" };
 
 export default async function CyberPage() {
   const [labs, challenges] = await Promise.all([listLabs(), listChallenges()]);
