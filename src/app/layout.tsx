@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Shell } from "@/components/layout";
 import { ToastProvider } from "@/components/interactive";
+import { OrganizationJsonLd } from "@/components/seo-schema";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   description:
     "Learn AI, prompt engineering, agentic AI, application development and cybersecurity through structured courses, hands-on labs, projects and live instruction.",
-  metadataBase: new URL(process.env.APP_BASE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.APP_BASE_URL || "https://zentrion.dev"),
   openGraph: {
     type: "website",
     siteName: "Zentrion Learntech",
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <OrganizationJsonLd />
         <a href="#main" className="skip-link">Skip to content</a>
         <ToastProvider>
           <Shell>{children}</Shell>

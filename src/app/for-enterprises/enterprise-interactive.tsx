@@ -531,31 +531,32 @@ export function EnterpriseProposalModal({
   );
 }
 
+export const ENTERPRISE_FAQS = [
+  {
+    q: "How does SSO and User Provisioning work?",
+    a: "Zentrion supports SAML 2.0 and OIDC protocols with zero-friction integration for Okta, Microsoft Entra ID (Azure AD), Google Workspace, and OneLogin. We also support SCIM 2.0 for automated user provisioning and de-provisioning directly from your HRMS.",
+  },
+  {
+    q: "Can we build proprietary or bespoke lab environments for our developers?",
+    a: "Yes. Our enterprise tier includes custom lab authoring. We can replicate your production cloud architectures (AWS, Azure, GCP), microservice dependencies, and internal security incident response playbooks in completely isolated sandbox containers.",
+  },
+  {
+    q: "What security compliance and data privacy standards do you meet?",
+    a: "Zentrion is ISO 27001-aligned and GDPR-compliant with 99.9% platform availability SLA. Enterprise customer data is tenant-isolated with Row-Level Security (RLS) in dedicated database namespaces. We sign BAAs and DPAs upon request.",
+  },
+  {
+    q: "Do you offer offline AI tutor capabilities for air-gapped or sensitive environments?",
+    a: "Yes. Our AI Tutor and evaluation harness support both local LLM endpoints (via Ollama or self-hosted vLLM) and air-gapped deployment configurations with zero external API data transmission.",
+  },
+  {
+    q: "What is your typical deployment timeline from signature to employee rollout?",
+    a: "Standard enterprise deployments are live in under 2 weeks. A dedicated Customer Success Manager handles SSO configuration, curriculum mapping to your engineering job levels, cohort provisioning, and executive kick-off masterclasses.",
+  },
+];
+
 export function EnterpriseFaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const FAQS = [
-    {
-      q: "How does SSO and User Provisioning work?",
-      a: "Zentrion supports SAML 2.0 and OIDC protocols with zero-friction integration for Okta, Microsoft Entra ID (Azure AD), Google Workspace, and OneLogin. We also support SCIM 2.0 for automated user provisioning and de-provisioning directly from your HRMS.",
-    },
-    {
-      q: "Can we build proprietary or bespoke lab environments for our developers?",
-      a: "Yes. Our enterprise tier includes custom lab authoring. We can replicate your production cloud architectures (AWS, Azure, GCP), microservice dependencies, and internal security incident response playbooks in completely isolated sandbox containers.",
-    },
-    {
-      q: "What security compliance and data privacy standards do you meet?",
-      a: "Zentrion is ISO 27001-aligned and GDPR-compliant with 99.9% platform availability SLA. Enterprise customer data is tenant-isolated with Row-Level Security (RLS) in dedicated database namespaces. We sign BAAs and DPAs upon request.",
-    },
-    {
-      q: "Do you offer offline AI tutor capabilities for air-gapped or sensitive environments?",
-      a: "Yes. Our AI Tutor and evaluation harness support both local LLM endpoints (via Ollama or self-hosted vLLM) and air-gapped deployment configurations with zero external API data transmission.",
-    },
-    {
-      q: "What is your typical deployment timeline from signature to employee rollout?",
-      a: "Standard enterprise deployments are live in under 2 weeks. A dedicated Customer Success Manager handles SSO configuration, curriculum mapping to your engineering job levels, cohort provisioning, and executive kick-off masterclasses.",
-    },
-  ];
+  const FAQS = ENTERPRISE_FAQS;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "48rem", margin: "0 auto" }}>

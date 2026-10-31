@@ -39,6 +39,61 @@
   --input-border: rgba(255, 255, 255, 0.15);
   --input-text: #f8fafc;
 
+  /* --- Type scale & Font Stacks --- */
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* --- Spacing scale (4px base) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* --- Radii --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+  --radius: 10px;
+
+  /* --- Semantic Colors --- */
+  --success: #10b981;
+  --success-subtle: rgba(16, 185, 129, 0.15);
+  --warning: #f59e0b;
+  --warning-subtle: rgba(245, 158, 11, 0.15);
+  --danger: #ef4444;
+  --danger-subtle: rgba(239, 68, 68, 0.15);
+  --info: #38bdf8;
+  --info-subtle: rgba(56, 189, 248, 0.15);
+
+  /* --- Motion & Layout --- */
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --content-max: 80rem;
+  --content-narrow: 48rem;
+  --nav-height: 4.5rem;
+  --glow-primary: 0 0 25px rgba(99, 102, 241, 0.25);
+  --glow-cyan: 0 0 25px rgba(34, 211, 238, 0.3);
+
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.6);
@@ -556,7 +611,7 @@ tbody tr:hover { background: var(--bg-subtle); }
   align-items: center;
   justify-content: center;
   padding: var(--space-4);
-  z-index: 90;
+  z-index: 1000;
   animation: fadeIn var(--motion-fast) var(--ease);
 }
 .dialog {

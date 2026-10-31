@@ -28,63 +28,73 @@ export default async function CyberPage() {
           className="grid mt-8"
           style={{ gridTemplateColumns: "repeat(auto-fit, minmax(22rem, 1fr))", gap: "var(--space-6)" }}
         >
-          <Card className="flex-col" style={{ padding: 0, overflow: "hidden" }}>
+          <Card className="flex-col" style={{ padding: 0, overflow: "hidden", background: "rgba(10, 15, 29, 0.85)", border: "1px solid rgba(255, 255, 255, 0.1)" }}>
             <div
               style={{
-                background: "#ffffff",
-                padding: "var(--space-4)",
-                borderBottom: "1px solid var(--border)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                background: "rgba(15, 23, 42, 0.9)",
+                padding: "0.75rem 1rem",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
               }}
             >
-              <img
-                src="/images/lesson-diagrams/08-soc-investigation.svg"
-                alt="SOC Alert Triage Architecture"
-                style={{ width: "100%", height: "180px", objectFit: "contain", display: "block" }}
-              />
+              <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.5rem" }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#EF4444" }} />
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#F59E0B" }} />
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#10B981" }} />
+                <span style={{ fontSize: "0.72rem", color: "#94A3B8", marginLeft: "0.5rem" }}>SOC Architecture Blueprint</span>
+              </div>
+              <div style={{ borderRadius: "0.5rem", overflow: "hidden", background: "#FFFFFF", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <img
+                  src="/images/lesson-diagrams/08-soc-investigation.svg"
+                  alt="SOC Alert Triage Architecture"
+                  style={{ width: "100%", height: "180px", objectFit: "contain", display: "block" }}
+                />
+              </div>
             </div>
             <div style={{ padding: "var(--space-5)" }}>
               <span className="badge badge-primary mb-2">SOC Telemetry</span>
-              <h3 style={{ fontSize: "var(--text-md)", marginBottom: "var(--space-1)" }}>
+              <h3 style={{ fontSize: "var(--text-md)", marginBottom: "var(--space-1)", color: "#FFFFFF" }}>
                 AI-Augmented SOC Alert Triage
               </h3>
               <p className="text-muted text-sm mb-3">
                 Telemetry ingestion, prompt injection detection, alert containment playbooks, and incident audit reporting.
               </p>
-              <Link href="/courses/ai-cybersecurity-and-llm-security" className="text-sm font-semibold">
+              <Link href="/courses/ai-cybersecurity-and-llm-security" className="text-sm font-semibold" style={{ color: "#38BDF8" }}>
                 View SOC Course & Lab →
               </Link>
             </div>
           </Card>
 
-          <Card className="flex-col" style={{ padding: 0, overflow: "hidden" }}>
+          <Card className="flex-col" style={{ padding: 0, overflow: "hidden", background: "rgba(10, 15, 29, 0.85)", border: "1px solid rgba(255, 255, 255, 0.1)" }}>
             <div
               style={{
-                background: "#ffffff",
-                padding: "var(--space-4)",
-                borderBottom: "1px solid var(--border)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                background: "rgba(15, 23, 42, 0.9)",
+                padding: "0.75rem 1rem",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
               }}
             >
-              <img
-                src="/images/lesson-diagrams/06-trust-boundaries.svg"
-                alt="AI Trust Boundaries Architecture"
-                style={{ width: "100%", height: "180px", objectFit: "contain", display: "block" }}
-              />
+              <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.5rem" }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#EF4444" }} />
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#F59E0B" }} />
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#10B981" }} />
+                <span style={{ fontSize: "0.72rem", color: "#94A3B8", marginLeft: "0.5rem" }}>Threat Model Architecture</span>
+              </div>
+              <div style={{ borderRadius: "0.5rem", overflow: "hidden", background: "#FFFFFF", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <img
+                  src="/images/lesson-diagrams/06-trust-boundaries.svg"
+                  alt="AI Trust Boundaries Architecture"
+                  style={{ width: "100%", height: "180px", objectFit: "contain", display: "block" }}
+                />
+              </div>
             </div>
             <div style={{ padding: "var(--space-5)" }}>
               <span className="badge badge-accent mb-2">Threat Modeling</span>
-              <h3 style={{ fontSize: "var(--text-md)", marginBottom: "var(--space-1)" }}>
+              <h3 style={{ fontSize: "var(--text-md)", marginBottom: "var(--space-1)", color: "#FFFFFF" }}>
                 AI Trust Boundaries & Attack Vectors
               </h3>
               <p className="text-muted text-sm mb-3">
                 Boundary isolation between untrusted user prompts, tool executors, vector retrievals, and structured JSON output decoders.
               </p>
-              <Link href="/courses/ai-cybersecurity-and-llm-security" className="text-sm font-semibold">
+              <Link href="/courses/ai-cybersecurity-and-llm-security" className="text-sm font-semibold" style={{ color: "#38BDF8" }}>
                 Explore Defense Curriculum →
               </Link>
             </div>

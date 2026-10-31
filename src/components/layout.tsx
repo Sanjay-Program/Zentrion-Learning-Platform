@@ -191,25 +191,31 @@ export async function Navbar() {
           <ThemeToggle />
           {user ? (
             <AuthedMenu userId={user.id} />
-          ) : (
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <Link
-                href="/auth/sign-in"
+                href="/courses"
+                className="desktop-only"
                 style={{
-                  fontSize: "0.9rem",
-                  fontWeight: 600,
-                  color: "var(--text, #F8FAFC)",
-                  padding: "0.5rem 1rem",
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  color: "#FCD34D",
+                  padding: "0.45rem 0.85rem",
+                  borderRadius: "9999px",
+                  background: "rgba(245, 158, 11, 0.12)",
+                  border: "1px solid rgba(245, 158, 11, 0.35)",
                   textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.35rem",
                 }}
               >
-                Login
+                <span className="flame-pulse">🔥</span> From ₹499
               </Link>
               <Link
-                href="/auth/sign-up"
+                href="/courses"
                 style={{
-                  fontSize: "0.9rem",
-                  padding: "0.55rem 1.4rem",
+                  fontSize: "0.88rem",
+                  padding: "0.5rem 1.25rem",
                   borderRadius: "0.6rem",
                   background: "linear-gradient(135deg, #6366F1, #8B5CF6)",
                   color: "#FFFFFF",
@@ -218,9 +224,10 @@ export async function Navbar() {
                   boxShadow: "0 0 20px rgba(99, 102, 241, 0.25)",
                   display: "inline-flex",
                   alignItems: "center",
+                  gap: "0.4rem",
                 }}
               >
-                Get Started
+                <span>⚡</span> Enroll Now
               </Link>
             </div>
           )}
@@ -380,6 +387,8 @@ export function Footer() {
   );
 }
 
+import { SocialProofTicker } from "@/components/social-proof-ticker";
+
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div
@@ -387,7 +396,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        background: "var(--bg, #ffffff)",
+        background: "var(--bg, #060913)",
         color: "var(--text, #F8FAFC)",
         transition: "background 0.2s ease, color 0.2s ease",
       }}
@@ -401,6 +410,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </main>
       <Footer />
       <FloatingWhatsAppWidget />
+      <SocialProofTicker />
     </div>
   );
 }

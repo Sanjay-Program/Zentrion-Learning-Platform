@@ -510,31 +510,32 @@ export function CollegeDemoModal({
   );
 }
 
+export const COLLEGE_FAQS = [
+  {
+    q: "Does Zentrion map to AICTE, UGC, and NEP 2020 guidelines?",
+    a: "Yes. All Zentrion tracks are aligned with the Model Curriculum guidelines from AICTE and NEP 2020 experiential learning mandates. We provide syllabi mapping documents for Board of Studies (BoS) approvals.",
+  },
+  {
+    q: "What infrastructure does our institution need to deploy Zentrion?",
+    a: "Zero servers or specialized hardware. All computing labs, AI GPU clusters, and cybersecurity drills run securely inside the browser via WebAssembly and sandboxed cloud containers. Any laptop with a modern web browser is sufficient.",
+  },
+  {
+    q: "How does batch enrollment and cohort tracking work for 1,000+ students?",
+    a: "Institutions can upload student lists in CSV format or sync via Google Classroom / Microsoft Teams. Students receive welcome invites with pre-assigned tracks, and faculty can track real-time coding progress and assignment pass rates.",
+  },
+  {
+    q: "Can our faculty conduct live lectures and assign custom lab assignments?",
+    a: "Yes. The Instructor Studio allows your professors to schedule interactive live coding sessions, author custom quizzes and programming challenges, and inspect automated submission test results.",
+  },
+  {
+    q: "Are completion certificates recognized by hiring companies?",
+    a: "Yes. Zentrion certificates feature cryptographic verification with unique QR codes, verifiable skills evidence, and are recognized by our network of over 150+ technology hiring partners.",
+  },
+];
+
 export function CollegeFaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const FAQS = [
-    {
-      q: "Does Zentrion map to AICTE, UGC, and NEP 2020 guidelines?",
-      a: "Yes. All Zentrion tracks are aligned with the Model Curriculum guidelines from AICTE and NEP 2020 experiential learning mandates. We provide syllabi mapping documents for Board of Studies (BoS) approvals.",
-    },
-    {
-      q: "What infrastructure does our institution need to deploy Zentrion?",
-      a: "Zero servers or specialized hardware. All computing labs, AI GPU clusters, and cybersecurity drills run securely inside the browser via WebAssembly and sandboxed cloud containers. Any laptop with a modern web browser is sufficient.",
-    },
-    {
-      q: "How does batch enrollment and cohort tracking work for 1,000+ students?",
-      a: "Institutions can upload student lists in CSV format or sync via Google Classroom / Microsoft Teams. Students receive welcome invites with pre-assigned tracks, and faculty can track real-time coding progress and assignment pass rates.",
-    },
-    {
-      q: "Can our faculty conduct live lectures and assign custom lab assignments?",
-      a: "Yes. The Instructor Studio allows your professors to schedule interactive live coding sessions, author custom quizzes and programming challenges, and inspect automated submission test results.",
-    },
-    {
-      q: "Are completion certificates recognized by hiring companies?",
-      a: "Yes. Zentrion certificates feature cryptographic verification with unique QR codes, verifiable skills evidence, and are recognized by our network of over 150+ technology hiring partners.",
-    },
-  ];
+  const FAQS = COLLEGE_FAQS;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "48rem", margin: "0 auto" }}>

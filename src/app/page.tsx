@@ -3,6 +3,30 @@ import { getDb } from "@/db/client";
 import { courses, categories, learningPaths, labDefinitions, liveSessions, lessons, modules, users } from "@/db/schema";
 import { eq, and, sql, desc, count } from "drizzle-orm";
 import { Button, Card, Badge, LevelBadge, CourseCard } from "@/components/ui";
+import type { Metadata } from "next";
+
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
+export const metadata: Metadata = {
+  title: "Zentrion Learntech — AI, Cybersecurity & Practical Skills Platform",
+  description:
+    "Master Artificial Intelligence (₹999), Cybersecurity (₹1,499), Prompt Engineering (₹499), Data Science (₹799), Full-Stack (₹1,299), and Frontend (₹599) with in-browser sandbox labs, verifiable credentials, and 100% money-back guarantee.",
+  alternates: {
+    canonical: BASE_URL,
+  },
+  openGraph: {
+    title: "Zentrion Learntech — Master AI, Cybersecurity & Future-Tech",
+    description:
+      "Enterprise-grade practical tech learning. 100% in-browser labs, verifiable credentials, and hands-on capstone projects.",
+    url: BASE_URL,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zentrion Learntech — Master AI & Practical Skills",
+    description: "Hands-on cloud labs, AI mentors, and verifiable blockchain-backed credentials.",
+  },
+};
 
 const POPULAR_PATHS = [
   {

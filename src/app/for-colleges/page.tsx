@@ -1,9 +1,26 @@
 import Link from "next/link";
-import { CollegeCurriculumEstimator, CollegeFaqAccordion } from "./colleges-interactive";
+import { CollegeCurriculumEstimator, CollegeFaqAccordion, COLLEGE_FAQS } from "./colleges-interactive";
+import { FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo-schema";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "For Colleges & Universities",
-  description: "Deploy Zentrion across your campus. Cohort management, AI-powered labs, bulk invitations, skills-gap analytics, and audit-ready compliance reports for universities and colleges.",
+export const metadata: Metadata = {
+  title: "For Colleges & Universities — AI & Cybersecurity Academic LMS",
+  description:
+    "Deploy Zentrion across your campus. Cohort management, AI-powered labs, bulk invitations, skills-gap analytics, and NAAC/NBA audit-ready reports for universities and colleges.",
+  alternates: {
+    canonical: "/for-colleges",
+  },
+  openGraph: {
+    title: "AI & Cybersecurity Education for Higher Education | Zentrion Learntech",
+    description:
+      "Transform engineering education with sandboxed browser labs, automated code evaluation, AICTE-aligned curriculum, and verifiable placement credentials.",
+    url: "/for-colleges",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Academic AI & Cybersecurity Platform | Zentrion",
+    description: "Empower computer science and engineering students with cloud hands-on labs and NAAC-aligned outcomes.",
+  },
 };
 
 const FEATURES = [
@@ -130,6 +147,18 @@ const STATS = [
 export default function ForCollegesPage() {
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "For Colleges", url: "/for-colleges" },
+        ]}
+      />
+      <FaqJsonLd
+        faqs={COLLEGE_FAQS.map((f) => ({
+          question: f.q,
+          answer: f.a,
+        }))}
+      />
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}

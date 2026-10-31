@@ -1,10 +1,36 @@
 import { listCategories, listCourses } from "@/lib/catalogue";
 import { CourseCard, Pagination } from "@/components/ui";
+import { BreadcrumbJsonLd } from "@/components/seo-schema";
 import Link from "next/link";
 
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
 export const metadata = {
-  title: "All Courses",
-  description: "Browse AI, Cybersecurity, Data Science, and Future-Tech courses. Filter by level, category, and topic to find your perfect learning path.",
+  title: "AI, Cybersecurity & Full-Stack Courses — 50% OFF Early Bird (Until 10th Oct)",
+  description: "Browse flagship courses in AI Foundations (₹999), Cybersecurity (₹1,499), Prompt Engineering (₹499), Data Science (₹799), Full-Stack (₹1,299), and Frontend (₹599). Hands-on sandbox labs with verifiable QR credentials.",
+  alternates: {
+    canonical: `${BASE_URL}/courses`,
+  },
+  openGraph: {
+    title: "AI, Cybersecurity & Full-Stack Courses — Zentrion Learntech",
+    description: "Save up to 50% on all flagship courses until 10th October only. Sandboxed browser labs, verified QR credentials, and 100% 7-day money-back guarantee.",
+    url: `${BASE_URL}/courses`,
+    siteName: "Zentrion Learntech",
+    images: [
+      {
+        url: `${BASE_URL}/images/logo/08-app-icon-favicon.png`,
+        width: 800,
+        height: 600,
+        alt: "Zentrion Learntech Courses",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Courses — Zentrion Learntech (Offer until 10th Oct)",
+    description: "Hands-on AI, cybersecurity, and engineering tracks with real capstone projects.",
+  },
 };
 
 const LEVELS = ["beginner", "intermediate", "advanced"];
@@ -53,6 +79,12 @@ export default async function CoursesPage({
 
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Courses", url: "/courses" },
+        ]}
+      />
       {/* ============================================================ */}
       {/* URGENCY ADMISSION BANNER                                     */}
       {/* ============================================================ */}
@@ -351,6 +383,90 @@ export default async function CoursesPage({
               )}
             </>
           )}
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* WHY ZENTRION COMPARISON MATRIX                               */}
+      {/* ============================================================ */}
+      <section style={{ padding: "4.5rem 0", background: "rgba(10, 15, 29, 0.75)", borderTop: "1px solid rgba(255, 255, 255, 0.08)" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "1rem" }}>
+              💎 Unmatched Value
+            </div>
+            <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 800, color: "#FFFFFF", marginBottom: "0.75rem", letterSpacing: "-0.02em" }}>
+              Why Zentrion Outperforms Generic Learning
+            </h2>
+            <p style={{ color: "#94A3B8", maxWidth: "38rem", margin: "0 auto", fontSize: "1rem", lineHeight: 1.6 }}>
+              Compare how our sandbox-first, AI-mentored curriculum beats passive video libraries and overpriced bootcamps.
+            </p>
+          </div>
+
+          <div style={{ overflowX: "auto", borderRadius: "1rem", border: "1px solid rgba(255, 255, 255, 0.1)", background: "rgba(15, 23, 42, 0.6)", WebkitOverflowScrolling: "touch" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "640px", textAlign: "left" }}>
+              <thead>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.12)", background: "rgba(20, 27, 45, 0.9)" }}>
+                  <th style={{ padding: "1.25rem 1.5rem", color: "#94A3B8", fontWeight: 700, fontSize: "0.9rem" }}>Core Criteria</th>
+                  <th style={{ padding: "1.25rem 1.5rem", color: "#22D3EE", fontWeight: 800, fontSize: "1rem", background: "rgba(99, 102, 241, 0.15)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1" }}>
+                    🚀 Zentrion Learntech
+                  </th>
+                  <th style={{ padding: "1.25rem 1.5rem", color: "#94A3B8", fontWeight: 700, fontSize: "0.9rem" }}>Generic Video Courses</th>
+                  <th style={{ padding: "1.25rem 1.5rem", color: "#94A3B8", fontWeight: 700, fontSize: "0.9rem" }}>Offline / Bootcamps</th>
+                </tr>
+              </thead>
+              <tbody style={{ fontSize: "0.9rem", color: "#CBD5E1" }}>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Hands-on Cloud Labs</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#34D399", fontWeight: 700 }}>
+                    ✅ In-browser GPU/Linux sandboxes, zero local setup
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>❌ Passive videos only (setup required)</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#F59E0B" }}>⚠️ Manual local installation</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Pricing</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#38BDF8", fontWeight: 800 }}>
+                    ✨ ₹499 – ₹1,499 (Offer until 10th Oct)
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem" }}>₹3,000 – ₹10,000+ per course</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>₹45,000 – ₹1,50,000 upfront</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Certificate Verification</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#34D399", fontWeight: 700 }}>
+                    ✅ Cryptographic QR code on Polygon ledger
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>❌ Unverified PDF download</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#94A3B8" }}>⚠️ Paper / unindexed certificate</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Instant AI Mentor & Feedback</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#34D399", fontWeight: 700 }}>
+                    ✅ 24/7 AI tutor + automated unit tests
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>❌ No code evaluation</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#F59E0B" }}>⚠️ Delayed TA office hours</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Risk Guarantee</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#34D399", fontWeight: 700 }}>
+                    ✅ 100% 7-Day Money-Back Guarantee
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#94A3B8" }}>⚠️ Complex refund policies</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>❌ Strictly non-refundable</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "1.2rem 1.5rem", fontWeight: 600 }}>Access Duration</td>
+                  <td style={{ padding: "1.2rem 1.5rem", background: "rgba(99, 102, 241, 0.08)", borderLeft: "2px solid #6366F1", borderRight: "2px solid #6366F1", color: "#34D399", fontWeight: 700 }}>
+                    ✅ Lifetime access + quarterly content updates
+                  </td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#94A3B8" }}>⚠️ Monthly recurring fee or archived</td>
+                  <td style={{ padding: "1.2rem 1.5rem", color: "#EF4444" }}>❌ Access revoked after 6 months</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

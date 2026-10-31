@@ -2,7 +2,7 @@ import { getDb } from "@/db/client";
 import { courses, learningPaths, labDefinitions, challengeDefinitions, projectDefinitions } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
-const BASE = process.env.APP_BASE_URL || "http://localhost:3000";
+const BASE = process.env.APP_BASE_URL || "https://zentrion.dev";
 
 export default async function sitemap() {
   const db = getDb();

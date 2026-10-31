@@ -1,8 +1,26 @@
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/seo-schema";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "About",
-  description: "Learn about Zentrion Learntech — the #1 AI, Cybersecurity & Future-Tech learning platform built for engineers and creators of tomorrow.",
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
+export const metadata: Metadata = {
+  title: "About Zentrion Learntech — The Frontier Tech Education Platform",
+  description:
+    "Learn about Zentrion Learntech — building the future of hands-on technical education in AI, Cybersecurity, Full-Stack, and Autonomous Systems with in-browser labs and verifiable credentials.",
+  alternates: {
+    canonical: `${BASE_URL}/about`,
+  },
+  openGraph: {
+    title: "About Zentrion Learntech — The Future of Tech Education",
+    description: "Hands-on, browser-sandboxed education for engineers, colleges, and enterprise teams.",
+    url: `${BASE_URL}/about`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Zentrion Learntech",
+    description: "Building the future of AI & Cybersecurity education.",
+  },
 };
 
 const VALUES = [
@@ -109,6 +127,12 @@ const MILESTONES = [
 export default function AboutPage() {
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About", url: "/about" },
+        ]}
+      />
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}

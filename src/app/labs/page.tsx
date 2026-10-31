@@ -1,10 +1,28 @@
 import { listChallenges, listLabs } from "@/lib/catalogue";
 import { Breadcrumbs, Card, LevelBadge, PageHeader } from "@/components/ui";
+import { BreadcrumbJsonLd } from "@/components/seo-schema";
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Cyber Labs",
-  description: "Hands-on cybersecurity labs and CTF challenges in a simulated environment.",
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
+export const metadata: Metadata = {
+  title: "Hands-on Cybersecurity & AI Cloud Labs — Zentrion Learntech",
+  description:
+    "Practice hands-on penetration testing, incident response, network packet analysis, and AI prompt defense in fully sandboxed, auto-graded in-browser cloud labs.",
+  alternates: {
+    canonical: `${BASE_URL}/labs`,
+  },
+  openGraph: {
+    title: "Hands-on Cyber & AI Cloud Labs | Zentrion Learntech",
+    description: "100% simulated, isolated browser sandboxes with auto-graded evaluation.",
+    url: `${BASE_URL}/labs`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hands-on Cyber & AI Labs | Zentrion",
+    description: "Practice real security skills in browser sandboxes.",
+  },
 };
 
 export default async function LabsPage() {
@@ -12,6 +30,12 @@ export default async function LabsPage() {
 
   return (
     <main className="container" style={{ padding: "var(--space-10) var(--space-6)" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Hands-on Labs", url: "/labs" },
+        ]}
+      />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Labs" }]} />
       <PageHeader
         eyebrow="Cybersecurity"
@@ -19,7 +43,7 @@ export default async function LabsPage() {
         description="Practice real security skills in a fully simulated environment — no vulnerable infrastructure required."
       />
 
-      <div className="flex items-center gap-2 mb-6">
+      <div className="flex items-center gap-2 mb-6" style={{ flexWrap: "wrap" }}>
         <span className="badge badge-success">100% simulated</span>
         <span className="badge badge-info">Browser sandbox</span>
         <span className="badge">Auto-graded</span>
@@ -28,7 +52,7 @@ export default async function LabsPage() {
       <h2 style={{ marginBottom: "var(--space-4)" }}>Guided labs</h2>
       <div
         className="grid"
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 1fr))", gap: "var(--space-5)" }}
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 19rem), 1fr))", gap: "var(--space-5)" }}
       >
         {labs.map((lab) => (
           <Link key={lab.id} href={`/labs/${lab.slug}`} style={{ textDecoration: "none" }}>
@@ -54,7 +78,7 @@ export default async function LabsPage() {
       </p>
       <div
         className="grid"
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 1fr))", gap: "var(--space-5)" }}
+        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 19rem), 1fr))", gap: "var(--space-5)" }}
       >
         {challenges.map((ch) => (
           <Link key={ch.id} href={`/challenges/${ch.slug}`} style={{ textDecoration: "none" }}>

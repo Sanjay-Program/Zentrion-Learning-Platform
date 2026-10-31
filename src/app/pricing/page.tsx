@@ -5,9 +5,28 @@ import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
 import { PricingPlanCards, PricingFaqAccordion } from "./pricing-interactive";
 
+import { FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo-schema";
+
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
 export const metadata = {
-  title: "Pricing",
-  description: "Transparent pricing for AI, Cybersecurity & Future-Tech learning. Free tier, individual courses, and Pro plans available.",
+  title: "Pricing Plans & Pro Membership — Zentrion Learntech",
+  description: "Transparent pricing for AI, Cybersecurity & Future-Tech skills. Free tier, individual course enrollments (₹499–₹1,499), and unlimited Pro membership with 7-day money back guarantee.",
+  alternates: {
+    canonical: `${BASE_URL}/pricing`,
+  },
+  openGraph: {
+    title: "Pricing & Plans — Zentrion Learntech",
+    description: "Start free or upgrade to Pro for unlimited sandboxed labs, 2026 frontier AI courses, and verifiable QR credentials.",
+    url: `${BASE_URL}/pricing`,
+    siteName: "Zentrion Learntech",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing & Plans — Zentrion Learntech",
+    description: "Individual courses and Pro membership plans.",
+  },
 };
 
 const FEATURES_COMPARE = [
@@ -87,6 +106,13 @@ export default async function PricingPage() {
 
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Pricing & Plans", url: "/pricing" },
+        ]}
+      />
+      <FaqJsonLd faqs={FAQS.map((f) => ({ question: f.q, answer: f.a }))} />
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}

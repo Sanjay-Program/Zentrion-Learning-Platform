@@ -1,9 +1,26 @@
 import Link from "next/link";
-import { EnterpriseRoiCalculator, EnterpriseFaqAccordion } from "./enterprise-interactive";
+import { EnterpriseRoiCalculator, EnterpriseFaqAccordion, ENTERPRISE_FAQS } from "./enterprise-interactive";
+import { FaqJsonLd, BreadcrumbJsonLd } from "@/components/seo-schema";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "For Enterprises",
-  description: "Upskill your entire workforce in AI, Cybersecurity, and Future Tech. Custom LMS, team analytics, SSO integration, and dedicated success management for enterprise teams.",
+export const metadata: Metadata = {
+  title: "For Enterprises — Corporate AI & Cybersecurity Workforce Upskilling",
+  description:
+    "Upskill your entire workforce in AI, Cybersecurity, Full-Stack, and Data Science. Custom LMS, team analytics, SSO integration, dedicated success management, and verifiable credentials.",
+  alternates: {
+    canonical: "/for-enterprises",
+  },
+  openGraph: {
+    title: "Enterprise AI & Cybersecurity Workforce Upskilling | Zentrion Learntech",
+    description:
+      "Scalable corporate technical training with interactive sandbox labs, custom competency paths, SAML SSO, and real-time skills-gap analytics.",
+    url: "/for-enterprises",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise AI & Cybersecurity Training | Zentrion",
+    description: "Empower your engineering squads with hands-on AI and Cybersecurity cloud labs.",
+  },
 };
 
 const FEATURES = [
@@ -134,6 +151,18 @@ const STATS = [
 export default function ForEnterprisesPage() {
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "For Enterprises", url: "/for-enterprises" },
+        ]}
+      />
+      <FaqJsonLd
+        faqs={ENTERPRISE_FAQS.map((f) => ({
+          question: f.q,
+          answer: f.a,
+        }))}
+      />
 
       {/* ============================================================ */}
       {/* HERO SECTION                                                  */}

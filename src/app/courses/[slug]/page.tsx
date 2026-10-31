@@ -8,12 +8,45 @@ import { formatHours } from "@/lib/utils";
 import { getCoursePricing, TRUST_PROMISES } from "@/lib/course-pricing";
 import { EnrollButton } from "./enroll-button";
 
+import { CourseJsonLd, BreadcrumbJsonLd } from "@/components/seo-schema";
+
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const course = await getCourseBySlug(slug);
+  const pricing = getCoursePricing(slug);
+  if (!course) return { title: "Course not found" };
+
+  const title = `${course.title} — ${pricing.formattedPrice} (50% OFF until 10th Oct)`;
+  const description = course.subtitle || `Enroll in ${course.title} for ${pricing.formattedPrice} (originally ${pricing.formattedOriginalPrice}). Limited seats remaining. 100% 7-day money back guarantee with verifiable credentials.`;
+
   return {
-    title: course ? `${course.title}` : "Course not found",
-    description: course?.subtitle ?? "",
+    title,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/courses/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/courses/${slug}`,
+      siteName: "Zentrion Learntech",
+      images: [
+        {
+          url: `${BASE_URL}/images/logo/08-app-icon-favicon.png`,
+          width: 800,
+          height: 600,
+          alt: course.title,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -33,6 +66,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ s
 
   return (
     <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh", padding: "2.5rem 0 6rem" }}>
+      <CourseJsonLd course={course} pricing={pricing} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Courses", url: "/courses" },
+          { name: course.title, url: `/courses/${course.slug}` },
+        ]}
+      />
       <div className="container">
         {/* Breadcrumbs */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", color: "#94A3B8", marginBottom: "1.5rem" }}>

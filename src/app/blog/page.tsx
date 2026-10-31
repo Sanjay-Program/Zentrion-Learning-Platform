@@ -1,8 +1,29 @@
 import { Breadcrumbs, Card, PageHeader } from "@/components/ui";
+import { BreadcrumbJsonLd } from "@/components/seo-schema";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
 
-export const metadata = { title: "Blog" };
+const BASE_URL = process.env.APP_BASE_URL || "https://zentrion.dev";
+
+export const metadata: Metadata = {
+  title: "Engineering Journal & Insights — AI, Security & Systems",
+  description:
+    "Engineering insights, research articles, and production guides on Prompt Engineering, Agentic AI, LLMOps, Defensive Cybersecurity, and Full-Stack Engineering from Zentrion.",
+  alternates: {
+    canonical: `${BASE_URL}/blog`,
+  },
+  openGraph: {
+    title: "Zentrion Engineering Journal & Blog",
+    description: "Deep dive articles on AI systems, cybersecurity drills, and developer education.",
+    url: `${BASE_URL}/blog`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zentrion Engineering Journal",
+    description: "Guides on building agentic AI, LLMOps, and defensive security.",
+  },
+};
 
 interface Post {
   slug: string;
@@ -82,6 +103,12 @@ const posts: Post[] = [
 export default function BlogPage() {
   return (
     <main className="container" style={{ padding: "var(--space-10) var(--space-6)" }}>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+        ]}
+      />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
       <PageHeader
         eyebrow="Journal"
@@ -89,7 +116,7 @@ export default function BlogPage() {
         description="Notes from the Zentrion team on teaching AI, security and modern application development."
       />
 
-      <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(22rem, 1fr))", gap: "var(--space-5)" }}>
+      <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 20rem), 1fr))", gap: "var(--space-5)" }}>
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
             <Card hover className="flex-col h-full">
