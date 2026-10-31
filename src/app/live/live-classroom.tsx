@@ -43,7 +43,7 @@ export function LiveClassroom() {
   };
 
   return (
-    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       {/* Top Studio Bar */}
       <div
         style={{
@@ -178,7 +178,7 @@ export function LiveClassroom() {
         </aside>
 
         {/* Center Main Stage + Bottom Tabs */}
-        <div style={{ display: "flex", flexDirection: "column", background: "#ffffff", overflowY: "auto" }}>
+        <div style={{ display: "flex", flexDirection: "column", background: "var(--bg, #060913)", overflowY: "auto" }}>
           {/* Video Stream Stage */}
           <div
             style={{

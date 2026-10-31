@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import { cx, truncate } from "@/lib/utils";
 import { CourseArtwork } from "@/components/course-artwork";
+import { getCoursePricing } from "@/lib/course-pricing";
 
 // ---------------------------------------------------------------------------
 // Button
@@ -344,51 +345,60 @@ export function CourseCard({
   hours?: number | null;
   priceCents: number;
 }) {
-  const formattedPrice =
-    priceCents <= 0
-      ? "Free"
-      : `₹ ${Math.round(priceCents / 100).toLocaleString("en-IN")}`;
+  const pricing = getCoursePricing(slug);
 
   return (
     <div
       style={{
         borderRadius: "1rem",
-        background: "rgba(10, 15, 29, 0.8)",
-        border: "1px solid rgba(0, 0, 0, 0.08)",
+        background: "rgba(10, 15, 29, 0.9)",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
         overflow: "hidden",
         display: "flex",
         flexDirection: "column",
-        transition: "transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
+        transition: "transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease",
+        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.4)",
       }}
       className="glass-card-hover"
     >
       <div style={{ position: "relative" }}>
         <CourseArtwork slug={slug} title={title} size="sm" />
-        <span
-          style={{
-            position: "absolute",
-            top: "0.75rem",
-            left: "0.75rem",
-            padding: "0.2rem 0.6rem",
-            borderRadius: "9999px",
-            background: "linear-gradient(135deg, #F59E0B, #D97706)",
-            color: "#FFFFFF",
-            fontSize: "0.7rem",
-            fontWeight: 700,
-            boxShadow: "0 2px 8px rgba(0,0,0,0.4)",
-          }}
-        >
-          Bestseller
-        </span>
+        <div style={{ position: "absolute", top: "0.75rem", left: "0.75rem", display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
+          <span
+            style={{
+              padding: "0.25rem 0.65rem",
+              borderRadius: "9999px",
+              background: "linear-gradient(135deg, #EF4444, #DC2626)",
+              color: "#FFFFFF",
+              fontSize: "0.72rem",
+              fontWeight: 800,
+              boxShadow: "0 2px 8px rgba(239, 68, 68, 0.5)",
+            }}
+          >
+            🔥 {pricing.seatsRemaining} seats left
+          </span>
+          <span
+            style={{
+              padding: "0.25rem 0.6rem",
+              borderRadius: "9999px",
+              background: "rgba(16, 185, 129, 0.9)",
+              color: "#FFFFFF",
+              fontSize: "0.7rem",
+              fontWeight: 800,
+            }}
+          >
+            {pricing.discountPct}% OFF
+          </span>
+        </div>
       </div>
 
       <div style={{ padding: "1.25rem", display: "flex", flexDirection: "column", flex: 1 }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem" }}>
-            <span style={{ color: "#FBBF24" }}>★ 4.9</span>
-            <span style={{ color: "#94A3B8" }}>(12.8K)</span>
+            <span style={{ color: "#FBBF24", fontWeight: 700 }}>★ 4.9</span>
+            <span style={{ color: "#94A3B8" }}>(12.8K verified)</span>
           </div>
-          <span style={{ fontSize: "0.75rem", color: "#6366F1", fontWeight: 600, textTransform: "capitalize" }}>
+          <span style={{ fontSize: "0.75rem", color: "#38BDF8", fontWeight: 700, textTransform: "capitalize" }}>
             {level}
           </span>
         </div>
@@ -400,29 +410,61 @@ export function CourseCard({
         </h3>
 
         {subtitle && (
-          <p style={{ color: "#94A3B8", fontSize: "0.85rem", lineHeight: 1.45, marginBottom: "1rem", flex: 1 }}>
+          <p style={{ color: "#94A3B8", fontSize: "0.85rem", lineHeight: 1.45, marginBottom: "0.75rem", flex: 1 }}>
             {truncate(subtitle, 110)}
           </p>
         )}
 
-        <div style={{ marginTop: "auto", borderTop: "1px solid rgba(0, 0, 0, 0.06)", paddingTop: "0.85rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ fontSize: "1.25rem", fontWeight: 800, color: "#FFFFFF" }}>
-            {formattedPrice}
+        {/* Urgency Deadline Pill */}
+        <div
+          style={{
+            fontSize: "0.72rem",
+            color: "#F59E0B",
+            fontWeight: 700,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.3rem",
+            marginBottom: "0.75rem",
+            background: "rgba(245, 158, 11, 0.1)",
+            padding: "0.25rem 0.5rem",
+            borderRadius: "0.35rem",
+            border: "1px solid rgba(245, 158, 11, 0.25)",
+            width: "fit-content",
+          }}
+        >
+          <span>⏳</span> Offer until 10th October only
+        </div>
+
+        <div style={{ marginTop: "auto", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "0.85rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div>
+            <div style={{ display: "flex", alignItems: "baseline", gap: "0.4rem" }}>
+              <span style={{ fontSize: "1.35rem", fontWeight: 900, color: "#22D3EE" }}>
+                {pricing.formattedPrice}
+              </span>
+              <span style={{ fontSize: "0.85rem", color: "#64748B", textDecoration: "line-through", fontWeight: 600 }}>
+                {pricing.formattedOriginalPrice}
+              </span>
+            </div>
+            <div style={{ fontSize: "0.68rem", color: "#10B981", fontWeight: 600 }}>
+              100% Money-Back Guarantee
+            </div>
           </div>
 
           <Link
             href={`/courses/${slug}`}
             style={{
-              padding: "0.45rem 0.95rem",
+              padding: "0.5rem 1rem",
               borderRadius: "0.5rem",
               background: "linear-gradient(135deg, #6366F1, #8B5CF6)",
               color: "#FFFFFF",
               fontSize: "0.85rem",
-              fontWeight: 600,
+              fontWeight: 700,
               textDecoration: "none",
+              boxShadow: "0 0 15px rgba(99, 102, 241, 0.4)",
+              transition: "all 0.2s ease",
             }}
           >
-            Enroll →
+            Enroll Now →
           </Link>
         </div>
       </div>

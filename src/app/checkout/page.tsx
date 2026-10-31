@@ -9,7 +9,7 @@ export const metadata = { title: "Checkout" };
 export default async function CheckoutPage({
   searchParams,
 }: {
-  searchParams: Promise<{ product?: string; order?: string }>;
+  searchParams: Promise<{ product?: string; order?: string; course?: string }>;
 }) {
   const user = await requireUser();
   const sp = await searchParams;
@@ -38,8 +38,42 @@ export default async function CheckoutPage({
     );
   }
 
-  if (!sp.product) notFound();
-  const product = await getProductBySlug(sp.product);
+  let productSlug = sp.product;
+  if (!productSlug && sp.course) {
+    const { getDb } = await import("@/db/client");
+    const { courses, products, prices } = await import("@/db/schema");
+    const { eq } = await import("drizzle-orm");
+    const { getCoursePricing } = await import("@/lib/course-pricing");
+    const db = getDb();
+    const courseId = Number(sp.course);
+    let courseRow = !isNaN(courseId)
+      ? await db.select().from(courses).where(eq(courses.id, courseId)).limit(1).get()
+      : await db.select().from(courses).where(eq(courses.slug, sp.course)).limit(1).get();
+
+    if (courseRow) {
+      productSlug = `course-${courseRow.slug}`;
+      const existing = await getProductBySlug(productSlug);
+      if (!existing) {
+        const pricing = getCoursePricing(courseRow.slug);
+        const [prod] = await db.insert(products).values({
+          slug: productSlug,
+          name: courseRow.title,
+          description: `Enrollment into ${courseRow.title}`,
+          productType: "course",
+          referenceId: courseRow.id,
+        }).returning();
+        await db.insert(prices).values({
+          productId: prod.id,
+          amountCents: pricing.price * 100,
+          currency: "INR",
+          interval: "once",
+        }).run();
+      }
+    }
+  }
+
+  if (!productSlug) notFound();
+  const product = await getProductBySlug(productSlug);
   if (!product) notFound();
 
   return (

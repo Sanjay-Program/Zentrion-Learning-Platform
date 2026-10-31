@@ -4,11 +4,85 @@
 */
 
 :root {
+  /* Futuristic cosmic dark palette (Zentrion Learntech Mockup Theme) */
+  --bg: #060913;
+  --bg-subtle: #0a0f24;
+  --bg-muted: #101735;
+  --surface: #0b1226;
+  --surface-raised: #111a38;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #e2e8f0;
+  --text-strong: #ffffff;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  /* Brand gradients & vibrant neon accents */
+  --primary: #6366f1;
+  --primary-strong: #4f46e5;
+  --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --primary-subtle: rgba(99, 102, 241, 0.12);
+  --primary-text: #ffffff;
+
+  --accent: #22d3ee;
+  --accent-cyan: #06b6d4;
+  --accent-subtle: rgba(34, 211, 238, 0.1);
+  --secondary-gradient: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+
+  --nav-bg: rgba(6, 9, 19, 0.95);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --footer-bg: #060913;
+  --card-bg: rgba(11, 18, 38, 0.9);
+  --card-border: rgba(99, 102, 241, 0.2);
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.08);
+  --input-bg: rgba(11, 18, 38, 0.95);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --input-text: #f8fafc;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}
+
+[data-theme="dark"] {
+  --bg: #060913;
+  --bg-subtle: #0a0f24;
+  --bg-muted: #101735;
+  --surface: #0b1226;
+  --surface-raised: #111a38;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #e2e8f0;
+  --text-strong: #ffffff;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --primary: #6366f1;
+  --primary-strong: #4f46e5;
+  --primary-subtle: rgba(99, 102, 241, 0.12);
+  --primary-text: #ffffff;
+  --accent: #22d3ee;
+  --accent-cyan: #06b6d4;
+  --accent-subtle: rgba(34, 211, 238, 0.1);
+  --nav-bg: rgba(6, 9, 19, 0.95);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --footer-bg: #060913;
+  --card-bg: rgba(11, 18, 38, 0.9);
+  --card-border: rgba(99, 102, 241, 0.2);
+  --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.08);
+  --input-bg: rgba(11, 18, 38, 0.95);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --input-text: #f8fafc;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
   --bg: #f8fafc;
   --bg-subtle: #f1f5f9;
   --bg-muted: #e2e8f0;
   --surface: #ffffff;
-  --surface-raised: #ffffff;
+  --surface-raised: #f8fafc;
   --border: rgba(15, 23, 42, 0.1);
   --border-strong: rgba(15, 23, 42, 0.2);
   --text: #0f172a;
@@ -23,23 +97,18 @@
   --accent-cyan: #0891b2;
   --accent-subtle: #e0f2fe;
 
-  --nav-bg: rgba(255, 255, 255, 0.94);
+  --nav-bg: rgba(255, 255, 255, 0.95);
   --nav-border: rgba(15, 23, 42, 0.08);
   --footer-bg: #f1f5f9;
   --card-bg: #ffffff;
-  --card-border: rgba(15, 23, 42, 0.08);
-  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --card-border: rgba(15, 23, 42, 0.1);
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
   --input-bg: #ffffff;
   --input-border: #cbd5e1;
   --input-text: #0f172a;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-
   color-scheme: light;
 }
-
 
 [data-theme="light"] body {
   background: var(--bg);
@@ -70,10 +139,6 @@
   background: var(--input-bg);
   border-color: var(--input-border);
   color: var(--input-text);
-}
-
-[data-theme="dark"] {
-  color-scheme: dark;
 }
 
 
@@ -1605,3 +1670,80 @@ header.scrolled {
 .card-stagger > *:nth-child(4) { animation-delay: 0.2s; }
 .card-stagger > *:nth-child(5) { animation-delay: 0.25s; }
 .card-stagger > *:nth-child(6) { animation-delay: 0.3s; }
+
+/* Course detail responsive layout */
+.course-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .course-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile sticky enroll bar */
+.mobile-enroll-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-enroll-bar {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(6, 9, 19, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.85rem 1.25rem;
+    align-items: center;
+    justifyContent: space-between;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.7);
+  }
+  body {
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* Trust chip and urgency pulse */
+@keyframes flamePulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.flame-pulse {
+  animation: flamePulse 2s ease-in-out infinite;
+}
+
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: #CBD5E1;
+}
+
+.checkout-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .checkout-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

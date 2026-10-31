@@ -7,7 +7,11 @@ import { Button, Card, Badge, LevelBadge, CourseCard } from "@/components/ui";
 const POPULAR_PATHS = [
   {
     title: "Artificial Intelligence",
-    desc: "From basics to advanced with real-world projects",
+    desc: "From basics to advanced with real-world foundation models & LLMs",
+    price: "₹999",
+    originalPrice: "₹1,999",
+    discount: "50% OFF",
+    seats: "7 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2a8 8 0 0 0-8 8c0 3.3 2 6.1 5 7.4V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.6c3-1.3 5-4.1 5-7.4a8 8 0 0 0-8-8z"/>
@@ -21,7 +25,11 @@ const POPULAR_PATHS = [
   },
   {
     title: "Prompt Engineering",
-    desc: "Master AI for all fields",
+    desc: "Master prompt steering, context windows & enterprise AI workflows",
+    price: "₹499",
+    originalPrice: "₹999",
+    discount: "50% OFF",
+    seats: "9 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#818CF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="4 17 10 11 4 5"/>
@@ -33,7 +41,11 @@ const POPULAR_PATHS = [
   },
   {
     title: "Cybersecurity",
-    desc: "Hands-on labs & real world simulations",
+    desc: "Hands-on SOC triage, sandboxed red-teaming & prompt injection defense",
+    price: "₹1,499",
+    originalPrice: "₹2,999",
+    discount: "50% OFF",
+    seats: "5 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -45,7 +57,11 @@ const POPULAR_PATHS = [
   },
   {
     title: "AI Agents & Automation",
-    desc: "Build autonomous agents",
+    desc: "Build autonomous agents, multi-agent swarms & tool reasoning",
+    price: "₹999",
+    originalPrice: "₹1,999",
+    discount: "50% OFF",
+    seats: "6 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C084FC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="11" width="18" height="10" rx="2"/>
@@ -60,7 +76,11 @@ const POPULAR_PATHS = [
   },
   {
     title: "Data Science",
-    desc: "Analytics, ML & real projects",
+    desc: "Analytics, vector embeddings, ML & real RAG projects",
+    price: "₹799",
+    originalPrice: "₹1,599",
+    discount: "50% OFF",
+    seats: "8 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="18" y1="20" x2="18" y2="10"/>
@@ -72,8 +92,12 @@ const POPULAR_PATHS = [
     badge: "Hands-on",
   },
   {
-    title: "Web & App Development",
-    desc: "Modern Full-stack with AI",
+    title: "Full-Stack Development",
+    desc: "Modern Next.js full-stack architectures & AI business automation",
+    price: "₹1,299",
+    originalPrice: "₹2,499",
+    discount: "48% OFF",
+    seats: "6 seats left",
     icon: (
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F472B6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
@@ -83,6 +107,22 @@ const POPULAR_PATHS = [
     ),
     href: "/courses/ai-business-automation",
     badge: "Full-Stack",
+  },
+  {
+    title: "Frontend Development",
+    desc: "UI/UX, high-performance web components & GenAI interfaces",
+    price: "₹599",
+    originalPrice: "₹1,199",
+    discount: "50% OFF",
+    seats: "11 seats left",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6"/>
+        <polyline points="8 6 2 12 8 18"/>
+      </svg>
+    ),
+    href: "/courses/frontend-development-genai",
+    badge: "UI/UX Special",
   },
 ];
 
@@ -250,7 +290,7 @@ export default async function HomePage() {
   ]);
 
   return (
-    <div style={{ background: "var(--bg, #ffffff)", color: "var(--text, #0f172a)", minHeight: "100vh", transition: "background 0.2s ease, color 0.2s ease" }}>
+    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh", transition: "background 0.2s ease, color 0.2s ease" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -293,24 +333,41 @@ export default async function HomePage() {
           >
             {/* Left Content */}
             <div>
-              {/* Badge */}
-              <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.5rem" }}>
+              {/* Early-Bird Urgency & Limited Seats Notice */}
+              <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
                 <span
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: "0.4rem",
-                    padding: "0.4rem 1rem",
+                    gap: "0.45rem",
+                    padding: "0.4rem 0.95rem",
                     borderRadius: "9999px",
-                    background: "rgba(99, 102, 241, 0.08)",
-                    border: "1px solid rgba(129, 140, 248, 0.4)",
-                    color: "#4338CA",
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
-                    boxShadow: "0 0 15px rgba(99, 102, 241, 0.08)",
+                    background: "linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.3))",
+                    border: "1px solid rgba(239, 68, 68, 0.4)",
+                    color: "#FCA5A5",
+                    fontSize: "0.82rem",
+                    fontWeight: 800,
+                    boxShadow: "0 0 15px rgba(239, 68, 68, 0.25)",
+                  }}
+                  className="flame-pulse"
+                >
+                  🔥 Limited Seats Available • Special Batch Pricing
+                </span>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.35rem",
+                    padding: "0.4rem 0.85rem",
+                    borderRadius: "9999px",
+                    background: "rgba(245, 158, 11, 0.15)",
+                    border: "1px solid rgba(245, 158, 11, 0.3)",
+                    color: "#FCD34D",
+                    fontSize: "0.8rem",
+                    fontWeight: 700,
                   }}
                 >
-                  <span style={{ color: "#6366F1" }}>✦</span> #1 AI & Cybersecurity Learning Platform
+                  ⏳ Offer valid until 10th October only
                 </span>
               </div>
 
@@ -411,11 +468,11 @@ export default async function HomePage() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(6.5rem, 1fr))",
                   gap: "0.75rem",
                   padding: "1rem 1.25rem",
                   background: "rgba(10, 15, 29, 0.75)",
-                  border: "1px solid rgba(0, 0, 0, 0.08)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
                   borderRadius: "1rem",
                   backdropFilter: "blur(12px)",
                 }}
@@ -561,7 +618,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
+      <section style={{ padding: "5rem 0", background: "var(--bg-subtle, #0a0f24)" }}>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "2.5rem", flexWrap: "wrap", gap: "1rem" }}>
             <div>
@@ -611,21 +668,22 @@ export default async function HomePage() {
                     position: "relative",
                     padding: "1.75rem",
                     borderRadius: "1rem",
-                    background: "rgba(10, 15, 29, 0.7)",
-                    border: "1px solid rgba(0, 0, 0, 0.08)",
+                    background: "rgba(10, 15, 29, 0.8)",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
                     display: "flex",
                     flexDirection: "column",
                     height: "100%",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.4)",
                   }}
                 >
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
                     <div
                       style={{
                         width: "52px",
                         height: "52px",
                         borderRadius: "0.75rem",
-                        background: "rgba(99, 102, 241, 0.06)",
-                        border: "1px solid rgba(99, 102, 241, 0.08)",
+                        background: "rgba(99, 102, 241, 0.12)",
+                        border: "1px solid rgba(99, 102, 241, 0.25)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -635,27 +693,66 @@ export default async function HomePage() {
                     </div>
                     <span
                       style={{
-                        fontSize: "0.7rem",
+                        fontSize: "0.72rem",
                         fontWeight: 700,
                         padding: "0.25rem 0.6rem",
                         borderRadius: "9999px",
-                        background: "rgba(34, 211, 238, 0.06)",
-                        color: "#0891B2",
-                        border: "1px solid rgba(34, 211, 238, 0.1)",
+                        background: "rgba(34, 211, 238, 0.1)",
+                        color: "#22D3EE",
+                        border: "1px solid rgba(34, 211, 238, 0.25)",
                       }}
                     >
                       {path.badge}
                     </span>
                   </div>
 
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.5rem" }}>
+                  <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.4rem" }}>
                     {path.title}
                   </h3>
-                  <p style={{ color: "#94A3B8", fontSize: "0.9rem", lineHeight: 1.5, margin: 0, flex: 1 }}>
+                  <p style={{ color: "#94A3B8", fontSize: "0.875rem", lineHeight: 1.5, margin: "0 0 0.85rem", flex: 1 }}>
                     {path.desc}
                   </p>
-                  <div style={{ marginTop: "1.25rem", color: "#6366F1", fontSize: "0.85rem", fontWeight: 600 }}>
-                    Start learning →
+
+                  {/* Urgency and seats left badges */}
+                  <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.85rem" }}>
+                    <span
+                      style={{
+                        fontSize: "0.72rem",
+                        fontWeight: 800,
+                        padding: "0.2rem 0.55rem",
+                        borderRadius: "9999px",
+                        background: "rgba(239, 68, 68, 0.15)",
+                        border: "1px solid rgba(239, 68, 68, 0.3)",
+                        color: "#F87171",
+                      }}
+                    >
+                      🔥 {path.seats}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "0.72rem",
+                        fontWeight: 700,
+                        padding: "0.2rem 0.55rem",
+                        borderRadius: "9999px",
+                        background: "rgba(245, 158, 11, 0.12)",
+                        border: "1px solid rgba(245, 158, 11, 0.25)",
+                        color: "#FBBF24",
+                      }}
+                    >
+                      ⏳ 10th Oct only
+                    </span>
+                  </div>
+
+                  {/* Pricing and Action */}
+                  <div style={{ marginTop: "auto", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "0.85rem", display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                    <div style={{ display: "flex", alignItems: "baseline", gap: "0.45rem" }}>
+                      <span style={{ fontSize: "1.3rem", fontWeight: 900, color: "#22D3EE" }}>{path.price}</span>
+                      <span style={{ fontSize: "0.85rem", color: "#64748B", textDecoration: "line-through", fontWeight: 600 }}>{path.originalPrice}</span>
+                      <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "#34D399" }}>{path.discount}</span>
+                    </div>
+                    <span style={{ color: "#818CF8", fontSize: "0.85rem", fontWeight: 700 }}>
+                      Enroll →
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -667,7 +764,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 3. WHY CHOOSE ZENTRION LEARNTECH? (6 Benefit Cards)       */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#0A0F1D", borderTop: "1px solid rgba(0, 0, 0, 0.06)", borderBottom: "1px solid rgba(0, 0, 0, 0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "var(--bg-subtle, #0a0f24)", borderTop: "1px solid rgba(255, 255, 255, 0.06)", borderBottom: "1px solid rgba(255, 255, 255, 0.06)" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "42rem", margin: "0 auto 3.5rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>✨ Why Us</div>
@@ -731,7 +828,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 4. REAL PROJECTS. REAL SKILLS. REAL CAREERS. (5 Cards)     */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
+      <section style={{ padding: "5rem 0", background: "var(--bg, #060913)" }}>
         <div className="container">
           <div style={{ textAlign: "center", maxWidth: "42rem", margin: "0 auto 3rem" }}>
             <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>🚀 Portfolio Projects</div>
@@ -881,7 +978,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 6. LOVED BY Growing LEARNERS WORLDWIDE (Testimonials)     */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#ffffff", borderTop: "1px solid rgba(0, 0, 0, 0.06)" }}>
+      <section style={{ padding: "5rem 0", background: "var(--bg-subtle, #0a0f24)", borderTop: "1px solid rgba(255, 255, 255, 0.06)" }}>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
             <div>
@@ -1050,7 +1147,7 @@ export default async function HomePage() {
       {/* ======================================================== */}
       {/* 8. BOTTOM CALL TO ACTION BANNER                          */}
       {/* ======================================================== */}
-      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
+      <section style={{ padding: "5rem 0", background: "var(--bg, #060913)" }}>
         <div className="container">
           <div
             style={{

@@ -52,7 +52,31 @@ export default async function CoursesPage({
   const hasFilters = !!(searchParamsResolved.q || searchParamsResolved.category || searchParamsResolved.level);
 
   return (
-    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
+      {/* ============================================================ */}
+      {/* URGENCY ADMISSION BANNER                                     */}
+      {/* ============================================================ */}
+      <div
+        style={{
+          background: "linear-gradient(90deg, rgba(239, 68, 68, 0.2) 0%, rgba(99, 102, 241, 0.2) 50%, rgba(245, 158, 11, 0.2) 100%)",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+          padding: "0.65rem 1rem",
+          textAlign: "center",
+          fontSize: "0.85rem",
+          color: "#F8FAFC",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.75rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <span style={{ fontWeight: 800, color: "#FCA5A5" }} className="flame-pulse">🔥 Early-Bird Admissions Open</span>
+        <span style={{ color: "#64748B" }}>·</span>
+        <span style={{ fontWeight: 600 }}>Special Pricing valid until <strong style={{ color: "#FCD34D" }}>10th October only</strong></span>
+        <span style={{ color: "#64748B" }}>·</span>
+        <span style={{ color: "#34D399", fontWeight: 700 }}>⚡ Limited seats remaining per batch</span>
+      </div>
 
       {/* ============================================================ */}
       {/* HEADER SECTION                                               */}
@@ -60,7 +84,7 @@ export default async function CoursesPage({
       <section
         style={{
           position: "relative",
-          padding: "4rem 0 3rem",
+          padding: "3.5rem 0 2.5rem",
           overflow: "hidden",
           background: "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(99, 102, 241, 0.18), transparent 70%)",
         }}
@@ -75,15 +99,15 @@ export default async function CoursesPage({
             {searchParamsResolved.category && <><span>/</span><span style={{ color: "#0891B2", textTransform: "capitalize" }}>{searchParamsResolved.category.replace(/-/g, " ")}</span></>}
           </div>
 
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1.5rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "1.5rem", marginBottom: "2rem" }}>
             <div>
               <div className="section-eyebrow" style={{ display: "inline-flex", marginBottom: "0.75rem" }}>📚 Course Catalogue</div>
               <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.03em", marginBottom: "0.5rem" }}>
-                {hasFilters ? "Search Results" : "All Courses"}
+                {hasFilters ? "Search Results" : "All Courses & Flagship Tracks"}
               </h1>
               <p style={{ color: "#94A3B8", fontSize: "1rem", margin: 0 }}>
                 {all.length > 0
-                  ? `${all.length} course${all.length !== 1 ? "s" : ""} found${hasFilters ? " for your filters" : " · Updated for 2026"}`
+                  ? `${all.length} course${all.length !== 1 ? "s" : ""} found${hasFilters ? " for your filters" : " · Special cohort pricing until 10th October only"}`
                   : "Explore our most in-demand AI, cybersecurity and future tech courses."}
               </p>
             </div>
@@ -113,6 +137,24 @@ export default async function CoursesPage({
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Platform Trust Reassurance Strip */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              flexWrap: "wrap",
+              paddingTop: "1.25rem",
+              borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+            }}
+          >
+            <div className="trust-chip">🛡️ 100% 7-Day Money-Back Guarantee</div>
+            <div className="trust-chip">📜 Verifiable QR Credential</div>
+            <div className="trust-chip">⚡ 100% Cloud Sandbox Labs</div>
+            <div className="trust-chip">👥 120,000+ Alumni Across Tech</div>
+            <div className="trust-chip">🔒 256-Bit SSL Encrypted Checkout</div>
           </div>
         </div>
       </section>
@@ -232,7 +274,7 @@ export default async function CoursesPage({
       {/* CATEGORY QUICK FILTERS (if no query active)                 */}
       {/* ============================================================ */}
       {!hasFilters && categories.length > 0 && (
-        <section style={{ padding: "2rem 0 1rem", background: "#ffffff" }}>
+        <section style={{ padding: "2rem 0 1rem", background: "var(--bg-subtle, #0a0f24)" }}>
           <div className="container">
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
               {categories.map((cat) => {
@@ -270,7 +312,7 @@ export default async function CoursesPage({
       {/* ============================================================ */}
       {/* COURSE GRID                                                  */}
       {/* ============================================================ */}
-      <section style={{ padding: "2rem 0 5rem", background: "#ffffff" }}>
+      <section style={{ padding: "2rem 0 5rem", background: "var(--bg, #060913)" }}>
         <div className="container">
           {courses.length === 0 ? (
             <div style={{ textAlign: "center", padding: "5rem 2rem", borderRadius: "1.25rem", background: "rgba(10,15,29,0.7)", border: "1px solid rgba(255,255,255,0.07)", marginTop: "1.5rem" }}>

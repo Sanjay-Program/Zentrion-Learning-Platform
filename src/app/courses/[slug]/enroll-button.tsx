@@ -16,12 +16,14 @@ export function EnrollButton({
   enrolled,
   slug,
   variant,
+  label,
 }: {
   courseId: number;
   priceCents: number;
   enrolled: boolean;
   slug: string;
   variant?: "block";
+  label?: string;
 }) {
   const router = useRouter();
   const toast = useToast();
@@ -64,12 +66,36 @@ export function EnrollButton({
   };
 
   return (
-    <button type="button" className={className} disabled={pending} onClick={handleEnroll}>
+    <button
+      type="button"
+      className={className}
+      disabled={pending}
+      onClick={handleEnroll}
+      style={{
+        padding: "0.85rem 1.5rem",
+        fontSize: "1rem",
+        fontWeight: 700,
+        borderRadius: "0.6rem",
+        cursor: pending ? "not-allowed" : "pointer",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "0.5rem",
+        background: "linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)",
+        color: "#FFFFFF",
+        boxShadow: "0 4px 15px rgba(99, 102, 241, 0.4)",
+        border: "none",
+        width: variant === "block" ? "100%" : "auto",
+        transition: "all 0.2s ease",
+      }}
+    >
       {pending
-        ? "Working…"
-        : priceCents > 0
-          ? `Buy — ${formatPrice(priceCents)}`
-          : "Enroll free"}
+        ? "Securing seat…"
+        : label
+          ? label
+          : priceCents > 0
+            ? `Enroll Now — ${formatPrice(priceCents)}`
+            : "Enroll free"}
     </button>
   );
 }

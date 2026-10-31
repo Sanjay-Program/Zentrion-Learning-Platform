@@ -47,7 +47,7 @@ export default function ContactClientPage() {
   };
 
   return (
-    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh" }}>
+    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh" }}>
 
       {/* ============================================================ */}
       {/* HERO                                                          */}
@@ -118,7 +118,7 @@ export default function ContactClientPage() {
       {/* ============================================================ */}
       {/* CONTACT FORM + INFO                                          */}
       {/* ============================================================ */}
-      <section style={{ padding: "3rem 0 6rem", background: "#ffffff", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section style={{ padding: "4rem 0 6rem", background: "var(--bg-subtle, #0a0f24)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(24rem, 1fr))", gap: "3rem", alignItems: "start" }}>
 

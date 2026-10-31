@@ -161,7 +161,7 @@ All automated tasks executed successfully in browser sandbox.`;
   };
 
   return (
-    <div style={{ background: "#ffffff", color: "#F8FAFC", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
+    <div style={{ background: "var(--bg, #060913)", color: "var(--text, #F8FAFC)", minHeight: "100vh", padding: "2.5rem 0 5rem" }}>
       <div className="container">
         {/* Lab Header */}
         <div style={{ marginBottom: "2rem" }}>
