@@ -371,8 +371,8 @@ export default function AboutPage() {
               Whether you&apos;re a student, software engineer, or team lead — Zentrion has a proven learning path for you.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/auth/sign-up" style={{ padding: "0.95rem 2.25rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#FFFFFF", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 25px rgba(99,102,241,0.5)", fontSize: "1rem" }}>
-                Start Free Today
+              <Link href="/courses" style={{ padding: "0.95rem 2.25rem", borderRadius: "0.75rem", background: "linear-gradient(135deg, #6366F1, #8B5CF6)", color: "#FFFFFF", fontWeight: 700, textDecoration: "none", boxShadow: "0 0 25px rgba(99,102,241,0.5)", fontSize: "1rem" }}>
+                🚀 Explore Flagship Courses (From ₹499)
               </Link>
               <Link href="/contact" style={{ padding: "0.95rem 2rem", borderRadius: "0.75rem", background: "rgba(15,23,42,0.8)", border: "1px solid rgba(255,255,255,0.25)", color: "#FFFFFF", fontWeight: 600, textDecoration: "none", fontSize: "1rem" }}>
                 Talk to Our Team

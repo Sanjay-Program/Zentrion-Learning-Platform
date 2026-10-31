@@ -333,7 +333,7 @@ export default async function PricingPage() {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link
-                href="/auth/sign-up"
+                href="/courses"
                 style={{
                   padding: "0.95rem 2.25rem",
                   borderRadius: "0.75rem",
@@ -345,7 +345,7 @@ export default async function PricingPage() {
                   fontSize: "1rem",
                 }}
               >
-                Get Started Free
+                ⚡ Enroll in Courses (From ₹499)
               </Link>
               <Link
                 href="/courses"

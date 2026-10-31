@@ -140,7 +140,7 @@ export function PricingPlanCards({
           </div>
 
           <Link
-            href="/auth/sign-up"
+            href="/courses"
             style={{
               display: "block",
               textAlign: "center",
@@ -155,7 +155,7 @@ export function PricingPlanCards({
               transition: "all 0.2s ease",
             }}
           >
-            Get Started Free →
+            Explore Free Lessons & Labs →
           </Link>
         </div>
 

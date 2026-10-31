@@ -53,9 +53,15 @@ export default async function EventsPage() {
                   </div>
                   <div style={{ flexShrink: 0 }}>
                     {!user ? (
-                      <Link href="/auth/sign-in" className="btn btn-secondary btn-sm">
-                        Sign in to register
-                      </Link>
+                      <a
+                        href={`https://wa.me/917305771789?text=Hello%2C%20I%20want%20to%20register%20for%20the%20live%20event%3A%20${encodeURIComponent(s.title)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm"
+                        style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem" }}
+                      >
+                        💬 Register via WhatsApp
+                      </a>
                     ) : full ? (
                       <span className="badge badge-warning">Session full</span>
                     ) : (

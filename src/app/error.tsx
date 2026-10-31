@@ -20,7 +20,7 @@ export default function RootError({ error, reset }: { error: AppError; reset: ()
         <h1>Authentication required</h1>
         <p className="lead">Please sign in to view this page.</p>
         <div className="flex justify-center gap-3 mt-8">
-          <Button href="/auth/sign-in">Sign in</Button>
+          <Button href="/courses">Browse Courses</Button>
           <Button variant="secondary" href="/">Back to home</Button>
         </div>
       </main>

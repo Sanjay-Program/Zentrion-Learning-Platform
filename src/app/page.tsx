@@ -1191,7 +1191,7 @@ export default async function HomePage() {
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link
-                href="/auth/sign-up"
+                href="/courses"
                 style={{
                   padding: "0.9rem 2rem",
                   borderRadius: "0.75rem",
@@ -1203,7 +1203,7 @@ export default async function HomePage() {
                   boxShadow: "0 0 25px rgba(99, 102, 241, 0.2)",
                 }}
               >
-                Get Started Free
+                🚀 Enroll Now — From ₹499
               </Link>
               <Link
                 href="/courses"

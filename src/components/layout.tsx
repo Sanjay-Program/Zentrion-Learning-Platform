@@ -191,6 +191,7 @@ export async function Navbar() {
           <ThemeToggle />
           {user ? (
             <AuthedMenu userId={user.id} />
+          ) : (
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <Link
                 href="/courses"
